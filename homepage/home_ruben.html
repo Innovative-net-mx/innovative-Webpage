@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/estilo.css">
+    <title>Document</title>
+</head>
+<script>
+
+    window.addEventListener('scroll', function()  {
+      let elements = document.getElementsByClassName('scroll-content');
+      let screenSize = window.innerHeight;
+      
+            for(var i = 0; i < elements.length; i++) {
+            var element = elements[i];
+    
+            if(element.getBoundingClientRect().top < screenSize) {
+              element.classList.add('visible');
+            } else {
+              element.classList.remove('visible');
+            }
+    
+          }
+    });
+  
+  </script>
+<header id="header">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+
+
+<body>
+    
+<div class="desb" >
+    <img class="img_home" src="static/css/img/imghome.jpeg" alt="">
+</div>
+
+<div class="servicios"><br>
+    <h1 class="serv">SERVICIOS</h1>
+
+    <section class="content">
+  
+      <div class="scroll-content fadeTop"><img class="a" src="static/css/img/hexagonorMO.png" alt=""><h1 style="display: inline-block; font-size:70%;">Lorem Ipsum is simply</h1>
+      
+      <div class="scroll-content fadeTop"><img class="b" src="static/css/img/hexagonorR.png" alt=""><h1 style="display: inline-block; font-size:70%; margin-left:10%;">Lorem Ipsum is simply</h1>
+  
+      <div class="scroll-content fadeTop"><img class="c" src="static/css/img/hexagonorM.png" alt=""><h1 style="display: inline-block; font-size:70%; margin-left:30%;">Lorem Ipsum is simply</h1>
+  
+      <div class="scroll-content fadeTop"><img class="d" src="static/css/img/hexagonorrojo.png" alt=""><h1 style="display: inline-block; font-size:70%; margin-left:150%;">Lorem Ipsum is simply</h1>
+  
+      <div class="scroll-content fadeTop"><img class="e" src="static/css/img/hexagonorN.png" alt=""><h1 style="display: inline-block; font-size:70%;  margin-left:268%;">Lorem Ipsum is simply</h1>
+  
+      <div class="scroll-content fadeTop"><img class="f" src="static/css/img/hexagonorA.png" alt=""><h1 style="display: inline-block; font-size:70%;margin-left:390%;">Lorem Ipsum is simply</h1>
+      </div>    
+    </section>
+<div style="margin-left: -6%; margin-top:-5%;">
+    <img class="as" src="static/css/img/hexagonorMO.png" alt="">
+    <img class="bs" src="static/css/img/hexagonorR.png" alt="">
+    <img class="cs" src="static/css/img/hexagonorM.png" alt="">
+    <img class="ds" src="static/css/img/hexagonorrojo.png" alt="">
+    <img class="es" src="static/css/img/hexagonorN.png" alt="">
+    <img class="fs" src="static/css/img/hexagonorA.png" alt="">
+</div><br><br><br>
+
+ 
+<div class="det_ser"><br><br><br>
+    <center>
+        <section>
+            <img src="static/css/img/Telecomunicaciones.png" alt="">
+            <img src="static/css/img/Seguridad.jpg" alt="">
+            <img src="static/css/img/audy.jpg" alt="">
+        </section>
+    </center> <br><br><br>
+    <div class="inf-ser">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+        It was popularised in the 1960s with the release of Letraset sheets containing </p>
+      <a href="pruebadeprueba.html"><button class="btn-sol">Solicitar cotización</button></a>
+    </div>
+</div>
+
+<div class="detnoso">
+<div class="nos">
+  <h1 class="hnos">NOSOTROS</h1><br><br><br>
+  <p class="pnos">Las tecnologías que utilizamos respaldan nuestro trabajo y 
+    aseguran un excelente servicio</p>
+    <center><br><br><br>
+    <a href=""><button class="butnos">OBJETIVOS</button></a>
+  </center>
+</div><br><br><br>
+
+<div>
+  <h1>ESPECIALIZADOS</h1>
+  <img class="imgesp" src="static/css/img/especializados.jpg" alt="">
+  <P style="width:40%; color:black;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P>
+</div>
+<div class="impnos">
+  <h1>TE IMPULSAMOS A CRECER</h1>
+  <img class="imgesp" src="static/css/img/impulnos.jpg" alt="">
+  <P style="width:40%; text-align:right; color:black; margin-left:60%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P>
+</div>
+<div>
+  <h1>PROVEEMOS</h1>
+  <img class="imgesp" src="static/css/img/provnos.jpg" alt="">
+  <P style="width:40%; color:black;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P><br><br>
+</div>
+<video src="static/css/img/video.mp4" autoplay="true" muted="true" loop="true"></video>
+</div>
+ <style>
+  video{
+    width: 100%;
+    height: auto;
+  }
+ </style>
+</body>
+</html>
