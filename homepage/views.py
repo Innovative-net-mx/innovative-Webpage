@@ -11,16 +11,12 @@ def index(request):
 def template(request):
     return render(request, "homepage/template.html")
 
-#form model view for contact form
-def contact(request):
-    if request.method == "POST":
-        nombre = request.POST.get('nombre')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-        empresa = request.POST.get('empresa')
-        extension = request.POST.get('extension')
-        descripcion = request.POST.get('descripcion')
-        contact = Formulario_Contacto(nombre=nombre, email=email, phone=phone, empresa=empresa, extension=extension, descripcion=descripcion)
-        contact.save()
-        return redirect('index')
-    return render(request, "homepage/index.html")
+#make a class view for a form Formulario_Contacto
+class Contacto_View(FormView):
+    template_name = 'homepage/contacto.html'
+    form_class = Formulario_Contacto
+    success_url = reverse_lazy('homepage:contacto')
+
+    def form_valid(self, form):
+        form.save()
+        return super(Contacto_View, self).form_valid(form)
