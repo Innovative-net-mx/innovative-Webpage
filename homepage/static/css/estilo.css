@@ -117,3 +117,178 @@
   
 
  
+
+      .impnos{
+        text-align: right;
+        } 
+        .detnoso{
+          width: 100%;
+          height: auto;
+          background-color: #F1F7ED;
+        }
+      .imgesp{
+        width: 40%;
+        height: auto;
+      }
+      .butnos{
+        width: auto;
+        letter-spacing: 2px;
+        border: 2px solid white;
+        border-radius: 30%;
+        height: 50px;
+        background-color:#587291;
+        color: #fff;
+        padding: 10px;
+      }
+      .pnos{
+        font-size: 300%;
+        text-align: center;
+      }
+      .hnos{
+        text-align: center;
+        font-size: 500%;
+        color: #C16200;
+      }
+    .nos{
+      width: 100%;
+      height: 700px;
+      background: #fff url(img/nos.jpg) center center/cover no-repeat content-box fixed;
+    }
+      .inf-ser{
+        margin-left: 6%;
+        width: 20%;
+        
+      }
+      .btn-sol{
+              background-color: orange;
+              border-radius: 70px;
+              border: 2px solid black;
+          }
+      .det_ser{
+        width: 100%;
+        height: auto;
+        background-color: black;
+      }
+      .img_home{
+        width: 100%;
+        height: auto;
+      }
+      .desb{
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 2;
+      }
+      .servicios{
+      width: 100%;
+      height: auto;
+      background-color: #E4971F;
+      }
+      .serv{
+      text-align: center;
+      color: white;
+      }
+      section {
+      height: 100vh;
+      }
+      
+      .content {
+      display: grid;
+      grid-template-columns: 15%;
+      opacity: 1;
+      transform: translate(0, 0);
+      transition: all 1s;
+      margin: auto;
+      background-color: transparent;
+      width: 50%;
+      }
+      
+      
+      .fadeTop {
+      opacity: 0;
+      transform: translate(0, 0vh);
+      transition: all 1s;
+      }
+      
+      .visible {
+      opacity: 1;
+      transform: translate(-120%, 0);
+      }
+      .a{
+      width: 70%;
+      margin-left: -150%;
+      }
+      .b{
+      margin-left: -80%;
+      width: 70%;
+      }
+      .c{
+      margin-left: 95%;
+      width: 70%;
+      }
+      .d{
+      margin-left: 165%;
+      width: 70%;
+      }
+      .e{
+      margin-left: 336%;
+      width: 60%;
+      }
+      .f{
+      margin-left:400%;
+      width: 100%;
+      }
+      .as{
+      width: 13%;
+      position: absolute;
+      margin-top: -43.7%;
+      margin-left: 41%;
+      }
+      .bs{
+      width: 11%;
+      position: absolute;
+      margin-top: -42.5%;
+      margin-left: 50%;
+      }
+      .cs{
+      width: 13%;
+      position: absolute;
+      margin-top: -39.5%;
+      margin-left: 46%;
+      }
+      .ds{
+      width: 12.2%;
+      position: absolute;
+      margin-top: -51%;
+      margin-left: 45.8%;
+      }
+      .es{
+      width: 9.3%;
+      position: absolute;
+      margin-top: -48.8%;
+      margin-left: 55.68%;
+      }
+      .fs{
+      width: 18%;
+      position: absolute;
+      margin-top: -53.5%;
+      margin-left: 54.55%;
+      }
+      section{
+        display: flex;
+        width: 60%;
+        height: 100%;
+      }
+      section img{
+        width: 0;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: .8;
+        transition: .5s ease;
+      }
+      section img:hover{
+        cursor: crosshair;
+        width: 100%;
+        opacity: 1;
+        filter: contrast(120%);
+      }
