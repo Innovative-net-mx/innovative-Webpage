@@ -8,7 +8,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, "homepage/index.html")
+    return render(request, "homepage/home.html")
 
 def cartera_servicios(request):
     return render(request, "homepage/cartera_servicios.html")
