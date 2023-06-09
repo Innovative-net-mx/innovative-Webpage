@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.views.generic import FormView
+from django.urls import reverse_lazy
 
 # Create your views here.
 from .models import *
@@ -8,8 +10,8 @@ from django.http import HttpResponse
 def index(request):
     return render(request, "homepage/index.html")
 
-def template(request):
-    return render(request, "homepage/template.html")
+def cartera_servicios(request):
+    return render(request, "homepage/cartera_servicios.html")
 
 # make a class view for a form Formulario_Contacto
 class Contacto_View(FormView):
