@@ -1,6 +1,11 @@
 {% extends "misc/base.html" %}
  {% block body %}
 
+<center>
+<h1>Ponte en contacto con nosotros</h1>
+<h3>Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3><br>
+</center>
+
  <center>
 <div class="form">
     
@@ -10,50 +15,64 @@
 
         <div>
             {{ form.nombre.errors }}
-            <input type="text" name="nombre" id="nombre">
+            Nombre
+            <input type="text" name="nombre" id="nombre" value="Nombre">
             {{form.nombre}}
-        </div>
+        </div><br>
 
         <div>
             {{ form.email.errors }}
-            <input type="email" name="email" id="email">
+            Email
+            <input type="email" name="email" id="email" value="Email">
             {{form.email}}
-        </div>
+        </div><br>
 
         <div>
             {{ form.phone.errors }}
-            <input type="number" name="phone" id="phone">
+            Telefono
+            <input type="number" name="phone" id="phone" value="Telefono">
             {{form.phone}}
-        </div>
+        </div><br>
 
         <div>
             {{ form.empresa.errors }}
-            <input type="text" name="empresa" id="empresa">
+            Empresa
+            <input type="text" name="empresa" id="empresa" value="Empresa">
             {{form.empresa}}
-        </div>
+        </div><br>
 
         <div>
             {{ form.extension.errors }}
-            <input type="number" name="extension" id="extension">
+            Extension
+            <input type="number" name="extension" id="extension" value="Extension">
             {{form.extension}}
-        </div>
+        </div><br>
 
         <div>
             {{ form.descripcion.errors }}
-            <input type="text" name="descripcion" id="descripcion">
+            Descripcion
+            <input type="text" name="descripcion" id="descripcion" value="Descripcion">
             {{form.descripcion}}
-        </div>
+        </div><br>
+        <button class="btnenvd" type="submit">Enviar datos</button>
 </div>
 </center>
 
 <style>
 .form{
     border-radius: 33px;
-    background: linear-gradient(225deg, #00439c, #004fb9);
-    box-shadow:  -40px 40px 85px #002250,
-    40px -40px 85px #0072ff;
-    width:35%;
+    background: linear-gradient(#F1F7ED, #F1F7ED);
+    box-shadow:  50px 50px 100px #529ed0,
+    -50px -50px 100px #70d6ff;
+    width:30%;
+    border: 3px solid black;
     }
+.btnenvd{
+    background:black;
+    color:white;
+    border-radius:20px;
+    border:2px solid red;
+}
 
 </style>
 
