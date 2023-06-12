@@ -10,46 +10,52 @@
 
         <div>
             {{ form.nombre.errors }}
-            <input type="text" name="nombre" id="nombre">
+            Nombre
+            <input type="text" name="nombre" id="nombre" value="Nombre">
             {{form.nombre}}
-        </div>
+        </div><br>
 
         <div>
             {{ form.email.errors }}
-            <input type="email" name="email" id="email">
+            Email
+            <input type="email" name="email" id="email" value="Email">
             {{form.email}}
-        </div>
+        </div><br>
 
         <div>
             {{ form.phone.errors }}
-            <input type="number" name="phone" id="phone">
+            Telefono
+            <input type="number" name="phone" id="phone" value="Telefono">
             {{form.phone}}
-        </div>
+        </div><br>
 
         <div>
             {{ form.empresa.errors }}
-            <input type="text" name="empresa" id="empresa">
+            Empresa
+            <input type="text" name="empresa" id="empresa" value="Empresa">
             {{form.empresa}}
-        </div>
+        </div><br>
 
         <div>
             {{ form.extension.errors }}
-            <input type="number" name="extension" id="extension">
+            Extension
+            <input type="number" name="extension" id="extension" value="Extension">
             {{form.extension}}
-        </div>
+        </div><br>
 
         <div>
             {{ form.descripcion.errors }}
-            <input type="text" name="descripcion" id="descripcion">
+            Descripcion
+            <input type="text" name="descripcion" id="descripcion" value="Descripcion">
             {{form.descripcion}}
-        </div>
+        </div><br>
 </div>
 </center>
 
 <style>
 .form{
     border-radius: 33px;
-    background: linear-gradient(225deg, #00439c, #004fb9);
+    background: linear-gradient(225deg, ##F1F7ED, ##F1F7ED);
     box-shadow:  -40px 40px 85px #002250,
     40px -40px 85px #0072ff;
     width:35%;
