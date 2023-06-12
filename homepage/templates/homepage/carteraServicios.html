@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body">
+{% extends "misc/base.html" %}
+
+{% block body %}
+
+
+
 <h1> DESCARGA NUESTRA CARTERA DE <br> SERVICIOS Y ESPECIALIDADES <h4 style="margin-right: 30px;"> Conoce más acerca de nosotros y lo que nos caracteriza</h4></h1>
 <button class="custom-btn btn-12"><span>Click!</span><span>Read More</span></button>
-<img src="static/css/img/carteraServicios.png" style="margin-left: 50%; width: 35%; margin-top: -5%;">
+<img src="static/css/img/carteraServicios.png"  style="margin-left: 50%; width: 35%; margin-top: -5%;">
 
 
 
@@ -28,5 +20,6 @@
         
     }
 </style>
-</body>
-</html>
+
+
+{% endblock %}

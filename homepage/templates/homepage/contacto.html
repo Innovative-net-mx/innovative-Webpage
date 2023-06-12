@@ -1,0 +1,60 @@
+{% extends "misc/base.html" %}
+ {% block body %}
+
+ <center>
+<div class="form">
+    
+    <form actions="" method="POST" >
+        {% csrf_token %}
+        {{form.non_field_errors}}
+
+        <div>
+            {{ form.nombre.errors }}
+            <input type="text" name="nombre" id="nombre">
+            {{form.nombre}}
+        </div>
+
+        <div>
+            {{ form.email.errors }}
+            <input type="email" name="email" id="email">
+            {{form.email}}
+        </div>
+
+        <div>
+            {{ form.phone.errors }}
+            <input type="number" name="phone" id="phone">
+            {{form.phone}}
+        </div>
+
+        <div>
+            {{ form.empresa.errors }}
+            <input type="text" name="empresa" id="empresa">
+            {{form.empresa}}
+        </div>
+
+        <div>
+            {{ form.extension.errors }}
+            <input type="number" name="extension" id="extension">
+            {{form.extension}}
+        </div>
+
+        <div>
+            {{ form.descripcion.errors }}
+            <input type="text" name="descripcion" id="descripcion">
+            {{form.descripcion}}
+        </div>
+</div>
+</center>
+
+<style>
+.form{
+    border-radius: 33px;
+    background: linear-gradient(225deg, #00439c, #004fb9);
+    box-shadow:  -40px 40px 85px #002250,
+    40px -40px 85px #0072ff;
+    width:35%;
+    }
+
+</style>
+
+ {% endblock %}
