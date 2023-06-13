@@ -10,10 +10,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, "homepage/home.html")
+    return render(request, "homepage/home_ruben.html")
 
 def cartera_servicios(request):
-    return render(request, "homepage/cartera_servicios.html")
+    return render(request, "homepage/carteraServicios.html")
 
 # make a class view for a form Formulario_Contacto
 class Contacto_Form(CreateView):
