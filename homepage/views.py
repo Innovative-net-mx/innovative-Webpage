@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.views.generic import FormView
 from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.list import ListView
 
 # Create your views here.
 from .models import *
@@ -14,11 +16,8 @@ def cartera_servicios(request):
     return render(request, "homepage/cartera_servicios.html")
 
 # make a class view for a form Formulario_Contacto
-class Contacto_View(FormView):
+class Contacto_Form(CreateView):
+    model = Formulario_Contacto
+    fields = ['nombre', 'email', 'phone', 'empresa', 'extension', 'descripcion']
+    success_url = reverse_lazy('homepage:home')
     template_name = 'homepage/contacto.html'
-    form_class = Formulario_Contacto
-    success_url = reverse_lazy('homepage:contacto')
-
-    def form_valid(self, form):
-        form.save()
-        return super(Contacto_View, self).form_valid(form)
