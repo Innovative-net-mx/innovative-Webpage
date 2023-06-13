@@ -5,4 +5,5 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("cartera_servicios", views.cartera_servicios, name="cartera_servicios"),
     path("contacto", Contacto_Form.as_view(), name="contacto"),
+    path("objetivos", views.objetivos, name="objetivos" )
 ]
