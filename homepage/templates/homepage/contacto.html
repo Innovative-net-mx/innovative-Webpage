@@ -1,79 +1,117 @@
 {% extends "misc/base.html" %}
  {% block body %}
 
+ <body>
+ <br><br><br><br><br>
 <center>
-<h1>Ponte en contacto con nosotros</h1>
-<h3>Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3><br>
-</center>
-
+    <h1 class="letras">Ponte en contacto con nosotros</h1>
+    <h3 class="letras1">Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3><br><br>
+    </center>
  <center>
 <div class="form">
     
     <form actions="" method="POST" >
         {% csrf_token %}
-        {{form.non_field_errors}}
-
+        {{form.non_field_errors}}<br>
+        Nombre:
         <div>
             {{ form.nombre.errors }}
-            Nombre
-            <input type="text" name="nombre" id="nombre" value="Nombre">
             {{form.nombre}}
-        </div><br>
-
+        </div>
+        Email:
         <div>
             {{ form.email.errors }}
-            Email
-            <input type="email" name="email" id="email" value="Email">
             {{form.email}}
-        </div><br>
-
+        </div>
+        Telefono:
         <div>
             {{ form.phone.errors }}
-            Telefono
-            <input type="number" name="phone" id="phone" value="Telefono">
             {{form.phone}}
-        </div><br>
-
+        </div>
+        Empresa:
         <div>
             {{ form.empresa.errors }}
-            Empresa
-            <input type="text" name="empresa" id="empresa" value="Empresa">
             {{form.empresa}}
-        </div><br>
-
+        </div>
+        Extension:
         <div>
             {{ form.extension.errors }}
-            Extension
-            <input type="number" name="extension" id="extension" value="Extension">
             {{form.extension}}
-        </div><br>
-
+        </div>
+        Descripcion:
         <div>
             {{ form.descripcion.errors }}
-            Descripcion
-            <input type="text" name="descripcion" id="descripcion" value="Descripcion">
             {{form.descripcion}}
         </div><br>
         <button class="btnenvd" type="submit">Enviar datos</button>
 </div>
-</center>
+</center> <br><br><br>
+
+<div class="supremo">
+<h1>Matriz Tijuana</h1>
+<p style="color:black; width:30%;">Calle 33 Sur, #33 Pinos Aguero,
+    Tijuana B.C. , C.P. 22116
+    gerencia.ventas@innovative-net.mx
+    info@innovative-net.mx
+    +52 664 200 2140</p>
+<div id="map">
+<script >function iniciarMap(){
+  var coord = {lat:32.4837952 ,lng: -116.9475872};
+  var map = new google.maps.Map(document.getElementById('map'),{
+    zoom: 10,
+    center: coord
+  });
+  var marker = new google.maps.Marker({
+    position: coord,
+    map: map
+  });
+}
+</script>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+</div>
+</div>
+
+
 
 <style>
+    .supremo{
+        
+    }
+    #map {
+        height: 500px;
+        width: 30%;
+      }
+
+    .letras{
+        font-size:150%;
+    }
+    .letras1{
+        font-size:100%;
+    }
+    body{
+        background:#F1F7ED;
+    }
 .form{
     border-radius: 33px;
     background: linear-gradient(#F1F7ED, #F1F7ED);
-    box-shadow:  50px 50px 100px #529ed0,
-    -50px -50px 100px #70d6ff;
-    width:30%;
-    border: 3px solid black;
+    box-shadow:  30px 30px 50px #529ed0,
+    -30px -30px 50px #70d6ff;
+    width:360px;
+    border: 3px solid white;
     }
 .btnenvd{
     background:black;
+    width:34%;
     color:white;
     border-radius:20px;
-    border:2px solid red;
+    border:2px solid white;
 }
 
 </style>
+ 
+
 
  {% endblock %}
