@@ -1,10 +1,13 @@
 {% extends "misc/base.html" %}
 
 {% block body %}
+
 <br>
 <br>
 <br><br><br><br><br><br><br>
-<h1 style="color: white; text-align: center;"> objetivos y noticias</h1>
+<h1 style="color: white; text-align: center;"> Objetivos </h1>
+<div style="margin-left:30px ;">
+
 <div class="container1">
     <div class="card">
       <img class="imgs1" src="static/css/mision.png" alt="ajio">
@@ -50,7 +53,115 @@
       </div>
     </div>
   </div>
-///////////
+</div>
+
+
+
+<h1 style="color: white; text-align: center;"> Noticias </h1>
+<body>
+  <div class="container">
+      <div class="caja" style="--clr: #009688">
+          <div class="img-box">
+            <img src="static/css/not1.png" alt="not1">  
+          </div>
+          <div class="content">
+              <h2>INNOVATIVE-NET MEXICO SE MANTIENE COMO <br> SOCIO  ESTRATEGICO DE LEVITON EN EL <br> PROGRAMA DE CABLEADOS ESTRUCTURADOS CCS.</h2>
+              <p>
+                1 de Agosto 2020 <br>
+                Certificado como socio Diamante, <br>  Innovative-net es un canal autorizado para diseñas e instalar<br>  sistema de cableado estructurado certificado Leviton con Garantias de 25 años.
+              </p>
+              
+          </div>
+      </div>
+      <div class="caja" style="--clr: #FF3E7F">
+          <div class="img-box">
+            <img src="static/css/not2.jpeg" alt="not2">  
+          </div>
+          <div class="content">
+              <h2>INNOVATIVE-NET MÉXICO CERTIFICA  A SU <br> DEPARTAMENTO DE INGENIERÍA Y TÉCNICO <br> EN “PANDUIT ONE PARTNER PROGRAM”</h2>
+              <p>
+                30 de Junio 2020 <br> Como Integrador autorizado para proporcionar Diseño, <br> Desarrollo e Implementación de Infraestructura de red de telecomunicaciones <br>para Edificios Comerciales e Industriales.
+              </p>
+              
+          </div>
+      </div>
+      <div class="caja" style="--clr: #03A9F4">
+          <div class="img-box">
+            <img src="static/css/not3.png" alt="not3">
+          </div>
+          <div class="content">
+              <h2>¿VIDEO DETECCION DE FIEBRE CON EL USO  <br>DE CASCO, CARETA Y CUBREBOCAS ES POSIBLE?</h2>
+              <p>
+                26 de Junio 2020 <br>¿Como puedo implementar cámaras de video de detección de fiebre <br>en ambientes donde se usa Casco de seguridad, cubre bocas  y <br> careta de filmina y no descartar esta tecnología?
+              </p>
+              
+          </div>
+      </div>
+  </div>
+  <h1 style="color: white; text-align: center;"> Nuestras certificaciones </h1>
+
+
+
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide">
+        <img src="static/css/img_y_video/Alcatel.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/Seneca.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/Axis-Communications-Logo.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/bogen_logo_black.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/kidde-logo.jpg" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/condunet.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/edwards-logo.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/bcdvideo-logo.jpg" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/FireLite_Alarms.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/Galaxy_Control.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/Hanwha-Techwin.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/hubbell.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/LenelS2.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/LevitonLogo.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+        <img src="static/css/img_y_video/milestone.png" height="100" width="250" alt="" />
+      </div>
+    
+      <div class="slide">
+        <img src="static/css/img_y_video/panduit-logo.png" height="100" width="250" alt="" />
+      </div>
+     
+      <div class="slide">
+        <img src="static/css/img_y_video/OIP.jfif" height="100" width="250" alt="" />
+      </div>
+    </div>
+  </div>
+
+
+</body>
 
 <style>
     body{
@@ -113,7 +224,212 @@
           transform: scale(1.1) rotate(-3deg);
         }
        
-        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+
+p{
+  font-size: 10px;
+}
+h2{
+  font-size: 15px;
+   text-align: right;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container .caja {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.container .caja:hover {
+    height: 300px;
+}
+
+.container .caja .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .caja:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .caja .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .caja .content {
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    height: 40px;
+    padding: 10 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+   
+}
+
+.container .caja:hover .content {
+    top: 130px;
+    height: 150px;
+}
+
+.container .caja .content h2 {
+    color: var(--clr);
+    white-space: nowrap;
+
+}
+
+.container .caja .content p {
+    color: #333;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.container .caja .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: white;
+    font-weight: 800;
+}
+
+.container .caja .content a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+    .container .caja {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container .caja .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .caja .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .caja .content a {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+</style>
+<style>
+  /* Slide In */
+.slide { animation-name: slide; }
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translate(4em, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* Slide Left */
+.slide-left { animation-name: slide-left; }
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translate(-40px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.slide-up {animation-name: slide-up;}
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: translateY(3em);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 20);
+  }
+  .slider .slide {
+    height: 100px;
+    width: 250px;
+  }
 </style>
 {% endblock %}
 
