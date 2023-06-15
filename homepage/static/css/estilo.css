@@ -7,6 +7,7 @@
     background-position: center;
      }
   .texto{
+    margin-left: 15px;
     color: #E4971F;
     text-align: left;
     font-size: 90px;
@@ -17,6 +18,7 @@
   p{
     color: white;
     font-size: 20px;
+    margin-left: 15px;
   }
 
  
