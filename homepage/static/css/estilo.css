@@ -7,6 +7,7 @@
     background-position: center;
      }
   .texto{
+    margin-left: 15px;
     color: #E4971F;
     text-align: left;
     font-size: 90px;
@@ -17,17 +18,17 @@
   p{
     color: white;
     font-size: 20px;
+    margin-left: 15px;
   }
 
  
-  *{
-    margin: 0;
-    padding: 0;
-  }
+  
+  
   #header{
     position: fixed;
     width: 100%;
     z-index: 1000;
+    
     }
   .dropdown-menu{
     margin-left: 50% !important;
