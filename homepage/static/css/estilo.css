@@ -45,13 +45,7 @@
  
  }
  
-
-
-	
-
- 
-
-      .impnos{
+     .impnos{
         text-align: right;
         } 
         .detnoso{
@@ -174,38 +168,38 @@
       .as{
       width: 13%;
       position: absolute;
-      margin-top: -43.7%;
+      margin-top: -95.7%;
       margin-left: 41%;
       }
       .bs{
       width: 11%;
       position: absolute;
-      margin-top: -42.5%;
+      margin-top: -94.3%;
       margin-left: 50%;
       }
       .cs{
       width: 13%;
       position: absolute;
-      margin-top: -39.5%;
-      margin-left: 46%;
+      margin-top: -91%;
+      margin-left: 46.4%;
       }
       .ds{
       width: 12.2%;
       position: absolute;
-      margin-top: -51%;
+      margin-top: -103%;
       margin-left: 45.8%;
       }
       .es{
       width: 9.3%;
       position: absolute;
-      margin-top: -48.8%;
+      margin-top: -100.7%;
       margin-left: 55.68%;
       }
       .fs{
       width: 18%;
       position: absolute;
-      margin-top: -53.5%;
-      margin-left: 54.55%;
+      margin-top: -105%;
+      margin-left: 54.66%;
       }
       section{
         display: flex;
