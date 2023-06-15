@@ -16,6 +16,8 @@ def cartera_servicios(request):
     return render(request, "homepage/carteraServicios.html")
 def  objetivos(request):
     return render(request, "homepage/objetivos.html")
+def inicio(request):
+    return render(request, "homepage/home_ruben.html")
 
 # make a class view for a form Formulario_Contacto
 class Contacto_Form(CreateView):
