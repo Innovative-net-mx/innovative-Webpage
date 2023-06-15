@@ -45,46 +45,59 @@
         </div><br>
         <button class="btnenvd" type="submit">Enviar datos</button>
 </div>
-</center> <br><br><br>
-
-<div class="supremo">
-<h1>Matriz Tijuana</h1>
-<p style="color:black; width:30%;">Calle 33 Sur, #33 Pinos Aguero,
-    Tijuana B.C. , C.P. 22116
-    gerencia.ventas@innovative-net.mx
-    info@innovative-net.mx
-    +52 664 200 2140</p>
-<div id="map">
-<script >function iniciarMap(){
-  var coord = {lat:32.4837952 ,lng: -116.9475872};
-  var map = new google.maps.Map(document.getElementById('map'),{
-    zoom: 10,
-    center: coord
-  });
-  var marker = new google.maps.Marker({
-    position: coord,
-    map: map
-  });
-}
-</script>
-
-
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+</center> <br><br><br><br><br><br>
+<div style="display:flex; justify-content:space-around; text-align:center; font-size:70%;">
+<h1 style="color:#E4971F;">MATRIZ TIJUANA<br><p style="color:black;">Calle 33 Sur, #33 Pinos Aguero,<br>
+    Tijuana B.C. , C.P. 22116<br>
+    gerencia.ventas@innovative-net.mx<br>
+    info@innovative-net.mx<br>
+    +52 664 200 2140</p></h1>
+    <h1 style="color:#E4971F;">SUCURSAL MEXICALI<br><p style="color:black;">Intermedia 3798, Bugambilias,<br>
+        Mexicali B.C., C.P. 21399<br>
+        gerencia.ventas@innovative-net.mx<br>
+        +52 686 842 9676<br></p></h1>
 </div>
+<div style="display:flex; justify-content:space-around;">
+
+    <div id="map" style="width:48%; height:450px;"></div>
+ 
+    <div id="map2" style="width:48%; height:450px;"></div>
 </div>
+    <script>
+      var map, map2;
+      function initMap() {
+    
+        var coord= {lat:32.4837952 ,lng: -116.9475872},
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: coord,
+          zoom: 10
+        });
+         new google.maps.Marker({
+        position: coord,
+        map: map,
+        title: "Innovative net Tijuana",
+      });
+    var coorden= {lat:32.6000276, lng: -115.3721117},
+    map2 = new google.maps.Map(document.getElementById('map2'), {
+      center: coorden,
+      zoom: 10
+    });
+    var marker = new google.maps.Marker({
+      position: coorden,
+      title: "Innovative net Mexicali",
+    });
+    marker.setMap(map2);
+    }
+    
+    
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap">
+    </script><br><br>
 
 
 
 <style>
-    .supremo{
-        
-    }
-    #map {
-        height: 500px;
-        width: 30%;
-      }
-
+    
     .letras{
         font-size:150%;
     }
