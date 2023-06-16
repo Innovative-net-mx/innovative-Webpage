@@ -18,7 +18,7 @@
     
           }
     });
-  
+
   </script>
 
   <div id="section1" class="img_index">
@@ -29,7 +29,7 @@
     <P> Ofrecemos soluciones de ingeniería de altos estándares tecnológicos,<br> con tiempos de entrega excepcionales, calidad y vanguardia tecnológica</P>
     <button type="button" class="btn btn-dark" style=" margin-left: 70%; margin-bottom: -20%; border-color: white; border-radius: 20px; height: 50px; width: 119px;">Contactanos</button>
   </div>
-
+  
 <div id="section2" class="servicios"><br>
     <h1 class="serv">SERVICIOS</h1>
 
@@ -46,25 +46,45 @@
       <div class="scroll-content fadeTop"><img class="e" style="width:120%" src="static/css/img/hexagonorN.png" alt=""><p style="display: inline-block; font-size:80%; margin-left:468%; margin-top:-110%; position:absolute; width:400%;">Lorem Ipsum is simply</p>
   
       <div class="scroll-content fadeTop"><img class="f" style="width:220%" src="static/css/img/hexagonorA.png" alt=""><p style="display: inline-block; font-size:80%;margin-left:578%; margin-top:-115%; position:absolute; width:400%;">Lorem Ipsum is simply</p>
-      </div>    
+      </div>     
     </section>
-
-<div style="margin-left:-5%;"> 
-    <img class="as" src="static/css/img/hexagonorMO.png" alt="">
-    <img class="bs" src="static/css/img/hexagonorR.png" alt="">
-    <img class="cs" src="static/css/img/hexagonorM.png" alt="">
-    <img class="ds" src="static/css/img/hexagonorrojo.png" alt="">
-    <img class="es" src="static/css/img/hexagonorN.png" alt="">
-    <img class="fs" src="static/css/img/hexagonorA.png" alt="">
+   
+  <div style="margin-left:-5%;" class="imgsdiv">
+  <img class="as" src="static/css/img/hexagonorMO.png" alt="">
+   <img class="bs" src="static/css/img/hexagonorR.png" alt="">
+  <img class="cs" src="static/css/img/hexagonorM.png" alt="">
+  <img class="ds" src="static/css/img/hexagonorrojo.png"alt="">
+  <img class="es" src="static/css/img/hexagonorN.png" alt="">
+  <img class="fs" src="static/css/img/hexagonorA.png" alt="">
 </div>
-
 <br><br><br>
- 
+<style>
+.imgsdiv {
+  animation-duration: 10s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+  animation-delay: 20s
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 10%;
+    width: 300%
+  }
+
+  to {
+    margin-left: -100%;
+    width: 100%;
+    opacity:0;
+  }
+}
+</style>
 <div class="det_ser"><br><br><br>
     <center>
-        <section>
+        <section class="detserimg">
             <img src="static/css/img/Telecomunicaciones.png" alt="">
-            <img src="static/css/img/Seguridad.jpg" alt=""
+            <img src="static/css/img/Seguridad.jpg" alt="">
             <img src="static/css/img/audy.jpg" alt="">
         </section>
     </center> <br><br><br>
