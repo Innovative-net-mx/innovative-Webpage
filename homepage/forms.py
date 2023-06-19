@@ -8,10 +8,16 @@ class FormularioContactoForm(forms.ModelForm):
         fields = ['nombre', 'email', 'phone',
                   'empresa', 'extension', 'descripcion']
         widgets = {
-            'nombre': forms.TextInput(attrs={'class': 'contact-from'}),
-            'email': forms.EmailInput(attrs={'class': 'contact-from'}),
-            'phone': forms.NumberInput(attrs={'class': 'contact-from-phone'}),
-            'empresa': forms.TextInput(attrs={'class': 'contact-from'}),
-            'extension': forms.NumberInput(attrs={'class': 'contact-from-extension'}),
-            'descripcion': forms.TextInput(attrs={'class': 'contact-from-descripcion'}),
+            'nombre': forms.TextInput(attrs={'class': 'contact-from',
+                                                   'placeholder': 'Nombre'}),
+            'email': forms.EmailInput(attrs={'class': 'contact-from',
+                                                   'placeholder': 'Correo electrónico'}),
+            'phone': forms.NumberInput(attrs={'class': 'contact-from-phone',
+                                                   'placeholder': 'Teléfono'}),
+            'empresa': forms.TextInput(attrs={'class': 'contact-from',
+                                                   'placeholder': 'Empresa'}),
+            'extension': forms.NumberInput(attrs={'class': 'contact-from-extension',
+                                                   'placeholder': 'Extensión'}),
+            'descripcion': forms.TextInput(attrs={'class': 'contact-from-descripcion',
+                                                   'placeholder': 'Descripción' }),
         }
