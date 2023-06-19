@@ -29,7 +29,7 @@
     </div>
     </div>
 
-<div class="form">
+<div class="form"><br><br>
     
     <form actions="" method="POST" >
         {% csrf_token %}
@@ -37,34 +37,36 @@
     
         <div>
             {{ form.nombre.errors }}
-           <input id="nombre" name="nombre" type="text">
+           {{form.nombre}}
           
-        </div>
+        </div><br>
        
         <div>
-            {{ form.email.errors }}
-            <input id="email" type="email">
-        </div>
+            {{ form.empresa.errors }}
+            {{form.empresa}}
+        </div><br>
       
         <div>
-            {{ form.phone.errors }}
-            <input id="phone" type="number">
-        </div>
-        
+            {{ form.email.errors }}
+            {{form.email}}
+        </div><br>
+
+        <div class="extphon" >
         <div>
-            {{ form.empresa.errors }}
-            <input id="empresa" type="text">
+            {{ form.phone.errors }}
+          {{form.phone}}
         </div>
-        
+
         <div>
             {{ form.extension.errors }}
-            <input id="empresa" type="number">
+            {{form.extension}}
         </div>
-        
+    </div><br>
+
         <div>
             {{ form.descripcion.errors }}
-            <label id="empresa" type="text"></label> 
-        </div><br>
+              {{form.descripcion}}
+        </div><br><br>
 
         <button class="btnenvd" type="submit">Enviar datos</button>
 </div>
@@ -121,7 +123,38 @@
 
 
 <style>
-
+    .extphon{
+        display:flex; 
+        justify-content:space-around;
+        
+    }
+    .contact-from-descripcion{
+    border-color:black;
+    border-radius:8px;
+    background:transparent;
+    width:70%;
+    height:130px;
+    }
+    .contact-from-extension{
+    border-color:black;
+    border-radius:8px;
+    width:35%;
+    margin-left:25%;
+    background:transparent;
+    }
+    .contact-from-phone{
+    border-color:black;
+    border-radius:8px;
+    width:140%;
+    margin-left:20%;
+    background:transparent;
+    }
+    .contact-from{
+    width:75%;
+    border-color:black;
+    border-radius:8px;
+    background:transparent;
+}
     .mgform{
         display:flex;  
     }
@@ -130,9 +163,9 @@
     height:370px; 
     background:black;
     border-radius:15px;
-    margin-left:20%;
+    margin-left:19%;
     z-index:100;
-    margin-top:2%;
+    margin-top:5%;
     position:absolute;
     }
     .letras{
@@ -146,11 +179,12 @@
     }
 .form{
     border-radius: 33px;
-    background: linear-gradient(#F1F7ED, #F1F7ED);
+    background: linear-gradient(#628395, #628395);
     box-shadow:  30px 30px 50px #529ed0,
     -30px -30px 50px #70d6ff;
-    width:360px;
-    border: 3px solid white;
+    width:450px;
+    height:550px;
+    border: 1px;
     margin-left:40%;
     }
 .btnenvd{
@@ -162,8 +196,10 @@
 }
 @media (max-width:1160px){
     .formnegro{
-        margin-top: 10%;
-
+       width:40%;
+       margin-left:5%;
+       height:300px;
+       font-size:70%; 
     }
 }
 </style>
