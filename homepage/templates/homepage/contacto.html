@@ -11,21 +11,21 @@
     <div class="mgform">
     <div class="formnegro">
         <h1 style="color:white;">Contactanos</h1><br>
-        <p style="font-size:90%; margin-left:-20%;">Dirección</p>
+        <p style="font-size:90%; margin-left:-20%; color:#F1F7ED;">Dirección</p>
         <div style="display:flex; justify-content:space-around;">
         <img src="static/css/img/ubicacion.png" style="width:8%; height:30px;">
-        <p style="font-size:80%; margin-left:-35%; width:50%;">Calle 33 Sur, #33 Pinos Aguero,
+        <p style="font-size:80%; margin-left:-35%; width:50%; color:#F1F7ED;">Calle 33 Sur, #33 Pinos Aguero,
             Tijuana B.C. , C.P. 22116</p>
         </div>
-        <p style="font-size:90%; margin-left:-20%;">Telefono</p>
+        <p style="font-size:90%; margin-left:-20%; color:#F1F7ED;">Telefono</p>
         <div style="display:flex; justify-content:space-around;">
             <img src="static/css/img/telefonocont.png" style="width:8%; height:30px; margin-left:-22%;">
-        <p style="font-size:80%; margin-left:-80%;">+52 664 200 2140</p>
+        <p style="font-size:80%; color:#F1F7ED; margin-left:-80%;">+52 664 200 2140</p>
     </div>
-        <p style="font-size:90%; margin-left:-5%; color:white;">Correo electronico</p>
+        <p style="font-size:90%; margin-left:-5%; color:#F1F7ED;">Correo electronico</p>
         <div style="display:flex; justify-content:space-around;">
             <img src="static/css/img/correocont.png" style="width:8%; height:30px; margin-left:-8%;">
-        <p style="font-size:80%; margin-left:-50%;">info@innovative-net.mx</p>
+        <p style="font-size:80%; color:#F1F7ED; margin-left:-50%;">info@innovative-net.mx</p>
     </div>
     </div>
 
@@ -161,7 +161,7 @@
     .formnegro{
     width:360px; 
     height:370px; 
-    background:black;
+    background:#051923;
     border-radius:15px;
     margin-left:19%;
     z-index:100;
@@ -176,23 +176,22 @@
     }
     body{
         background:#F1F7ED;
+        background-image: url("static/css/img/fondocont.svg");
+        background-repeat:no-repeat;
     }
 .form{
     border-radius: 33px;
-    background: linear-gradient(#628395, #628395);
-    box-shadow:  30px 30px 50px #529ed0,
-    -30px -30px 50px #70d6ff;
+    background:#628395;
     width:450px;
     height:550px;
     border: 1px;
     margin-left:40%;
     }
 .btnenvd{
-    background:black;
+    background:#C16200;
     width:34%;
-    color:white;
+    color:#F1F7ED;
     border-radius:20px;
-    border:2px solid white;
 }
 @media (max-width:1160px){
     .formnegro{
@@ -201,6 +200,13 @@
        height:300px;
        font-size:70%; 
     }
+}
+@media(min-width: 1700px){
+    .formnegro{
+        margin-left: 23%;
+
+    }
+   
 }
 </style>
  {% endblock %}
