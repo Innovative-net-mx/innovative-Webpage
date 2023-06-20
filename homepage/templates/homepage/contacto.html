@@ -1,93 +1,94 @@
 {% extends "misc/base2.html" %}
  {% block body %}
 
- <body>
- <br><br><br><br><br>
-<center>
-    <h1 class="letras">Ponte en contacto con nosotros</h1>
-    <h3 class="letras1">Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3><br><br>
-    </center>
- <center>
-    <div class="mgform">
-    <div class="formnegro">
-        <h1 style="color:white;">Contactanos</h1><br>
-        <p style="font-size:90%; margin-left:-20%; color:#F1F7ED;">Dirección</p>
-        <div style="display:flex; justify-content:space-around;">
-        <img src="static/css/img/ubicacion.png" style="width:8%; height:30px;">
-        <p style="font-size:80%; margin-left:-35%; width:50%; color:#F1F7ED;">Calle 33 Sur, #33 Pinos Aguero,
-            Tijuana B.C. , C.P. 22116</p>
+ <div class="body">
+    <br><br><br><br><br>
+    <center>
+        <h1 class="letras">Ponte en contacto con nosotros</h1>
+        <h3 class="letras1">Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3><br><br>
+        </center>
+    <center>
+        <div class="mgform">
+        <div class="formnegro">
+            <h1 style="color:white;">Contactanos</h1><br>
+            <p style="font-size:90%; margin-left:-20%; color:#F1F7ED;">Dirección</p>
+            <div style="display:flex; justify-content:space-around;">
+            <img src="static/css/img/ubicacion.png" style="width:8%; height:30px;">
+            <p style="font-size:80%; margin-left:-35%; width:50%; color:#F1F7ED;">Calle 33 Sur, #33 Pinos Aguero,
+                Tijuana B.C. , C.P. 22116</p>
+            </div>
+            <p style="font-size:90%; margin-left:-20%; color:#F1F7ED;">Telefono</p>
+            <div style="display:flex; justify-content:space-around;">
+                <img src="static/css/img/telefonocont.png" style="width:8%; height:30px; margin-left:-22%;">
+            <p style="font-size:80%; color:#F1F7ED; margin-left:-80%;">+52 664 200 2140</p>
         </div>
-        <p style="font-size:90%; margin-left:-20%; color:#F1F7ED;">Telefono</p>
-        <div style="display:flex; justify-content:space-around;">
-            <img src="static/css/img/telefonocont.png" style="width:8%; height:30px; margin-left:-22%;">
-        <p style="font-size:80%; color:#F1F7ED; margin-left:-80%;">+52 664 200 2140</p>
-    </div>
-        <p style="font-size:90%; margin-left:-5%; color:#F1F7ED;">Correo electronico</p>
-        <div style="display:flex; justify-content:space-around;">
-            <img src="static/css/img/correocont.png" style="width:8%; height:30px; margin-left:-8%;">
-        <p style="font-size:80%; color:#F1F7ED; margin-left:-50%;">info@innovative-net.mx</p>
-    </div>
-    </div>
-
-<div class="form"><br><br>
-    
-    <form actions="" method="POST" >
-        {% csrf_token %}
-        {{form.non_field_errors}}<br>
-    
-        <div>
-            {{ form.nombre.errors }}
-           {{form.nombre}}
-          
-        </div><br>
-       
-        <div>
-            {{ form.empresa.errors }}
-            {{form.empresa}}
-        </div><br>
-      
-        <div>
-            {{ form.email.errors }}
-            {{form.email}}
-        </div><br>
-
-        <div class="extphon" >
-        <div>
-            {{ form.phone.errors }}
-          {{form.phone}}
+            <p style="font-size:90%; margin-left:-5%; color:#F1F7ED;">Correo electronico</p>
+            <div style="display:flex; justify-content:space-around;">
+                <img src="static/css/img/correocont.png" style="width:8%; height:30px; margin-left:-8%;">
+            <p style="font-size:80%; color:#F1F7ED; margin-left:-50%;">info@innovative-net.mx</p>
+        </div>
         </div>
 
-        <div>
-            {{ form.extension.errors }}
-            {{form.extension}}
-        </div>
-    </div><br>
+    <div class="form"><br><br>
+        
+        <form actions="" method="POST" >
+            {% csrf_token %}
+            {{form.non_field_errors}}<br>
+        
+            <div>
+                {{ form.nombre.errors }}
+            {{form.nombre}}
+            
+            </div><br>
+        
+            <div>
+                {{ form.empresa.errors }}
+                {{form.empresa}}
+            </div><br>
+        
+            <div>
+                {{ form.email.errors }}
+                {{form.email}}
+            </div><br>
 
-        <div>
-            {{ form.descripcion.errors }}
-              {{form.descripcion}}
-        </div><br><br>
+            <div class="extphon" >
+            <div>
+                {{ form.phone.errors }}
+            {{form.phone}}
+            </div>
 
-        <button class="btnenvd" type="submit">Enviar datos</button>
-</div>
-</div>
-</center> <br><br><br><br><br><br>
-<div style="display:flex; justify-content:space-around; text-align:center; font-size:70%;">
-<h1 style="color:#E4971F;">MATRIZ TIJUANA<br><p style="color:black;">Calle 33 Sur, #33 Pinos Aguero,<br>
-    Tijuana B.C. , C.P. 22116<br>
-    gerencia.ventas@innovative-net.mx<br>
-    info@innovative-net.mx<br>
-    +52 664 200 2140</p></h1>
-    <h1 style="color:#E4971F;">SUCURSAL MEXICALI<br><p style="color:black;">Intermedia 3798, Bugambilias,<br>
-        Mexicali B.C., C.P. 21399<br>
+            <div>
+                {{ form.extension.errors }}
+                {{form.extension}}
+            </div>
+        </div><br>
+
+            <div>
+                {{ form.descripcion.errors }}
+                {{form.descripcion}}
+            </div><br><br>
+
+            <button class="btnenvd" type="submit">Enviar datos</button>
+    </div>
+    </div>
+    </center> <br><br><br><br><br><br>
+    <div style="display:flex; justify-content:space-around; text-align:center; font-size:70%;">
+    <h1 style="color:#E4971F;">MATRIZ TIJUANA<br><p style="color:black;">Calle 33 Sur, #33 Pinos Aguero,<br>
+        Tijuana B.C. , C.P. 22116<br>
         gerencia.ventas@innovative-net.mx<br>
-        +52 686 842 9676<br></p></h1>
-</div>
-<div style="display:flex; justify-content:space-around;">
+        info@innovative-net.mx<br>
+        +52 664 200 2140</p></h1>
+        <h1 style="color:#E4971F;">SUCURSAL MEXICALI<br><p style="color:black;">Intermedia 3798, Bugambilias,<br>
+            Mexicali B.C., C.P. 21399<br>
+            gerencia.ventas@innovative-net.mx<br>
+            +52 686 842 9676<br></p></h1>
+    </div>
+    <div style="display:flex; justify-content:space-around;">
 
-    <div id="map" style="width:48%; height:450px;"></div>
- 
-    <div id="map2" style="width:48%; height:450px;"></div>
+        <div id="map" style="width:48%; height:450px;"></div>
+    
+        <div id="map2" style="width:48%; height:450px;"></div>
+    </div>
 </div>
     <script>
       var map, map2;
@@ -179,10 +180,14 @@
     .letras1{
         font-size:100%;
     }
-    body{
+    .body{
+        width: 100%;
+        height: 100%;
         background:#F1F7ED;
         background-image: url("static/css/img/fondocont.svg");
         background-repeat:no-repeat;
+        background-size:cover;
+
     }
 .form{
     border-radius: 33px;

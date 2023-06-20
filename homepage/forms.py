@@ -17,7 +17,7 @@ class FormularioContactoForm(forms.ModelForm):
             'empresa': forms.TextInput(attrs={'class': 'contact-from',
                                                    'placeholder': 'Empresa'}),
             'extension': forms.NumberInput(attrs={'class': 'contact-from-extension',
-                                                   'placeholder': 'Extensión'}),
+                                                   'placeholder': 'Ext.'}),
             'descripcion': forms.TextInput(attrs={'class': 'contact-from-descripcion',
                                                    'placeholder': 'Descripción' }),
         }
