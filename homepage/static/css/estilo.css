@@ -201,8 +201,9 @@
       width: 60%;
       }
       .f{
-      margin-left:400%;
-      width: 100%;
+      margin-left:350%;
+      width: 225%;
+      margin-top:-90%;
       }
       .as{
       width: 13%;
@@ -245,14 +246,14 @@
         width: 60%;
         height: 100%;
       }
-      section img{
+      .detserimg img{
         width: 0;
         flex-grow: 1;
         object-fit: cover;
         opacity: .8;
         transition: .5s ease;
       }
-      section img:hover{
+      .detserimg img:hover{
         cursor: crosshair;
         width: 100%;
         opacity: 1;
