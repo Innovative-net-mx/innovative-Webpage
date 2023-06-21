@@ -19,6 +19,22 @@
           }
     });
 
+    window.addEventListener('scroll', function()  {
+      let elements = document.getElementsByClassName('scroll-content2');
+      let screenSize = window.innerHeight;
+      
+            for(var i = 0; i < elements.length; i++) {
+            var element = elements[i];
+    
+            if(element.getBoundingClientRect().top < screenSize) {
+              element.classList.add('visible1');
+            } else {
+              element.classList.remove('visible1');
+            }
+    
+          }
+    });
+
   </script>
 
   <div id="section1" class="img_index">
@@ -29,10 +45,13 @@
     <P> Ofrecemos soluciones de ingeniería de altos estándares tecnológicos,<br> con tiempos de entrega excepcionales, calidad y vanguardia tecnológica</P>
     <a href="{% url "contacto" %}" ><button type="button" style=" margin-left: 70%;  border-color: white; background-color: #587291; color: white; border-radius: 20px; height: 50px; width: 119px;">Contactanos</button> </a>
   </div>
+
   
 <div id="section2" class="servicios"><br>
     <h1 class="serv">SERVICIOS</h1>
-
+<section class="content2">
+    <div class="scroll-content2 fadeTop1"><img src="static/css/img/colmenaan.jpg" style=" margin-left:35%; position:absolute; margin-top:200%; width:300%;"; alt=""></div>
+</section>
     <section class="content">
   
       <div class="scroll-content fadeTop"><img class="a" style="width:150%"src="static/css/img/hexagonorMO.png" alt=""><p style="display: inline-block; font-size:80%; margin-top:100%; position:absolute; width:400%;">Lorem Ipsum is simply</p>
@@ -49,37 +68,31 @@
      
       </div>     
     </section>
-    
-  <div style="margin-left:-5%;" class="imgsdiv">
-  <img class="as" src="static/css/img/hexagonorMO.png" alt="">
-   <img class="bs" src="static/css/img/hexagonorR.png" alt="">
-  <img class="cs" src="static/css/img/hexagonorM.png" alt="">
-  <img class="ds" src="static/css/img/hexagonorrojo.png"alt="">
-  <img class="es" src="static/css/img/hexagonorN.png" alt="">
-  <img class="fs" src="static/css/img/hexagonorA.png" alt="">
-</div>
-<br><br><br>
+
 <style>
-.imgsdiv {
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: 3;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 0%;
-    width: 300%
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-    opacity:0;
-  }
-}
+  .content2 {
+    display: grid;
+    grid-template-columns: 15%;
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 1s;
+    margin: auto;
+    background-color: transparent;
+    width: 50%;
+    }      
+      .fadeTop1 {
+      opacity: 1;
+      transform: translate(0, 0vh);
+      transition: all 4s;
+      }
+      
+      .visible1 {
+      opacity: 0;
+      transform: translate(100%, 100%);
+      } 
+   
 </style>
+
 <div class="det_ser"><br><br><br>
     <center>
         <section class="detserimg">
@@ -113,7 +126,7 @@
 <div style="margin: 40px">
   <h3 style="font-size:150%;">ESPECIALIZADOS</h3>
   <img class="imgesp" src="static/css/img/especializados.jpg" alt="">
-  <P class="letters" style="width:50%; color:black; font-size:80%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P>
+  <P class="letters" style="width:50%; color:black; font-size:80%; margin-left:-0.2%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P>
 </div>
 <div  style="margin: 40px" class="impnos">
   <h3 style="font-size:150%;">TE IMPULSAMOS A CRECER</h3>
@@ -123,7 +136,7 @@
 <div style="margin: 40px">
   <h3  style="font-size:150%;">PROVEEMOS</h3>
   <img class="imgesp"src="static/css/img/provnos.jpg" alt="">
-  <P class="letters" style="width:50%;  font-size:80%; color:black;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P><br><br>
+  <P class="letters" style="width:50%;  font-size:80%; color:black; margin-left:-0.2%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P><br><br>
 </div>
 
 
