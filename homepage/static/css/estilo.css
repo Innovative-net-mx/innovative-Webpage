@@ -39,12 +39,8 @@
       margin-right: 10%;
       justify-content: right;
       margin-top: 2%;
-      
-     
     }
   }
- 
-
  
   @media(max-width: 1500px){
     .texto{
