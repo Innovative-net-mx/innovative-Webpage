@@ -7,11 +7,12 @@
 <br><br><br><br><br><br><br>
 
 <h1 style="color: white; text-align: center;"> Objetivos </h1>
+
 <div style="margin-left:30px ;">
 
 <div class="container1">
-    <div class="card">
-      <img class="imgs1" src="static/css/mision.png" alt="ajio">
+    <div class="card" id="card1">
+      <img class="imgs1" src="static/css/mision.png" alt="">
       <div class="intro">
         <h1 class="hs1">MISION</h1>
         <p class="ps">Nuestro compromiso ofrecer soluciones en proyectos
@@ -21,8 +22,9 @@
         
       </div>
     </div>
+   
     <div class="card">
-      <img class="imgs1" src="static/css/vision.png" alt="ajio">
+      <img class="imgs1" src="static/css/vision.png" alt="">
       <div class="intro">
         <h1 class="hs1">VISION</h1>
         <p class="ps">a. Maximizar la rentabilidad del valor de las acciones de la empresa, sin perder de vista la totalidad de nuestra responsabilidad que ion nuestros dientes.<br>
@@ -37,6 +39,7 @@
         
       </div>
     </div>
+ 
     <div class="card">
       <img class="imgs1" src="static/css/valores.png" alt="valores">
       <div class="intro">
@@ -58,8 +61,9 @@
 
 
 
-<h1 style="color: white; text-align: center;"> Noticias </h1>
+
 <body>
+  <h1 style="color: white; text-align: center;"> Noticias </h1>
   <div class="container">
       <div class="caja" style="--clr: #009688">
           <div class="img-box">
@@ -176,6 +180,7 @@
     }
      .container1{
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
       }
       .card{
@@ -184,8 +189,29 @@
         margin: 50px;
         box-shadow: 5px 5px 20px black;
         overflow: hidden;
-        
       }
+      @media(max-width: 1000px){
+        .card{
+          height: auto;
+          width: 388px;
+          position:relative;
+          margin: 50px;
+          margin-left:6%;
+          box-shadow: 5px 5px 20px black;
+          overflow: hidden;
+        }
+    }
+      @media(max-width: 480px){
+        .card{
+          height: auto;
+          width: 388px;
+          position:relative;
+          margin: 50px;
+          margin-left:15%;
+          box-shadow: 5px 5px 20px black;
+          overflow: hidden;
+        }
+    }
       .imgs1{
         height: 500%;
         width: 100%;
@@ -207,7 +233,7 @@
         font-size: 40px;
         }
         .ps{
-          font-size: 9px;
+          font-size: 7px;
           margin: 20px;
           visibility: hidden;
           opacity: 0;
