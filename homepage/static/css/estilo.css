@@ -131,6 +131,13 @@
       height: 700px;
       background: #fff url(img/nos.jpg) center center/cover no-repeat content-box fixed;
     }
+    @media(max-width:900px){
+      .nos{
+        width: 100%;
+        height: 700px;
+        background: #fff url(img/nos.jpg) center center/cover no-repeat content-box;
+      }
+     }
       .inf-ser{
         margin-left: 6%;
         width: 40%;
@@ -374,5 +381,3 @@
         font-size:13px;
         margin-bottom:0;
       }
-      
-     
