@@ -1,123 +1,173 @@
 {% extends "misc/base2.html" %}
- {% block body %}
+{% block body %}
 
- <div class="body">
-    <br><br><br><br><br>
-    <center>
-        <h1 class="letras">Ponte en contacto con nosotros</h1>
-        <h3 class="letras1">Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3><br><br>
-        </center>
-    <center>
-        <div class="mgform">
+<div class="body">
+
+<br><br><br><br><br>
+<center>
+    <h1 class="letras">Ponte en contacto con nosotros</h1>
+    <h3 class="letras1">Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3>
+    <br><br>
+</center>
+
+  <center>
+    <div class="mgform">
+
         <div class="formnegro">
-            <h1  class="letcontti" style="color:#F1F7ED;">Contactanos</h1><br>
-            <p class="contdire">Dirección</p>
-            <div class="divcontinf">
+
+              <h1  class="letcontti" style="color:#F1F7ED;">Contactanos</h1><br>
+              <p class="contdire">Dirección</p>
+
+         <div class="divcontinf">
+
             <img class="imgubica" src="static/css/img/ubicacion.png">
             <p class="indicasucti">Calle 33 Sur, #33 Pinos Aguero,
                 Tijuana B.C. , C.P. 22116</p>
-            </div>
+
+         </div>
+
             <p class="ptelefonocon">Telefono</p>
-            <div class="conttelefonocont">
+
+          <div class="conttelefonocont">
+
                 <img class="imgtelefonocontlo" src="static/css/img/telefonocont.png">
             <a class="numtelcont">+52 664 200 2140</a>
-        </div>
+
+          </div>
+
             <p class="pcorreoeleccont">Correo electronico</p>
-            <div class="conttelefonocont">
+
+        <div class="conttelefonocont">
+
                 <img class="imgcorreocont" src="static/css/img/correocont.png">
             <p class="pdireccioncorrecont">info@innovative-net.mx</p>
-        </div>
+
         </div>
 
-    <div class="form"><br><br>
+        </div>
+    
+    <div class="form">
+    <br><br>
         
         <form actions="" method="POST" >
+
             {% csrf_token %}
-            {{form.non_field_errors}}<br>
+            {{form.non_field_errors}}
+            <br>
         
             <div>
+
                 {{ form.nombre.errors }}
             {{form.nombre}}
             
             </div><br>
         
             <div>
+
                 {{ form.empresa.errors }}
                 {{form.empresa}}
-            </div><br>
+
+            </div>
+            <br>
         
             <div>
+
                 {{ form.email.errors }}
                 {{form.email}}
-            </div><br>
+
+            </div>
+            <br>
 
             <div class="extphon" >
+
             <div class="acomodo">
+
                 {{ form.phone.errors }}
             {{form.phone}}
+
             </div>
 
             <div>
+
                 {{ form.extension.errors }}
                 {{form.extension}}
+
             </div>
-        </div><br>
+
+        </div>
+
+        <br>
 
             <div>
+
                 {{ form.descripcion.errors }}
                 {{form.descripcion}}
-            </div><br><br>
 
-            <button class="btnenvd" type="submit">Enviar datos</button>
-    </div>
-    </div>
-    </center> <br><br><br><br><br><br>
+            </div>
+            <br><br>
 
-    <div class="contapismaps">
-    <h1 class="hdirecapiscont" >MATRIZ TIJUANA<br><p class="ph1matrizTIJ">Calle 33 Sur, #33 Pinos Aguero,<br>
-        Tijuana B.C. , C.P. 22116<br>
-        gerencia.ventas@innovative-net.mx<br>
-        info@innovative-net.mx<br>
-        <a>+52 664 200 2140</a></p></h1>
-        <h1 class="hdirecapiscont" >SUCURSAL MEXICALI<br><p class="ph1matrizTIJ">Intermedia 3798, Bugambilias,<br>
-            Mexicali B.C., C.P. 21399<br>
-            gerencia.ventas@innovative-net.mx<br>
-            <a>+52 686 842 9676</a><br></p></h1>
+        <button class="btnenvd" type="submit">Enviar datos</button>
+
     </div>
+
+    </div>
+
+  </center> 
+  <br><br><br><br><br><br>
+
+<div class="contapismaps">
+
+    <h1 class="hdirecapiscont" >MATRIZ TIJUANA<br>
+     <p class="ph1matrizTIJ">Calle 33 Sur, #33 Pinos Aguero,<br>
+     Tijuana B.C. , C.P. 22116<br>
+     gerencia.ventas@innovative-net.mx<br>
+     info@innovative-net.mx<br>
+     <a>+52 664 200 2140</a></p></h1>
+    <h1 class="hdirecapiscont" >SUCURSAL MEXICALI<br>
+     <p class="ph1matrizTIJ">Intermedia 3798, Bugambilias,<br>
+     Mexicali B.C., C.P. 21399<br>
+     gerencia.ventas@innovative-net.mx<br>
+     <a>+52 686 842 9676</a><br></p></h1>
+
+    </div>
+
     <div class="conttelefonocont">
 
         <div class="mapsapis" id="map"></div>
     
         <div class="mapsapis" id="map2"></div>
+
     </div>
+
 </div>
 
     <script>
-      var map, map2;
-      function initMap() {
+    var map, map2;
+    function initMap() {
     
-        var coord= {lat:32.4837952 ,lng: -116.9475872},
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: coord,
-          zoom: 10
-        });
-         new google.maps.Marker({
-        position: coord,
-        map: map,
-        title: "Innovative net Tijuana",
-      });
+    var coord= {lat:32.4837952 ,lng: -116.9475872},
+    map = new google.maps.Map(document.getElementById('map'), {
+    center: coord,
+    zoom: 10
+    });
+    new google.maps.Marker({
+    position: coord,
+    map: map,
+    title: "Innovative net Tijuana",
+    });
     var coorden= {lat:32.6000276, lng: -115.3721117},
     map2 = new google.maps.Map(document.getElementById('map2'), {
-      center: coorden,
-      zoom: 10
+    center: coorden,
+    zoom: 10
     });
     var marker = new google.maps.Marker({
-      position: coorden,
-      title: "Innovative net Mexicali",
+    position: coorden,
+    title: "Innovative net Mexicali",
     });
     marker.setMap(map2);
     }
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap">
-    </script><br><br>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap"> </script>
+    <br><br>
  {% endblock %}

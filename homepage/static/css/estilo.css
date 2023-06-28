@@ -1,3 +1,5 @@
+ /*home*/
+ 
  .img_index {
      height: 100vh;
      background-image: url(img/fondo_index.png);
@@ -20,6 +22,16 @@
      color: white;
      font-size: 20px;
      margin-left: 5%;
+ }
+ 
+ .btnindex {
+     margin-left: 60%;
+     border-color: white;
+     background-color: #587291;
+     color: white;
+     border-radius: 20px;
+     height: 40px;
+     width: 119px;
  }
  
  @media (max-width: 500px) {
@@ -416,6 +428,7 @@
      font-size: 13px;
      margin-bottom: 0;
  }
+ /*Fin home*/
  /*Contacto*/
  
  .extphon {
