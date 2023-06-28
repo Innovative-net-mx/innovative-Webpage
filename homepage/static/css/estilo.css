@@ -86,6 +86,7 @@
  .logo {
      width: 130px;
      height: auto;
+     margin-right:100px;
  }
  
  a {
@@ -427,6 +428,9 @@
      padding-top: 24px;
      font-size: 13px;
      margin-bottom: 0;
+ }
+ .lifotter{
+    color:white;
  }
  /*Fin home*/
  /*Contacto*/
