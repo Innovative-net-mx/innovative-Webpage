@@ -10,22 +10,22 @@
     <center>
         <div class="mgform">
         <div class="formnegro">
-            <h1 style="color:#F1F7ED;" class="letcontti">Contactanos</h1><br>
-            <p style="font-size:90%; margin-left:-20%; color:#F1F7ED;">Dirección</p>
-            <div style="display:flex; justify-content:space-around;">
-            <img src="static/css/img/ubicacion.png" style="width:8%; height:30px;">
-            <p style="font-size:80%; margin-left:-35%; width:50%; color:#F1F7ED;">Calle 33 Sur, #33 Pinos Aguero,
+            <h1  class="letcontti" style="color:#F1F7ED;">Contactanos</h1><br>
+            <p class="contdire">Dirección</p>
+            <div class="divcontinf">
+            <img class="imgubica" src="static/css/img/ubicacion.png">
+            <p class="indicasucti">Calle 33 Sur, #33 Pinos Aguero,
                 Tijuana B.C. , C.P. 22116</p>
             </div>
-            <p style="font-size:90%; margin-left:-20%; color:#F1F7ED;">Telefono</p>
-            <div style="display:flex; justify-content:space-around;">
-                <img src="static/css/img/telefonocont.png" style="width:8%; height:30px; margin-left:-22%;">
-            <a style="font-size:70%; color:#F1F7ED; margin-left:-80%; text-decoration:none">+52 664 200 2140</a>
+            <p class="ptelefonocon">Telefono</p>
+            <div class="conttelefonocont">
+                <img class="imgtelefonocontlo" src="static/css/img/telefonocont.png">
+            <a class="numtelcont">+52 664 200 2140</a>
         </div>
-            <p style="font-size:90%; margin-left:-5%; color:#F1F7ED;">Correo electronico</p>
-            <div style="display:flex; justify-content:space-around;">
-                <img src="static/css/img/correocont.png" style="width:8%; height:30px; margin-left:-8%;">
-            <p style="font-size:80%; color:#F1F7ED; margin-left:-50%;">info@innovative-net.mx</p>
+            <p class="pcorreoeleccont">Correo electronico</p>
+            <div class="conttelefonocont">
+                <img class="imgcorreocont" src="static/css/img/correocont.png">
+            <p class="pdireccioncorrecont">info@innovative-net.mx</p>
         </div>
         </div>
 
@@ -72,22 +72,23 @@
     </div>
     </div>
     </center> <br><br><br><br><br><br>
-    <div style="display:flex; justify-content:space-around; text-align:center;">
-    <h1 style="color:#E4971F;font-size:200%;">MATRIZ TIJUANA<br><p style="color:black; font-size:40%;">Calle 33 Sur, #33 Pinos Aguero,<br>
+
+    <div class="contapismaps">
+    <h1 class="hdirecapiscont" >MATRIZ TIJUANA<br><p class="ph1matrizTIJ">Calle 33 Sur, #33 Pinos Aguero,<br>
         Tijuana B.C. , C.P. 22116<br>
         gerencia.ventas@innovative-net.mx<br>
         info@innovative-net.mx<br>
         <a>+52 664 200 2140</a></p></h1>
-        <h1 style="color:#E4971F; font-size:200%;">SUCURSAL MEXICALI<br><p style="color:black; font-size:40%;">Intermedia 3798, Bugambilias,<br>
+        <h1 class="hdirecapiscont" >SUCURSAL MEXICALI<br><p class="ph1matrizTIJ">Intermedia 3798, Bugambilias,<br>
             Mexicali B.C., C.P. 21399<br>
             gerencia.ventas@innovative-net.mx<br>
             <a>+52 686 842 9676</a><br></p></h1>
     </div>
-    <div style="display:flex; justify-content:space-around;">
+    <div class="conttelefonocont">
 
-        <div id="map" style="width:48%; height:450px;"></div>
+        <div class="mapsapis" id="map"></div>
     
-        <div id="map2" style="width:48%; height:450px;"></div>
+        <div class="mapsapis" id="map2"></div>
     </div>
 </div>
 
@@ -116,164 +117,7 @@
     });
     marker.setMap(map2);
     }
-    
-    
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap">
     </script><br><br>
-
-
-
-<style>
-    .extphon{
-        display:flex; 
-        justify-content:space-around;
-        
-    }
-    .contact-from-descripcion{
-    border-color:black;
-    border-radius:8px;
-    background:transparent;
-    width:70%;
-    height:130px;
-    }
-    .contact-from-extension{
-    border-color:black;
-    border-radius:8px;
-    width:35%;
-    margin-left:25%;
-    background:transparent;
-    }
-    .contact-from-phone{
-    border-color:black;
-    border-radius:8px;
-    width:120%;
-    margin-left:20%;
-    background:transparent;
-    }
-    @media(max-width: 500px){
-        .contact-from-phone{
-            width:100%;
-            margin-left:26%
-
-        }
-    }
-    @media(min-width: 500px){
-        .contact-from-phone{
-            margin-left:20%;
-                width:120%;
-        }
-    }
-    @media(min-width: 700px){
-        .contact-from-phone{
-            margin-left:24%;
-                width:120%;
-        }
-    }
-    @media(min-width: 900px) and (max-width: 2398px){
-        .contact-from-phone{
-            margin-left:20%;
-                width:120%;
-        }
-    }
-    .contact-from::-webkit-input-placeholder { color:#F1F7ED; }
-    .contact-from-descripcion::-webkit-input-placeholder { color:#F1F7ED; }
-    .contact-from-extension::-webkit-input-placeholder { color:#F1F7ED; }
-    .contact-from-phone::-webkit-input-placeholder { color:#F1F7ED; }
-
-    .contact-from{
-    width:75%;
-    border-color:black;
-    border-radius:8px;
-    background:transparent;
-}
-    .mgform{
-        display:flex;  
-    }
-    .formnegro{
-    width:360px; 
-    height:370px; 
-    background:#051923;
-    border-radius:15px;
-    margin-left:19%;
-    z-index:100;
-    margin-top:5%;
-    position:absolute;
-    }
-    .letras{
-        font-size:150%;
-    }
-    .letras1{
-        font-size:100%;
-    }
-    .body{
-        width: 100%;
-        height: 100%;
-        background:#F1F7ED;
-        background-image: url("static/css/img/fondocont.svg");
-        background-repeat:no-repeat;
-        background-size:cover;
-        background-position:center;
-
-    }
-.form{
-    border-radius: 33px;
-    background:#628395;
-    width:450px;
-    height:550px;
-    border: 1px;
-    margin-left:40%;
-    }
-    @media(max-width: 500px){
-        .form{
-            width:350px;
-          margin-left:9%;
-        }
-    }
-.btnenvd{
-    background:#C16200;
-    width:34%;
-    color:#F1F7ED;
-    border-radius:20px;
-}
-@media(max-width: 500px){
-    .btnenvd{
-        width:40%
-    }
-}
-
-@media(max-width:1395px){
-    .formnegro{
-       width:30%;
-       margin-left:14%;
-       height:350px;
-       font-size:70%; 
-    }
-}
-@media(min-width: 900px){
-    .formnegro{
-        width: 20%;
-        margin-left:21%;
-       height:350px;
-       font-size:70%; 
-    }
-}
-@media(max-width:1395px){
-    .letcontti{
-       font-size:190%; 
-    }
-}
-@media(min-width: 900px){
-    .letcontti{
-       font-size:300%; 
-    }
-}
-@media(max-width: 600px){
-    .formnegro{
-       width:47%; 
-       visibility:hidden;
-       margin-left:-4%;
-    }
-}
-</style>
  {% endblock %}

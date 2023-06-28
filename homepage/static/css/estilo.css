@@ -416,3 +416,271 @@
      font-size: 13px;
      margin-bottom: 0;
  }
+ /*Contacto*/
+ 
+ .extphon {
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .contact-from-descripcion {
+     border-color: black;
+     border-radius: 8px;
+     background: transparent;
+     width: 70%;
+     height: 130px;
+ }
+ 
+ .contact-from-extension {
+     border-color: black;
+     border-radius: 8px;
+     width: 35%;
+     margin-left: 25%;
+     background: transparent;
+ }
+ 
+ .contact-from-phone {
+     border-color: black;
+     border-radius: 8px;
+     width: 120%;
+     margin-left: 20%;
+     background: transparent;
+ }
+ 
+ @media(max-width: 500px) {
+     .contact-from-phone {
+         width: 100%;
+         margin-left: 26%
+     }
+ }
+ 
+ @media(min-width: 500px) {
+     .contact-from-phone {
+         margin-left: 20%;
+         width: 120%;
+     }
+ }
+ 
+ @media(min-width: 700px) {
+     .contact-from-phone {
+         margin-left: 24%;
+         width: 120%;
+     }
+ }
+ 
+ @media(min-width: 900px) and (max-width: 2398px) {
+     .contact-from-phone {
+         margin-left: 20%;
+         width: 120%;
+     }
+ }
+ 
+ .contact-from::-webkit-input-placeholder {
+     color: #F1F7ED;
+ }
+ 
+ .contact-from-descripcion::-webkit-input-placeholder {
+     color: #F1F7ED;
+ }
+ 
+ .contact-from-extension::-webkit-input-placeholder {
+     color: #F1F7ED;
+ }
+ 
+ .contact-from-phone::-webkit-input-placeholder {
+     color: #F1F7ED;
+ }
+ 
+ .contact-from {
+     width: 75%;
+     border-color: black;
+     border-radius: 8px;
+     background: transparent;
+ }
+ 
+ .mgform {
+     display: flex;
+ }
+ 
+ .formnegro {
+     width: 360px;
+     height: 370px;
+     background: #051923;
+     border-radius: 15px;
+     margin-left: 19%;
+     z-index: 100;
+     margin-top: 5%;
+     position: absolute;
+ }
+ 
+ .letras {
+     font-size: 150%;
+ }
+ 
+ .letras1 {
+     font-size: 100%;
+ }
+ 
+ .body {
+     width: 100%;
+     height: 100%;
+     background: #F1F7ED;
+     background-image: url("img/fondocont.svg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+ }
+ 
+ .form {
+     border-radius: 33px;
+     background: #628395;
+     width: 450px;
+     height: 550px;
+     border: 1px;
+     margin-left: 40%;
+ }
+ 
+ @media(max-width: 500px) {
+     .form {
+         width: 350px;
+         margin-left: 9%;
+     }
+ }
+ 
+ .btnenvd {
+     background: #C16200;
+     width: 34%;
+     color: #F1F7ED;
+     border-radius: 20px;
+ }
+ 
+ @media(max-width: 500px) {
+     .btnenvd {
+         width: 40%
+     }
+ }
+ 
+ @media(max-width:1395px) {
+     .formnegro {
+         width: 30%;
+         margin-left: 14%;
+         height: 350px;
+         font-size: 70%;
+     }
+ }
+ 
+ @media(min-width: 900px) {
+     .formnegro {
+         width: 20%;
+         margin-left: 21%;
+         height: 350px;
+         font-size: 70%;
+     }
+ }
+ 
+ @media(max-width:1395px) {
+     .letcontti {
+         font-size: 190%;
+     }
+ }
+ 
+ @media(min-width: 900px) {
+     .letcontti {
+         font-size: 300%;
+     }
+ }
+ 
+ @media(max-width: 600px) {
+     .formnegro {
+         width: 47%;
+         visibility: hidden;
+         margin-left: -4%;
+     }
+ }
+ 
+ .contdire {
+     font-size: 90%;
+     margin-left: -20%;
+     color: #F1F7ED;
+ }
+ 
+ .divcontinf {
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .imgubica {
+     width: 8%;
+     height: 30px;
+ }
+ 
+ .indicasucti {
+     font-size: 80%;
+     margin-left: -35%;
+     width: 50%;
+     color: #F1F7ED;
+ }
+ 
+ .ptelefonocon {
+     font-size: 90%;
+     margin-left: -20%;
+     color: #F1F7ED;
+ }
+ 
+ .conttelefonocont {
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .imgtelefonocontlo {
+     width: 8%;
+     height: 30px;
+     margin-left: -22%;
+ }
+ 
+ .numtelcont {
+     font-size: 70%;
+     color: #F1F7ED;
+     margin-left: -80%;
+     text-decoration: none
+ }
+ 
+ .pcorreoeleccont {
+     font-size: 90%;
+     margin-left: -5%;
+     color: #F1F7ED;
+ }
+ 
+ .imgcorreocont {
+     width: 8%;
+     height: 30px;
+     margin-left: -8%;
+ }
+ 
+ .pdireccioncorrecont {
+     font-size: 80%;
+     color: #F1F7ED;
+     margin-left: -50%;
+ }
+ 
+ .contapismaps {
+     display: flex;
+     justify-content: space-around;
+     text-align: center;
+ }
+ 
+ .hdirecapiscont {
+     color: #E4971F;
+     font-size: 200%;
+ }
+ 
+ .ph1matrizTIJ {
+     color: black;
+     font-size: 40%;
+ }
+ 
+ .mapsapis {
+     width: 48%;
+     height: 450px;
+ }
+ /*Fin contacto*/
