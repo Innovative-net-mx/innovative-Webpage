@@ -92,6 +92,59 @@
      font-size: 15px;
  }
  
+ .phex-a {
+     display: inline-block;
+     font-size: 80%;
+     margin-top: 100%;
+     position: absolute;
+     width: 400%;
+ }
+ 
+ .phex-b {
+     display: inline-block;
+     font-size: 80%;
+     margin-left: 9%;
+     margin-top: 78%;
+     position: absolute;
+     width: 400%;
+ }
+ 
+ .phex-c {
+     display: inline-block;
+     font-size: 80%;
+     margin-left: 220%;
+     margin-top: -110%;
+     position: absolute;
+     width: 400%;
+ }
+ 
+ .phex-d {
+     display: inline-block;
+     font-size: 80%;
+     margin-left: 295%;
+     margin-top: -130%;
+     position: absolute;
+     width: 400%;
+ }
+ 
+ .phex-e {
+     display: inline-block;
+     font-size: 80%;
+     margin-left: 468%;
+     margin-top: -110%;
+     position: absolute;
+     width: 400%;
+ }
+ 
+ .phex-f {
+     display: inline-block;
+     font-size: 80%;
+     margin-left: 540%;
+     margin-top: -115%;
+     position: absolute;
+     width: 400%;
+ }
+ 
  .btn btn-dark {
      margin-left: -80%;
      position: absolute;
@@ -99,6 +152,7 @@
  
  .impnos {
      text-align: right;
+     margin: 40px;
  }
  
  .detnoso {
@@ -208,6 +262,29 @@
      height: 100vh;
  }
  
+ .contdetnos {
+     margin: 40px
+ }
+ 
+ .letters {
+     width: 50%;
+     color: black;
+     font-size: 80%;
+     margin-left: -0.2%;
+ }
+ 
+ .letters2 {
+     width: 40%;
+     font-size: 80%;
+     text-align: right;
+     color: black;
+     margin-left: 60%;
+ }
+ 
+ .titapsobnons {
+     font-size: 150%;
+ }
+ 
  .content {
      display: grid;
      grid-template-columns: 15%;
@@ -231,28 +308,28 @@
  }
  
  .a {
-     width: 70%;
+     width: 150%;
      margin-left: -150%;
  }
  
  .b {
+     width: 130%;
      margin-left: -80%;
-     width: 70%;
  }
  
  .c {
+     width: 160%;
      margin-left: 95%;
-     width: 70%;
  }
  
  .d {
+     width: 150%;
      margin-left: 165%;
-     width: 70%;
  }
  
  .e {
+     width: 120%;
      margin-left: 336%;
-     width: 60%;
  }
  
  .f {
@@ -261,46 +338,33 @@
      margin-top: -90%;
  }
  
- .as {
-     width: 13%;
+ .imgcolmenaanserv {
+     margin-left: 35%;
      position: absolute;
-     margin-top: -95.7%;
-     margin-left: 41%;
+     margin-top: 200%;
+     width: 400%;
  }
  
- .bs {
-     width: 11%;
-     position: absolute;
-     margin-top: -94.3%;
-     margin-left: 50%;
+ .content2 {
+     display: grid;
+     grid-template-columns: 15%;
+     opacity: 1;
+     transform: translate(0, 0);
+     transition: all 1s;
+     margin: auto;
+     background-color: transparent;
+     width: 50%;
  }
  
- .cs {
-     width: 13%;
-     position: absolute;
-     margin-top: -91%;
-     margin-left: 46.4%;
+ .fadeTop1 {
+     opacity: 1;
+     transform: translate(0, 0vh);
+     transition: all 4s;
  }
  
- .ds {
-     width: 12.2%;
-     position: absolute;
-     margin-top: -103%;
-     margin-left: 45.8%;
- }
- 
- .es {
-     width: 9.3%;
-     position: absolute;
-     margin-top: -100.7%;
-     margin-left: 55.68%;
- }
- 
- .fs {
-     width: 18%;
-     position: absolute;
-     margin-top: -105%;
-     margin-left: 54.66%;
+ .visible1 {
+     opacity: 0;
+     transform: translate(100%, 100%);
  }
  
  section {

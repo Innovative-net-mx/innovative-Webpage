@@ -1,146 +1,126 @@
 {% extends "misc/base.html" %}
-
 {% block body %}
-<script>
 
-    window.addEventListener('scroll', function()  {
-      let elements = document.getElementsByClassName('scroll-content');
-      let screenSize = window.innerHeight;
-      
-            for(var i = 0; i < elements.length; i++) {
-            var element = elements[i];
-    
-            if(element.getBoundingClientRect().top < screenSize) {
-              element.classList.add('visible');
-            } else {
-              element.classList.remove('visible');
-            }
-    
-          }
-    });
+<div id="section1" class="img_index">
+<br><br><br>
 
-    window.addEventListener('scroll', function()  {
-      let elements = document.getElementsByClassName('scroll-content2');
-      let screenSize = window.innerHeight;
-      
-            for(var i = 0; i < elements.length; i++) {
-            var element = elements[i];
-    
-            if(element.getBoundingClientRect().top < screenSize) {
-              element.classList.add('visible1');
-            } else {
-              element.classList.remove('visible1');
-            }
-    
-          }
-    });
-
-  </script>
-
-  <div id="section1" class="img_index">
-    <br>
-    <br>
-    <br>
     <div class="texto">INNOVATIVE- <br>NET</div>
+
     <P> Ofrecemos soluciones de ingeniería de altos estándares tecnológicos,<br> con tiempos de entrega excepcionales, calidad y vanguardia tecnológica</P>
-    <a href="{% url "contacto" %}" ><button type="button" class="btnindex">Contactanos</button> </a>
+
+    <a href="{% url "contacto" %}" ><button type="button" class="btnindex">Contactanos</button></a>
+
   </div>
-
   
-<div id="section2" class="servicios"><br>
+<div id="section2" class="servicios">
+<br>
+
     <h1 class="serv">SERVICIOS</h1>
-<section class="content2">
-    <div class="scroll-content2 fadeTop1"><img src="static/css/img/colmenaan.jpg" style=" margin-left:35%; position:absolute; margin-top:200%; width:400%;"; alt=""></div>
-</section>
-    <section class="content">
-  
-      <div class="scroll-content fadeTop"><img class="a" style="width:150%"src="static/css/img/hexagonorMO.png" alt=""><p style="display: inline-block; font-size:80%; margin-top:100%; position:absolute; width:400%;">Lorem Ipsum is simply</p>
-      
-      <div class="scroll-content fadeTop"><img class="b" style="width:130%" src="static/css/img/hexagonorR.png" alt=""><p style="display: inline-block; font-size:80%; margin-left:9%; margin-top:78%; position:absolute; width:400%;">Lorem Ipsum is simply</p>
-  
-      <div class="scroll-content fadeTop"><img class="c" style="width:160%" src="static/css/img/hexagonorM.png" alt=""><p style="display: inline-block; font-size:80%; margin-left:220%;  margin-top:-110%; position:absolute; width:400%;">Lorem Ipsum is simply</p>
-  
-      <div class="scroll-content fadeTop"><img class="d" style="width:150%" src="static/css/img/hexagonorrojo.png" alt=""><p style="display: inline-block; font-size:80%; margin-left:295%; margin-top:-130%; position:absolute; width:400%;">Lorem Ipsum is simply</p>
-  
-      <div class="scroll-content fadeTop"><img class="e" style="width:120%;" src="static/css/img/hexagonorN.png" alt=""><p style="display: inline-block; font-size:80%; margin-left:468%; margin-top:-110%; position:absolute; width:400%;">Lorem Ipsum is simply</p>
 
-      <div class="scroll-content fadeTop"><img class="f" src="static/css/img/hexagonorA.png" alt=""><p style="display: inline-block; font-size:80%;margin-left:540%; margin-top:-115%; position:absolute; width:400%;">Lorem Ipsum is simply</p>
+  <section class="content2">
+
+      <div class="scroll-content2 fadeTop1"><img class="imgcolmenaanserv" src="static/css/img/colmenaan.jpg" alt=""></div>
+
+  </section>
+
+  <section class="content">
+  
+      <div class="scroll-content fadeTop"><img class="a" src="static/css/img/hexagonorMO.png" alt=""><p class="phex-a">Lorem Ipsum is simply</p>
+      
+      <div class="scroll-content fadeTop"><img class="b" src="static/css/img/hexagonorR.png" alt=""><p  class="phex-b">Lorem Ipsum is simply</p>
+  
+      <div class="scroll-content fadeTop"><img class="c" src="static/css/img/hexagonorM.png" alt=""><p class="phex-c">Lorem Ipsum is simply</p>
+  
+      <div class="scroll-content fadeTop"><img class="d" src="static/css/img/hexagonorrojo.png" alt=""><p class="phex-d">Lorem Ipsum is simply</p>
+  
+      <div class="scroll-content fadeTop"><img class="e" src="static/css/img/hexagonorN.png" alt=""><p  class="phex-e">Lorem Ipsum is simply</p>
+
+      <div class="scroll-content fadeTop"><img class="f" src="static/css/img/hexagonorA.png" alt=""><p class="phex-f">Lorem Ipsum is simply</p>
      
-      </div>     
-    </section>
+  </section>
 
-<style>
-  .content2 {
-    display: grid;
-    grid-template-columns: 15%;
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: all 1s;
-    margin: auto;
-    background-color: transparent;
-    width: 50%;
-    }      
-      .fadeTop1 {
-      opacity: 1;
-      transform: translate(0, 0vh);
-      transition: all 4s;
-      }
-      
-      .visible1 {
-      opacity: 0;
-      transform: translate(100%, 100%);
-      } 
-   
-</style>
 
-<div class="det_ser"><br><br><br>
-    <center>
-        <section class="detserimg">
-            <img src="static/css/img/Telecomunicaciones.png" alt="">
-            <img src="static/css/img/Seguridad.jpg" alt="">
-            <img src="static/css/img/audy.jpg" alt="">
-        </section>
-    </center> <br><br><br>
-    <div class="inf-ser">
+
+<div class="det_ser">
+
+<br><br><br>
+  <center>
+  <section class="detserimg">
+
+  <img src="static/css/img/Telecomunicaciones.png" alt="">
+  <img src="static/css/img/Seguridad.jpg" alt="">
+  <img src="static/css/img/audy.jpg" alt="">
+
+  </section>
+  </center> 
+<br><br><br>
+
+  <div class="inf-ser">
+
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
         when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
         It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
         It was popularised in the 1960s with the release of Letraset sheets containing </p>
-      <a href="{% url "contacto" %}"><button class="btn-sol">Solicitar cotización</button></a><br><br>
-    </div>
+
+      <a href="{% url "contacto" %}"><button class="btn-sol">Solicitar cotización</button></a>
+<br><br>
+
+  </div>
+
 </div>
 
 <div id="section3" class="detnoso">
+
 <div class="nos">
-  <h1 class="hnos">NOSOTROS</h1><br><br><br>
+
+  <h1 class="hnos">NOSOTROS</h1>
+<br><br><br>
+
   <p class="pnos">Las tecnologías que utilizamos respaldan nuestro trabajo y 
     aseguran un excelente servicio</p>
-    <center><br><br><br>
-    <a href="{% url "objetivos" %}"><button class="butnos">OBJETIVOS</button></a>
+  <center>
+<br><br><br>
+
+<a href="{% url "objetivos" %}"><button class="butnos">OBJETIVOS</button></a>
+
   </center>
-</div><br><br><br>
+</div>
+<br><br><br>
+  
+<div class="contdetnos">
 
+  <h3 class="titapsobnons">ESPECIALIZADOS</h3>
 
-    
-<div style="margin: 40px">
-  <h3 style="font-size:150%;">ESPECIALIZADOS</h3>
   <img class="imgesp" src="static/css/img/especializados.jpg" alt="">
-  <P class="letters" style="width:50%; color:black; font-size:80%; margin-left:-0.2%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P>
+
+  <P class="letters">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P>
+
 </div>
-<div  style="margin: 40px" class="impnos">
-  <h3 style="font-size:150%;">TE IMPULSAMOS A CRECER</h3>
+
+<div class="impnos">
+
+  <h3 class="titapsobnons">TE IMPULSAMOS A CRECER</h3>
+
   <img class="imgesp" src="static/css/img/impulnos.jpg" alt="">
-  <P class="letters"  style="width:40%; font-size:80%; text-align:right; color:black; margin-left:60%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P>
+
+  <P class="letters2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P>
+
 </div>
-<div style="margin: 40px">
-  <h3  style="font-size:150%;">PROVEEMOS</h3>
+
+<div class="contdetnos">
+
+  <h3  class="titapsobnons">PROVEEMOS</h3>
+
   <img class="imgesp"src="static/css/img/provnos.jpg" alt="">
-  <P class="letters" style="width:50%;  font-size:80%; color:black; margin-left:-0.2%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P><br><br>
+
+  <P class="letters">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </P>
+  <br><br>
+
 </div>
 
 
-<iframe width="100%" height="760px" src="https://www.youtube.com/embed/L6ti9P1SMVw"" title="YouTube video player"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="760px" src="https://www.youtube.com/embed/L6ti9P1SMVw" title="YouTube video player"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 {% endblock %}

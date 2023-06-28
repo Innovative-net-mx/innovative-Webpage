@@ -2,12 +2,15 @@
 {% block body %}
 
 <div class="body">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap"> </script>
 
 <br><br><br><br><br>
 <center>
+
     <h1 class="letras">Ponte en contacto con nosotros</h1>
     <h3 class="letras1">Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3>
     <br><br>
+    
 </center>
 
   <center>
@@ -140,34 +143,6 @@
     </div>
 
 </div>
+<br><br>
 
-    <script>
-    var map, map2;
-    function initMap() {
-    
-    var coord= {lat:32.4837952 ,lng: -116.9475872},
-    map = new google.maps.Map(document.getElementById('map'), {
-    center: coord,
-    zoom: 10
-    });
-    new google.maps.Marker({
-    position: coord,
-    map: map,
-    title: "Innovative net Tijuana",
-    });
-    var coorden= {lat:32.6000276, lng: -115.3721117},
-    map2 = new google.maps.Map(document.getElementById('map2'), {
-    center: coorden,
-    zoom: 10
-    });
-    var marker = new google.maps.Marker({
-    position: coorden,
-    title: "Innovative net Mexicali",
-    });
-    marker.setMap(map2);
-    }
-    </script>
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap"> </script>
-    <br><br>
  {% endblock %}
