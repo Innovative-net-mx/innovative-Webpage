@@ -145,28 +145,31 @@
  
  .phex-d {
      font-size: 80%;
-     margin-left: 940%;
+     margin-left: 910%;
      margin-top: -368%;
      position: absolute;
      width: 200%;
+     text-align: right;
  }
  
  .phex-e {
      display: inline-block;
      font-size: 80%;
-     margin-left: 1000%;
+     margin-left: 980%;
      margin-top: -140%;
      position: absolute;
      width: 200%;
+     text-align: right;
  }
  
  .phex-f {
      display: inline-block;
      font-size: 80%;
-     margin-left: 930%;
+     margin-left: 920%;
      margin-top: -115%;
      position: absolute;
      width: 200%;
+     text-align: right;
  }
  
  @media(max-width: 670px) {
@@ -180,7 +183,7 @@
  @media(max-width: 670px) {
      .phex-e {
          width: 320%;
-         margin-left: 890%;
+         margin-left: 860%;
          font-size: 60%;
          margin-top: -220%;
      }
