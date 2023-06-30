@@ -98,7 +98,7 @@
      font-size: 80%;
      margin-top: 100%;
      position: absolute;
-     width: 400%;
+     width: 200%;
  }
  
  .phex-b {
@@ -107,43 +107,100 @@
      margin-left: 9%;
      margin-top: 78%;
      position: absolute;
-     width: 400%;
+     width: 200%;
  }
  
  .phex-c {
      display: inline-block;
      font-size: 80%;
      margin-left: 220%;
-     margin-top: -110%;
+     margin-top: 87%;
      position: absolute;
-     width: 400%;
+     width: 200%;
+ }
+ 
+ @media(max-width: 670px) {
+     .phex-a {
+         width: 340%;
+         font-size: 60%;
+         margin-top: 60%;
+     }
+ }
+ 
+ @media(max-width: 670px) {
+     .phex-b {
+         width: 340%;
+         font-size: 60%;
+         margin-top: -1%;
+     }
+ }
+ 
+ @media(max-width: 670px) {
+     .phex-c {
+         width: 340%;
+         font-size: 60%;
+         margin-top: 50%;
+     }
  }
  
  .phex-d {
-     display: inline-block;
      font-size: 80%;
-     margin-left: 295%;
-     margin-top: -130%;
+     margin-left: 940%;
+     margin-top: -368%;
      position: absolute;
-     width: 400%;
+     width: 200%;
  }
  
  .phex-e {
      display: inline-block;
      font-size: 80%;
-     margin-left: 468%;
-     margin-top: -110%;
+     margin-left: 1000%;
+     margin-top: -140%;
      position: absolute;
-     width: 400%;
+     width: 200%;
  }
  
  .phex-f {
      display: inline-block;
      font-size: 80%;
-     margin-left: 540%;
+     margin-left: 930%;
      margin-top: -115%;
      position: absolute;
-     width: 400%;
+     width: 200%;
+ }
+ 
+ @media(max-width: 670px) {
+     .phex-f {
+         width: 320%;
+         margin-left: 825%;
+         margin-top: -225%;
+     }
+ }
+ 
+ @media(max-width: 670px) {
+     .phex-e {
+         width: 320%;
+         margin-left: 890%;
+         font-size: 60%;
+         margin-top: -220%;
+     }
+ }
+ 
+ @media(max-width: 670px) {
+     .phex-d {
+         width: 320%;
+         margin-left: 800%;
+         font-size: 60%;
+         margin-top: -447%;
+     }
+ }
+ 
+ @media(max-width: 670px) {
+     .phex-f {
+         width: 320%;
+         margin-left: 800%;
+         font-size: 60%;
+     }
  }
  
  .btn btn-dark {
@@ -327,18 +384,23 @@
  
  .d {
      width: 150%;
-     margin-left: 165%;
+     position: relative;
+     margin-left: 1100%;
+     margin-top: -680%;
  }
  
  .e {
      width: 120%;
-     margin-left: 336%;
+     position: absolute;
+     margin-top: -220%;
+     margin-left: 1170%;
  }
  
  .f {
-     margin-left: 350%;
+     margin-left: 1050%;
      width: 225%;
-     margin-top: -90%;
+     position: relative;
+     margin-top: -160%;
  }
  
  .imgcolmenaanserv {
@@ -368,6 +430,28 @@
  .visible1 {
      opacity: 0;
      transform: translate(100%, 100%);
+ }
+ 
+ .content3 {
+     display: grid;
+     grid-template-columns: 15%;
+     opacity: 1;
+     transform: translate(0, 0);
+     transition: all 1s;
+     margin: auto;
+     background-color: transparent;
+     width: 50%;
+ }
+ 
+ .fadeTop3 {
+     opacity: 0;
+     transform: translate(-600%, 0vh);
+     transition: all 1s;
+ }
+ 
+ .visible3 {
+     opacity: 1;
+     transform: translate(0, 0);
  }
  
  section {

@@ -25,114 +25,19 @@
 
   <section class="content">
   
-      <div class="scroll-content fadeTop"><img class="a" src="static/css/img/hexagonorMO.png" alt=""><p class="phex-a">Lorem Ipsum is simply</p>
+      <div class="scroll-content fadeTop"><img class="a" src="static/css/img/hexagonorMO.png" alt=""><p class="phex-a">Accesos controlados inteligentes.</p>
       
-      <div class="scroll-content fadeTop"><img class="b" src="static/css/img/hexagonorR.png" alt=""><p  class="phex-b">Lorem Ipsum is simply</p>
+      <div class="scroll-content fadeTop"><img class="b" src="static/css/img/hexagonorR.png" alt=""><p  class="phex-b">Redes de datos inalambricas wifi, Punto a punto y punto multipunto.</p>
   
-      <div class="scroll-content fadeTop"><img class="c" src="static/css/img/hexagonorM.png" alt=""><p class="phex-c">Lorem Ipsum is simply</p>
+      <div class="scroll-content fadeTop"><img class="c" src="static/css/img/hexagonorM.png" alt=""><p class="phex-c">Alarmas de deteccion de fuego y agentes limpios.</p>
   
-      <div class="scroll-content3 fadeTop3"><img class="d" src="static/css/img/hexagonorrojo.png" alt=""><p class="phex-d">Lorem Ipsum is simply</p>
+      <div class="scroll-content3 fadeTop3"><img class="d" src="static/css/img/hexagonorrojo.png" alt=""><p class="phex-d">Infraestructura de Red de Datos.</p></div>
   
-      <div class="scroll-content3 fadeTop"><img class="e" src="static/css/img/hexagonorN.png" alt=""><p  class="phex-e">Lorem Ipsum is simply</p>
+      <div class="scroll-content3 fadeTop3"><img class="e" src="static/css/img/hexagonorN.png" alt=""><p  class="phex-e">Video Vigilancia CCTV, analiticos e inteligencia artificial.</p></div>
 
-      <div class="scroll-content3 fadeTop"><img class="f" src="static/css/img/hexagonorA.png" alt=""><p class="phex-f">Lorem Ipsum is simply</p>
+      <div class="scroll-content3 fadeTop3"><img class="f" src="static/css/img/hexagonorA.png" alt=""><p class="phex-f">Telefonia , Comunicaciones de Voz IP, sistemas de Audio y video.</p></div>
      
   </section>
-
-<style>
-  .content3 {
-    display: grid;
-    grid-template-columns: 15%;
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: all 1s;
-    margin: auto;
-    background-color: transparent;
-    width: 50%;
-}
-
-.fadeTop3 {
-    opacity: 0;
-    transform: translate(-600%, 0vh);
-    transition: all 1s;
-}
-
-.visible3 {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-  .d {
-    width: 150%;
-    position:relative;
-    margin-left: 1100%;
-    margin-top:-650%;
-}
-
-.e {
-    width: 120%;
-    position:absolute;
-    margin-top:-220%;
-    margin-left: 1170%;
-}
-
-.f {
-    margin-left: 1050%;
-    width: 225%;
-    position:relative;
-    margin-top:-150%;
-}
-  .phex-d {
-    font-size: 80%;
-    margin-left: 800%;
-    margin-top: -380%;
-    position: absolute;
-    width: 400%;
-    color:red;
-}
-
-.phex-e {
-    display: inline-block;
-    font-size: 80%;
-    margin-left: 870%;
-    margin-top: -370%;
-    position: absolute;
-    width: 400%;
-}
-
-.phex-f {
-    display: inline-block;
-    font-size: 80%;
-    margin-left: -50%;
-    margin-top: -115%;
-    position: absolute;
-    width: 400%;
-}
-</style>
-
-<script>
-
-  window.addEventListener('scroll', function() {
-    let elements = document.getElementsByClassName('scroll-content3');
-    let screenSize = window.innerHeight;
-
-    for (var i = 0; i < elements.length; i++) {
-        var element = elements[i];
-
-        if (element.getBoundingClientRect().top < screenSize) {
-
-            element.classList.add('visible3');
-
-        } else {
-
-            element.classList.remove('visible3');
-
-        }
-
-    }
-
-});
-
-</script>
 
 <div class="det_ser">
 
@@ -215,5 +120,29 @@
 
 <iframe width="100%" height="760px" src="https://www.youtube.com/embed/L6ti9P1SMVw" title="YouTube video player"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<script>
+
+  window.addEventListener('scroll', function() {
+    let elements = document.getElementsByClassName('scroll-content3');
+    let screenSize = window.innerHeight;
+
+    for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+
+        if (element.getBoundingClientRect().top < screenSize) {
+
+            element.classList.add('visible3');
+
+        } else {
+
+            element.classList.remove('visible3');
+
+        }
+
+    }
+
+});
+
+</script>
 
 {% endblock %}
