@@ -41,7 +41,6 @@ window.addEventListener('scroll', function() {
     }
 
 });
-
 /*FIN animacion servicio SCROLL*/
 
 /*Apis mapas*/
