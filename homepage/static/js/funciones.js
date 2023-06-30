@@ -70,3 +70,4 @@ function initMap() {
     marker.setMap(map2);
 }
 /*Fin Apis mapas*/
+
