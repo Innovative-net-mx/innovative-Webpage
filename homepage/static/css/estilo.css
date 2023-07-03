@@ -25,81 +25,76 @@
      margin-left: 5%;
  }
  
-
-
-/*btn idea*/
-.btnini {
-    position: relative;
-    margin: auto;
-    padding: 12px 18px;
-    transition: all 0.2s ease;
-    border: none;
-    background: none;
-    margin-left: 60%;
-   }
-   
-   .btnini:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 50px;
-    background: #f1f7ed;
-    width: 45px;
-    height: 45px;
-    transition: all 0.3s ease;
-   }
-   
-   .btnini span {
-    position: relative;
-    font-family: "Ubuntu", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: #c16200;
-   }
-   
-   .btnini svg {
-    position: relative;
-    top: 0;
-    margin-left: 10px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: #c16200;
-    stroke-width: 2;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-   }
-   
-   .btnini:hover:before {
-    width: 100%;
-    background: #f1f7ed;
-   }
-   
-   .btnini:hover svg {
-    transform: translateX(0);
-   }
-   
-   .btnini:active {
-    transform: scale(0.95);
-   }
-
-/*fin btn idea*/
-
-
-
- @media(max-width: 500px){
-    .img_index{
-        height: 500px;  
-    }
+ .btnini {
+     position: relative;
+     margin: auto;
+     padding: 12px 18px;
+     transition: all 0.2s ease;
+     border: none;
+     background: none;
+     margin-left: 60%;
  }
- @media(max-width: 900px){
-    .img_index{
-        height: 550px;
-    }
+ 
+ .btnini:before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: block;
+     border-radius: 50px;
+     background: #f1f7ed;
+     width: 45px;
+     height: 45px;
+     transition: all 0.3s ease;
  }
+ 
+ .btnini span {
+     position: relative;
+     font-family: "Ubuntu", sans-serif;
+     font-size: 18px;
+     font-weight: 700;
+     letter-spacing: 0.05em;
+     color: #c16200;
+ }
+ 
+ .btnini svg {
+     position: relative;
+     top: 0;
+     margin-left: 10px;
+     fill: none;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+     stroke: #c16200;
+     stroke-width: 2;
+     transform: translateX(-5px);
+     transition: all 0.3s ease;
+ }
+ 
+ .btnini:hover:before {
+     width: 100%;
+     background: #f1f7ed;
+ }
+ 
+ .btnini:hover svg {
+     transform: translateX(0);
+ }
+ 
+ .btnini:active {
+     transform: scale(0.95);
+ }
+ 
+ @media(max-width: 500px) {
+     .img_index {
+         height: 500px;
+     }
+ }
+ 
+ @media(max-width: 900px) {
+     .img_index {
+         height: 550px;
+     }
+ }
+ 
  @media (max-width: 500px) {
      .texto {
          padding-right: 100px;
