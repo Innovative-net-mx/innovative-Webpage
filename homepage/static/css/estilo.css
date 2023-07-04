@@ -157,6 +157,7 @@
  .phex-a {
      display: inline-block;
      font-size: 80%;
+     margin-left: 37%;
      margin-top: 150%;
      position: absolute;
      width: 200%;
@@ -166,7 +167,7 @@
  .phex-b {
      display: inline-block;
      font-size: 80%;
-     margin-left: 65%;
+     margin-left: 77%;
      margin-top: 323%;
      position: absolute;
      width: 200%;
@@ -176,7 +177,7 @@
  .phex-c {
      display: inline-block;
      font-size: 80%;
-     margin-left: 230%;
+     margin-left: 277%;
      margin-top: 510%;
      position: absolute;
      width: 200%;
@@ -209,7 +210,7 @@
  
  .phex-d {
      font-size: 80%;
-     margin-left: 564%;
+     margin-left: 540%;
      margin-top: 150%;
      position: absolute;
      width: 200%;
@@ -220,7 +221,7 @@
  .phex-e {
      display: inline-block;
      font-size: 80%;
-     margin-left: 645%;
+     margin-left: 637%;
      margin-top: 330%;
      position: absolute;
      width: 200%;
@@ -231,7 +232,7 @@
  .phex-f {
      display: inline-block;
      font-size: 80%;
-     margin-left: 590%;
+     margin-left: 550%;
      margin-top: 520%;
      position: absolute;
      width: 200%;
@@ -251,7 +252,7 @@
  @media(max-width: 670px) {
      .phex-d {
          width: 320%;
-         margin-left: 440%;
+         margin-left: 420%;
          font-size: 60%;
          margin-top: 150%;
      }
@@ -261,7 +262,7 @@
      .phex-f {
          width: 320%;
          margin-top: 490%;
-         margin-left: 470%;
+         margin-left: 430%;
          font-size: 60%;
      }
  }
@@ -341,61 +342,60 @@
      width: 40%;
  }
  
-
- .btnservicios{
-    position: relative;
-    display: inline-block;
-    margin: 15px;
-    padding: 15px 30px;
-    text-align: center;
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: white;
-    background: transparent;
-    cursor: pointer;
-    transition: ease-out 0.5s;
-    border: 2px solid #c16200;
-    border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #c16200;
-  }
-  
-  .btnservicios:hover {
-    color: white;
-    box-shadow: inset 0 -100px 0 0 #c16200;
-  }
-  
-  .btnservicios:active {
-    transform: scale(0.9);
-  }
-
-  .btnnos{
-    position: relative;
-    display: inline-block;
-    margin: 15px;
-    padding: 15px 30px;
-    text-align: center;
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: white;
-    background: transparent;
-    cursor: pointer;
-    transition: ease-out 0.5s;
-    border: 2px solid #c16200;
-    border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #c16200;
-  }
-  
-  .btnnos:hover {
-    color: white;
-    box-shadow: inset 0 -100px 0 0 #c16200;
-  }
-  
-  .btnnos:active {
-    transform: scale(0.9);
-  }
-
+ .btnservicios {
+     position: relative;
+     display: inline-block;
+     margin: 15px;
+     padding: 15px 30px;
+     text-align: center;
+     font-size: 18px;
+     letter-spacing: 1px;
+     text-decoration: none;
+     color: white;
+     background: transparent;
+     cursor: pointer;
+     transition: ease-out 0.5s;
+     border: 2px solid #c16200;
+     border-radius: 10px;
+     box-shadow: inset 0 0 0 0 #c16200;
+ }
+ 
+ .btnservicios:hover {
+     color: white;
+     box-shadow: inset 0 -100px 0 0 #c16200;
+ }
+ 
+ .btnservicios:active {
+     transform: scale(0.9);
+ }
+ 
+ .btnnose {
+     position: relative;
+     display: inline-block;
+     margin: 15px;
+     padding: 15px 30px;
+     text-align: center;
+     font-size: 18px;
+     letter-spacing: 1px;
+     text-decoration: none;
+     color: white;
+     background: transparent;
+     cursor: pointer;
+     transition: ease-out 0.5s;
+     border: 2px solid black;
+     border-radius: 10px;
+     box-shadow: inset 0 0 0 0 #c16200;
+ }
+ 
+ .btnnose:hover {
+     color: white;
+     box-shadow: inset 0 -100px 0 0 #c16200;
+ }
+ 
+ .btnnose:active {
+     transform: scale(0.9);
+ }
+ 
  .det_ser {
      width: 100%;
      height: auto;
@@ -479,7 +479,7 @@
  
  .a {
      width: 150%;
-     margin-left: -150%;
+     margin-left: -90%;
      position: absolute;
      margin-top: 50%;
  }
@@ -488,20 +488,20 @@
      width: 130%;
      position: absolute;
      margin-top: 247%;
-     margin-left: -80%;
+     margin-left: -50%;
  }
  
  .c {
      width: 160%;
      position: absolute;
      margin-top: 374%;
-     margin-left: 95%;
+     margin-left: 155%;
  }
  
  .d {
      width: 150%;
      position: absolute;
-     margin-left: 760%;
+     margin-left: 720%;
      margin-top: 50%;
  }
  
@@ -509,11 +509,11 @@
      width: 120%;
      position: absolute;
      margin-top: 260%;
-     margin-left: 850%;
+     margin-left: 830%;
  }
  
  .f {
-     margin-left: 730%;
+     margin-left: 680%;
      width: 225%;
      position: absolute;
      margin-top: 300%;
@@ -583,7 +583,6 @@
      width: 60%;
      height: 100%;
  }
- 
  
  @import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
  /* --- IMAGE-HOVER --- */
@@ -694,7 +693,6 @@
  .image-hover:hover .description {
      transform: translateY(0);
  }
- 
  
  .linea {
      width: 100%;
