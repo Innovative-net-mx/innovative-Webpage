@@ -83,15 +83,16 @@
      transform: scale(0.95);
  }
  
- @media(max-width: 500px) {
-    .img_index {
-        height: 700px;
+
+@media(max-width:900px){
+    .btnini{
+        width: 20px;
     }
 }
  
  @media(max-width: 900px) {
      .img_index {
-         height: 550px;
+         height: 650px;
      }
  }
  
@@ -147,7 +148,7 @@
  .logo {
      width: 130px;
      height: auto;
-     margin-right: 100px;
+     margin-left: 60px;
  }
  
  a {
