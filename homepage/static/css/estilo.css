@@ -343,6 +343,33 @@
      width: 40%;
  }
  
+ .btnnosotros {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #c16200;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #c16200;
+}
+
+.btnnosotros:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #c16200;
+}
+
+.btnnosotros:active {
+    transform: scale(0.9);
+}
+
  .btnservicios {
      position: relative;
      display: inline-block;
@@ -369,6 +396,12 @@
  .btnservicios:active {
      transform: scale(0.9);
  }
+ @media(max-width: 500px) {
+    .btnservicios {
+        justify-content: center;
+        width: 200%;
+    }
+}
  
  .btnnose {
      position: relative;
@@ -524,7 +557,7 @@
      position: relative;
      background: transparent;
      width: 10%;
-     height: 70px;
+     height: 10px;
      margin-top: 50%;
  }
  
