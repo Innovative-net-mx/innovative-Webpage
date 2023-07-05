@@ -83,12 +83,11 @@
      transform: scale(0.95);
  }
  
-
-@media(max-width:900px){
-    .btnini{
-        width: 20px;
-    }
-}
+ @media(max-width:900px) {
+     .btnini {
+         width: 20px;
+     }
+ }
  
  @media(max-width: 900px) {
      .img_index {
@@ -304,6 +303,7 @@
      font-size: 300%;
      text-align: center;
      padding: 30px;
+     margin-left: auto;
  }
  
  .hnos {
@@ -828,6 +828,7 @@
  @media(max-width: 500px) {
      .form {
          width: 350px;
+         height: 600px;
          margin-left: 9%;
      }
  }
@@ -967,6 +968,221 @@
  .mapsapis {
      width: 48%;
      height: 450px;
+ }
+ 
+ .inputGroup {
+     font-family: 'Segoe UI', sans-serif;
+     max-width: 350px;
+     position: relative;
+ }
+ 
+ .inputGroup input {
+     font-size: 100%;
+     padding: 0.8em;
+     outline: none;
+     border: 2px solid rgb(100, 100, 100);
+     background-color: transparent;
+     border-radius: 20px;
+     height: 50px;
+     width: 100%;
+ }
+ 
+ .inputGroup label {
+     font-size: 100%;
+     position: absolute;
+     left: 0;
+     margin-top: -10px;
+     padding: 0.8em;
+     margin-left: 0.5em;
+     pointer-events: none;
+     transition: all 0.3s ease;
+     color: white;
+ }
+ 
+ .inputGroup :is(input:focus,
+ input:valid)~label {
+     transform: translateY(-50%) scale(.9);
+     margin: 0em;
+     margin-left: 1.3em;
+     padding: 0.4em;
+     background-color: #628395;
+ }
+ 
+ .inputGroup :is(input:focus,
+ input:valid) {
+     border-color: rgb(150, 150, 200);
+ }
+ 
+ .inputGroup1 {
+     font-family: 'Segoe UI', sans-serif;
+     max-width: 350px;
+     position: relative;
+ }
+ 
+ .inputGroup1 input {
+     font-size: 100%;
+     padding: 0.8em;
+     outline: none;
+     border: 2px solid rgb(100, 100, 100);
+     background-color: transparent;
+     border-radius: 20px;
+     height: 50px;
+     margin-left: 10%;
+     width: 50%;
+ }
+ 
+ .inputGroup1 label {
+     font-size: 100%;
+     position: absolute;
+     left: 0;
+     margin-top: -10px;
+     padding: 0.8em;
+     margin-left: 30%;
+     pointer-events: none;
+     transition: all 0.3s ease;
+     color: white;
+ }
+ 
+ .inputGroup1 :is(input:focus,
+ input:valid)~label {
+     transform: translateY(-50%) scale(.9);
+     margin: 0em;
+     margin-left: 30%;
+     padding: 0.4em;
+     background-color: #628395;
+ }
+ 
+ .inputGroup1:is(input:focus,
+ input:valid) {
+     border-color: rgb(150, 150, 200);
+ }
+ 
+ .inputGroup2 {
+     font-family: 'Segoe UI', sans-serif;
+     max-width: 350px;
+     position: relative;
+ }
+ 
+ .inputGroup2 input {
+     font-size: 100%;
+     outline: none;
+     border: 2px solid rgb(100, 100, 100);
+     background-color: transparent;
+     border-radius: 20px;
+     height: 50px;
+     margin-left: 50px;
+     width: 100%;
+ }
+ 
+ .inputGroup2 label {
+     font-size: 100%;
+     position: absolute;
+     left: 0;
+     margin-top: -57px;
+     padding: 0.8em;
+     margin-left: 20%;
+     pointer-events: none;
+     transition: all 0.3s ease;
+     color: white;
+ }
+ 
+ .inputGroup2 :is(input:focus,
+ input:valid)~label {
+     transform: translateY(-50%) scale(.9);
+     margin-top: -20%;
+     margin-left: 23%;
+     padding: 0.4em;
+     background-color: #628395;
+ }
+ 
+ .inputGroup2:is(input:focus,
+ input:valid) {
+     border-color: rgb(150, 150, 200);
+ }
+ 
+ .inputGroup3 {
+     font-family: 'Segoe UI', sans-serif;
+     max-width: 350px;
+     position: relative;
+ }
+ 
+ .inputGroup3 input {
+     font-size: 100%;
+     padding: 0.8em;
+     outline: none;
+     border: 2px solid rgb(100, 100, 100);
+     background-color: transparent;
+     border-radius: 20px;
+     height: 100px;
+     margin-top: -10%;
+     margin-left: 22%;
+     width: 150%;
+ }
+ 
+ .inputGroup3 label {
+     font-size: 100%;
+     position: absolute;
+     left: 0;
+     margin-top: -100px;
+     padding: 0.8em;
+     margin-left: 20%;
+     pointer-events: none;
+     transition: all 0.3s ease;
+     color: white;
+ }
+ 
+ .inputGroup3 :is(input:focus,
+ input:valid)~label {
+     transform: translateY(-50%) scale(.9);
+     margin-top: -40%;
+     margin-left: 25%;
+     padding: 0.4em;
+     background-color: #628395;
+ }
+ 
+ .inputGroup3 :is(input:focus,
+ input:valid) {
+     border-color: rgb(150, 150, 200);
+ }
+ 
+ @media(max-width: 500px) {
+     .inputGroup3 :is(input:focus, input:valid)~label {
+         margin-top: -60%;
+     }
+ }
+ 
+ @media(max-width: 500px) {
+     .inputGroup2 input {
+         margin-left: 20%;
+     }
+ }
+ 
+ @media(max-width: 500px) {
+     .inputGroup2 :is(input:focus, input:valid)~label {
+         margin-top: -30%;
+     }
+ }
+ @media(min-width: 600px) {
+    .inputGroup2 :is(input:focus, input:valid)~label {
+        margin-top: -25%;
+    }
+}
+ @media(max-width: 500px) {
+     .inputGroup:is(input:focus,input:valid)~label {
+         margin-left: 10%;
+     }
+ }
+ 
+ @media(max-width: 500px) {
+     .inputGroup label {
+         margin-left: 10%;
+     }
+ }
+ 
+ @media(max-width: 600px) {
+     .inputGroup input {
+         width: 80%;
+     }
  }
  /*Fin contacto*/
  /*Cartera de servicios*/

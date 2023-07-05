@@ -58,25 +58,27 @@
             {{form.non_field_errors}}
             <br>
         
-            <div>
+            <div class="inputGroup">
 
                 {{ form.nombre.errors }}
             {{form.nombre}}
-            
+            <label for="name">Nombre</label>
             </div><br>
         
-            <div>
+            <div class="inputGroup">
 
                 {{ form.empresa.errors }}
                 {{form.empresa}}
+                <label for="name">Empresa</label>
 
             </div>
             <br>
         
-            <div>
+            <div class="inputGroup">
 
                 {{ form.email.errors }}
                 {{form.email}}
+                <label for="name">Email</label>
 
             </div>
             <br>
@@ -84,39 +86,35 @@
             <div class="extphon" >
 
             <div class="acomodo">
-
+                <div class="inputGroup2">
                 {{ form.phone.errors }}
             {{form.phone}}
+            <label for="name">Telefono</label>
 
             </div>
 
-            <div>
+            <br><br>
+            <div class="inputGroup3">
 
-                {{ form.extension.errors }}
-                {{form.extension}}
+                {{ form.descripcion.errors }}
+                {{form.descripcion}}
+                <label for="name">Descripcion</label>
 
             </div>
 
         </div>
 
-        <br>
-
-            <div>
-
-                {{ form.descripcion.errors }}
-                {{form.descripcion}}
+        <div class="inputGroup1">
+            {{ form.extension.errors }}
+            {{form.extension}}
+               
+                <label for="name">Ext.</label>
 
             </div>
             <br><br>
-
-        
-        
-            <button class="btnnose"> Enviar datos
-            </button>
           
-
     </div>
-
+    <button class="btnnose"> Enviar datos</button>
     </div>
 
   </center> 
