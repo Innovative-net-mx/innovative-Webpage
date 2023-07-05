@@ -48,72 +48,206 @@
   
      
   </section>
+  
 <div class="divseparador"></div>
- 
+
+
 
 
 <div class="det_ser">
 
+
 <br><br><br>
   <center>
-
-  <figure class="image-hover">
-    <div class="image">
-      <img src="static/css/img/redes_y_telecomunicaciones.png" class="thumb" id="img1ds"/>
-    </div>
-   
-        <h2 class="title">Redes y Telecomunicaciones</h2>
-        <p class="description">Voip-telefonia IP
-          Cableado estructurado Cat5e,6,6A,7,7A
-          Respaldo de energia UPS y distribucion PDU
-          Infraestructura de red
-          Redes Wifi, PtP y  PtMP
-          Networking
-          Infraestructura y diseño de Data Centers
-          Servidores y estaciones de trabajo.</p>
-    
-</figure>
-
-<figure class="image-hover">
-    <div class="image">
-      <img src="static/css/img/electronica_seguridad.jpg " class="thumb" /></div>
-        <h2 class="title">Electronica de Seguridad</h2>
-        <p class="description">Video Vigilancia
-          control de accesos
-          Servidores NVR
-          Video Porteros
-          Acceso Vehicular
-          Biometria
-          Torniquetes y Puertas de cortesia
-          Identificacion y credencializacion
-          Alarmas de deteccion de fuego
-          Alarmas de Intrusion
-          Proteccion perimetral
-          Supresion de incendios NOVEC 1230 (FM200)</p>
-    
-</figure>
-
-<figure class="image-hover">
-    <div class="image">
-      <img src="static/css/img/sala_multimedia.png " class="thumb" />
-    </div>
-        <h2 class="title">Soluciones Multimedia audio y Video</h2>
-        <p class="description">Sistemas de Video Conferencias IP
-          Sistemas de voceo IP
-          Equipos de audio-Video y voceo
-          Soluciones integradas de distribucion  y control de AV sobre IP</p>
-</figure>
   </section>
   </center> 
 <br><br><br>
+  <!--Aqui inicia la prueba-->
+  <center></center>
+  <div class="slideshow-container">
+
+    <div class="mySlides">
+      <img src="static/css/img/redes_y_telecomunicaciones.png" class="imgservicios"/>
+      <p class="author">Redes y Telecomunicaciones</p>
+      <q>Voip-telefonia IP,
+        Cableado estructurado Cat5e,6,6A,7,7A,
+        Respaldo de energia UPS y distribucion PDU,
+        Infraestructura de red,
+        Redes Wifi, PtP y  PtMP,
+        Networking,
+        Infraestructura y diseño de Data Centers,
+        Servidores y estaciones de trabajo.</q>
+      
+    </div>
+    
+    <div class="mySlides">
+      <img src="static/css/img/electronica_seguridad.jpg " class="imgservicios" />
+     
+      <p class="author">Electronica de Seguridad</p>
+    
+      <q>Video Vigilancia,
+        control de accesos,
+        Servidores NVR,
+        Video Porteros,
+        Acceso Vehicular,
+        Biometria,
+        Torniquetes y Puertas de cortesia,
+        Identificacion y credencializacion<br>
+        Alarmas de deteccion de fuego,
+        Alarmas de Intrusion,
+        Proteccion perimetral
+        Supresion de incendios NOVEC 1230 (FM200)</q>
+      
+    </div>
+    
+    <div class="mySlides">
+      <img src="static/css/img/sala_multimedia.png " class="imgservicios" />
+      <p class="author">Soluciones Multimedia audio y Video</p>
+      <q>Sistemas de Video Conferencias IP,
+        Sistemas de voceo IP,
+        Equipos de audio-Video y voceo,
+        Soluciones integradas de distribucion  y control de AV sobre IP.</q>
+      
+    </div>
+  </center>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    <style>
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+.imgservicios{
+ width: 40%;
+ 
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #C16200;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+ .dot:hover {
+  background-color: black;
+}
+
+/* Add an italic font style to all quotes */
+q{
+  color: white;
+  text-align: center;
+}
+
+
+.author {color: #C16200;
+text-align: center;
+margin-left:10px;
+}
+
+
+
+    </style>
+
+
+
+<script>
+  /* carousel */
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+window.onload= function () {
+ setInterval(function(){ 
+     plusSlides(1);
+ }, 9000);
+ }
+
+/* fin carousel */
+</script>
+
+
+  <!--aqui termina la prueba aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
 
   <div class="inf-ser">
-
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-        It was popularised in the 1960s with the release of Letraset sheets containing </p>
       
       <a href="{% url "contacto" %}">
       <button class="btnservicios"> Solicitar cotización

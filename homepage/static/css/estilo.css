@@ -92,7 +92,7 @@
  
  @media(max-width: 900px) {
      .img_index {
-         height: 650px;
+         height: 750px;
      }
  }
  
@@ -585,110 +585,7 @@
      height: 100%;
  }
  
- @import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
- /* --- IMAGE-HOVER --- */
- 
- .image-hover {
-     font-family: 'Raleway', Arial, sans-serif;
-     font-size: 15px;
-     color: #FFFFFF;
-     display: inline-block;
-     overflow: hidden;
-     width: 80%;
-     transform: translateZ(0);
- }
- 
- .image-hover * {
-     box-sizing: border-box;
-     transition: all 0.35s ease;
- }
- 
- .image-hover .image {
-     padding: 15px 0;
- }
- 
- .image-hover .thumb {
-     max-width: 100%;
-     opacity: 0.75;
- }
- 
- .image-hover .header {
-     position: absolute;
-     top: 0;
-     bottom: 0;
-     left: 0;
-     right: 0;
- }
- 
- .image-hover .title,
- .image-hover .description {
-     position: absolute;
-     left: 0;
-     width: 100%;
-     background-color: #0D0D0D;
-     margin: 0;
-     padding: 15px 25px;
- }
- 
- .image-hover .title {
-     font-weight: bold;
-     text-transform: uppercase;
-     top: 0;
-     transform: translateY(-100%);
- }
- 
- .image-hover .description {
-     font-size: 0.8em;
-     bottom: 0;
-     transform: translateY(100%);
- }
- 
- .image-hover a {
-     position: absolute;
-     top: 0;
-     bottom: 0;
-     left: 0;
-     right: 0;
- }
- 
- .image-hover:hover .thumb,
- .image-hover.hover .thumb {
-     transform: scale(1.25);
-     opacity: 1;
- }
- 
- #img1ds {
-     height: 267px;
-     width: 400px;
- }
- 
- @media(max-width:700px) {
-     #img1ds {
-         height: 40%;
-         width: 100%;
-     }
- }
- 
- @media(min-width:1200px) {
-     .image-hover {
-         height: 267px;
-         width: 400px
-     }
- }
- 
- @media(max-width:1800px) {
-     #img1ds {
-         height: 367px;
-         width: 790px
-     }
- }
- 
- @media(max-width:1800px) {
-     img.thumb {
-         height: 367px;
-         width: 790px
-     }
- }
+
  
  .image-hover:hover .title,
  .image-hover:hover .description {
