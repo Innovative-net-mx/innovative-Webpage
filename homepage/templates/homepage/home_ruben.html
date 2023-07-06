@@ -57,139 +57,80 @@
 
 
 <div class="det_ser">
+
+<br><br><br>
+  <center>
+
+  <figure class="image-hover">
+    <div class="image">
+      <img src="static/css/img/redes_y_telecomunicaciones.png" class="thumb" id="img1ds"/>
+    </div>
+   
+        <h2 class="title">Redes y Telecomunicaciones</h2>
+        <p class="description">Voip-telefonia IP
+          Cableado estructurado Cat5e,6,6A,7,7A
+          Respaldo de energia UPS y distribucion PDU
+          Infraestructura de red
+          Redes Wifi, PtP y  PtMP
+          Networking
+          Infraestructura y diseño de Data Centers
+          Servidores y estaciones de trabajo.</p>
+    
+</figure>
+
+<figure class="image-hover">
+    <div class="image">
+      <img src="static/css/img/electronica_seguridad.jpg " class="thumb" /></div>
+        <h2 class="title">Electronica de Seguridad</h2>
+        <p class="description">Video Vigilancia
+          control de accesos
+          Servidores NVR
+          Video Porteros
+          Acceso Vehicular
+          Biometria
+          Torniquetes y Puertas de cortesia
+          Identificacion y credencializacion
+          Alarmas de deteccion de fuego
+          Alarmas de Intrusion
+          Proteccion perimetral
+          Supresion de incendios NOVEC 1230 (FM200)</p>
+    
+</figure>
+
+<figure class="image-hover">
+    <div class="image">
+      <img src="static/css/img/sala_multimedia.png " class="thumb" />
+    </div>
+        <h2 class="title">Soluciones Multimedia audio y Video</h2>
+        <p class="description">Sistemas de Video Conferencias IP
+          Sistemas de voceo IP
+          Equipos de audio-Video y voceo
+          Soluciones integradas de distribucion  y control de AV sobre IP</p>
+</figure>
   </section>
- 
-  <div class="slideshow-container">
-
-    <div class="mySlides">
-      <img src="static/css/img/redes_y_telecomunicaciones.png" class="imgservicios"/>
-      <h3 class="author">Redes y Telecomunicaciones</h3>
-      <p class="pservici">Voip-telefonia IP,<br>
-        Cableado estructurado Cat5e,6,6A,7,7A,<br>
-        Respaldo de energia UPS y distribucion PDU,<br>
-        Infraestructura de red,<br>
-        Redes Wifi, PtP y PtMP,<br>
-        Networking,<br>
-        Infraestructura y diseño de Data Centers,<br>
-        Servidores y estaciones de trabajo.</p>
-      
-    </div>
-    
-    <div class="mySlides">
-      <img src="static/css/img/electronica_seguridad.jpg " class="imgservicios" />
-     
-      <h3 class="author">Electronica de Seguridad</h3>
-    <div class="divps">
-      <p class="pservicios2">
-        Video Vigilancia,<br>
-        control de accesos,<br>
-        Servidores NVR,<br>
-        Video Porteros,<br>
-        Acceso Vehicular,<br>
-        Biometria,<br>
-      </p>
-      <p class="pservicios3">
-        Torniquetes y Puertas de cortesia,<br>
-        Identificacion y credencializacion<br>
-        Alarmas de deteccion de fuego,<br>
-        Alarmas de Intrusion,<br>
-        Proteccion perimetral, <br>
-        Supresion de incendios NOVEC 1230 (FM200)</p>
-      </div>
-    </div>
-    <style>
-
-.divps{
-  display: flex;
-  justify-content: start;
-  width: 50%;
-  margin-left: 30%;
-  
-}
-.pservicios2{
-  text-align: left;
-  margin-left: 0%;
-  font-size: medium;
-}
-.pservicios3{
-  text-align: left;
-  margin-left: 16%;
-  font-size: medium;
-}
-@media(max-width:500px) {
-     .pservicios2 {
-        margin-left: -20%;
-     }
- }
-
-    </style>
-    <div class="mySlides">
-      <img src="static/css/img/sala_multimedia.png " class="imgservicios" />
-      <h3 class="author">Soluciones Multimedia audio y Video</h3>
-      <p class="pservici">Sistemas de Video Conferencias IP,<br>
-        Sistemas de voceo IP,<br>
-        Equipos de audio-Video y voceo,<br>
-        Soluciones integradas de distribucion  y control de AV sobre IP.</p>
-    </div>
-  </center>
-
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
-    
-    </div>
-    
-    <div class="dot-container">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
-    </div>
-
-<script>
-  /* carousel */
-  var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-window.onload= function () {
- setInterval(function(){ 
-     plusSlides(1);
- }, 9000);
- }
-
-/* fin carousel */
-</script>
+  </center> 
+<br><br><br>
 
   <div class="inf-ser">
-      
+<!-- 
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+        It was popularised in the 1960s with the release of Letraset sheets containing </p>
+      -->
+      <center> 
       <a href="{% url "contacto" %}">
       <button class="btnservicios"> Solicitar cotización
       </button>
     </a>
+  </center>
 <br><br>
 
   </div>
+
+</div>
+
 
 </div>
 
@@ -248,7 +189,7 @@ window.onload= function () {
 </div>
 
 
-<iframe width="100%" height="760px" src="https://www.youtube.com/embed/L6ti9P1SMVw" title="YouTube video player"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 <script>
 
