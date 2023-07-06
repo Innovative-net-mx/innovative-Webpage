@@ -50,6 +50,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.ionos.mx'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'no-reply@innovative-net.mx' 
+EMAIL_HOST_PASSWORD = 'Sscz70ic'
+
+
+
 ROOT_URLCONF = 'innovative_net.urls'
 
 TEMPLATES = [
