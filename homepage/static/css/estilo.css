@@ -158,7 +158,7 @@
      display: inline-block;
      font-size: 80%;
      margin-left: 37%;
-     margin-top: 150%;
+     margin-top: 50%;
      position: absolute;
      width: 200%;
      color: #fff;
@@ -168,7 +168,7 @@
      display: inline-block;
      font-size: 80%;
      margin-left: 77%;
-     margin-top: 323%;
+     margin-top: 265%;
      position: absolute;
      width: 200%;
      color: #fff;
@@ -188,7 +188,7 @@
      .phex-a {
          width: 340%;
          font-size: 60%;
-         margin-top: 150%;
+         margin-top: 20%;
      }
  }
  
@@ -196,7 +196,7 @@
      .phex-b {
          width: 340%;
          font-size: 60%;
-         margin-top: 300%;
+         margin-top: 230%;
      }
  }
  
@@ -211,7 +211,7 @@
  .phex-d {
      font-size: 80%;
      margin-left: 540%;
-     margin-top: 150%;
+     margin-top: 50%;
      position: absolute;
      width: 200%;
      text-align: right;
@@ -222,7 +222,7 @@
      display: inline-block;
      font-size: 80%;
      margin-left: 637%;
-     margin-top: 330%;
+     margin-top: 267%;
      position: absolute;
      width: 200%;
      text-align: right;
@@ -245,7 +245,7 @@
          width: 320%;
          margin-left: 520%;
          font-size: 60%;
-         margin-top: 300%;
+         margin-top: 240%;
      }
  }
  
@@ -254,7 +254,7 @@
          width: 320%;
          margin-left: 420%;
          font-size: 60%;
-         margin-top: 150%;
+         margin-top: 20%;
      }
  }
  
@@ -338,7 +338,7 @@
      }
  }
  
-/* Slideshow container */
+
 .slideshow-container {
     position: relative;
   }
@@ -347,14 +347,14 @@
    
   }
   
-  /* Slides */
+
   .mySlides {
     display: none;
     padding: 80px;
     text-align: center;
   }
   
-  /* Next & previous buttons */
+
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -400,19 +400,20 @@
     transition: background-color 0.6s ease;
   }
   
-  /* Add a background color to the active dot/circle */
+ 
    .dot:hover {
     background-color: black;
   }
-  
-  /* Add an italic font style to all quotes */
-  q{
-    color: white;
-    text-align: center;
+
+  .pservici{
+    text-align: left;
+    margin-left: 29.7%;
+    font-size: medium;
   }
   
   
-  .author {color: #C16200;
+  .author {
+  color: #C16200;
   text-align: center;
   margin-left:10px;
   }
@@ -600,13 +601,13 @@
      width: 150%;
      margin-left: -90%;
      position: absolute;
-     margin-top: 50%;
+     margin-top: -50%;
  }
  
  .b {
      width: 130%;
      position: absolute;
-     margin-top: 247%;
+     margin-top: 190%;
      margin-left: -50%;
  }
  
@@ -621,13 +622,13 @@
      width: 150%;
      position: absolute;
      margin-left: 720%;
-     margin-top: 50%;
+     margin-top: -50%;
  }
  
  .e {
      width: 120%;
      position: absolute;
-     margin-top: 260%;
+     margin-top: 205%;
      margin-left: 830%;
  }
  
@@ -649,7 +650,7 @@
  .imgcolmenaanserv {
      margin-left: 35%;
      position: absolute;
-     margin-top: 200%;
+     margin-top: 100%;
      width: 400%;
  }
  
@@ -668,6 +669,7 @@
      opacity: 1;
      transform: translate(0, 0vh);
      transition: all 4s;
+     animation-duration: 10s;
  }
  
  .visible1 {
