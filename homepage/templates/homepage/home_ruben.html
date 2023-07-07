@@ -224,68 +224,10 @@
 
 <div class='video-wrap'>
   <video autoplay muted playsinline loop poster="https://youtu.be/L6ti9P1SMVw">
-    
-    <source src="https://www.w3schools.com/html/mov_bbb.ogg">
+    <source src="static/css/img_y_video/videopromocional.mp4">
   </video>
+  <a href="https://www.youtube.com/watch?v=L6ti9P1SMVw"><img class="iconyoutubevid" src="static/css/img/logoyoutube.png" alt=""></a>
 </div>
 <br><br>
-
-<style>
-
-
-.scroll-spacer {
-  align-items: center;
-  background-color: #1a1a1a;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  height: 75vh;
-  margin: 1em auto;
-  width: 90%;
-}
-video {
-  display: block;
-  height: auto;
-  margin: auto;
-  position: relative;
-  width: 50%;
-}
-.video-wrap {
-  margin: 0 auto;
-  position: relative;
-  width: 90%;
-}
-
-
-</style>
-
-<script>
-
-window.addEventListener('load', videoScroll);
-window.addEventListener('scroll', videoScroll);
-
-function videoScroll() {
-
-  if ( document.querySelectorAll('video[autoplay]').length > 0) {
-    var windowHeight = window.innerHeight,
-        videoEl = document.querySelectorAll('video[autoplay]');
-
-    for (var i = 0; i < videoEl.length; i++) {
-
-      var thisVideoEl = videoEl[i],
-          videoHeight = thisVideoEl.clientHeight,
-          videoClientRect = thisVideoEl.getBoundingClientRect().top;
-
-      if ( videoClientRect <= ( (windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ) ) ) {
-        thisVideoEl.play();
-      } else {
-        thisVideoEl.pause();
-      }
-
-    }
-  }
-
-}
-</script>
 
 {% endblock %}

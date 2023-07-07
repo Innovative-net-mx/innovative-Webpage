@@ -347,6 +347,44 @@
          background: #fff url(img/nos.jpg) center center/cover no-repeat content-box;
      }
  }
+ .iconyoutubevid{
+    width: 60px;
+    position: absolute;
+    height: 70px; 
+    margin-top: -4.2%;
+    margin-left: 70.7%;
+  }
+  @media(max-width:1347px) {
+       .iconyoutubevid {
+          margin-left: 70%;
+          margin-top: -5%;
+          width: 20px;
+        height: 30px;
+       }
+   }
+  .scroll-spacer {
+    align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    height: 75vh;
+    margin: 1em auto;
+    width: 90%;
+  }
+  video {
+    display: block;
+    height: auto;
+    margin: auto;
+    position: relative;
+    width: 50%;
+  }
+  .video-wrap {
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+  }
+  
 
  .inf-ser {
      margin-left: 6%;
