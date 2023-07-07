@@ -644,9 +644,9 @@
      width: 80%;
      transform: translateZ(0);
  }
- @media(min-width:1920px){
+ @media(min-width:1720px){
     .image-hover{
-    margin: 100px;
+    margin: 60px;
     }
     
  }
