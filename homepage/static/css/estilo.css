@@ -1245,7 +1245,7 @@
      position: relative;
  }
 
- .inputGroup3 input {
+ .inputGroup3 textarea {
      font-size: 100%;
      padding: 0.8em;
      outline: none;
@@ -1255,7 +1255,7 @@
      height: 100px;
      margin-top: -10%;
      margin-left: 22%;
-     width: 150%;
+     width: 120%;
  }
 
  .inputGroup3 label {
@@ -1270,8 +1270,8 @@
      color: white;
  }
 
- .inputGroup3 :is(input:focus,
-     input:valid)~label {
+ .inputGroup3 :is(textarea:focus,
+     textarea:valid)~label {
      transform: translateY(-50%) scale(.9);
      margin-top: -40%;
      margin-left: 25%;
@@ -1320,7 +1320,7 @@
     .inputGroup2 input {
         margin-left: 20%;
     }
-    .inputGroup3 :is(input:focus, input:valid)~label {
+    .inputGroup3 :is(textarea:focus, textarea:valid)~label {
         margin-top: -60%;
     }
     .btnenvd {
