@@ -91,7 +91,7 @@
 
  @media(max-width: 900px) {
      .img_index {
-         height: 650px;
+         height: 700px;
      }
  }
 
@@ -394,10 +394,11 @@
     }
     
  }
- @media(max-width:500px){
+ @media(max-width:900px){
     .btnservicios{
         height: 40%;
-        width: 90%;
+        width: 150%;
+        margin-left:40%;
     }
  }
 
