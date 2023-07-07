@@ -644,12 +644,17 @@
      width: 80%;
      transform: translateZ(0);
  }
-
+ @media(min-width:1920px){
+    .image-hover{
+    margin: 100px;
+    }
+    
+ }
+ 
  .image-hover * {
      box-sizing: border-box;
      transition: all 0.35s ease;
  }
-
  .image-hover .image {
      padding: 15px 0;
  }
@@ -879,8 +884,9 @@
      opacity: 1;
  }
 
- .footer-dark .copyright {
+ .footer-dark .copyr {
      text-align: center;
+     margin-left: 2%;
      font-size: 40%;
      padding-top: 24px;
      font-size: 13px;
