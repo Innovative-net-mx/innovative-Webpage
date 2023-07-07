@@ -82,48 +82,6 @@
  .btnini:active {
      transform: scale(0.95);
  }
-
- @media(max-width:900px) {
-     .btnini {
-         width: 20px;
-     }
- }
-
- @media(max-width: 900px) {
-     .img_index {
-         height: 700px;
-     }
- }    
-
- @media (max-width: 900px) {
-     .texto {
-         padding-right: 100px;
-         font-size: 40px;
-         margin-right: 10%;
-         justify-content: right;
-         margin-top: 2%;
-     }
- }
-
- @media(max-width: 1500px) {
-     .texto {
-         font-size: 70px;
-         margin-top: 9%;
-     }
- }
-
- @media(max-width: 1500px) {
-     p {
-         font-size: 20px;
-     }
- }
-
- @media(max-width: 939px) {
-     .texto {
-         font-size: 50px;
-     }
- }
-
  #header {
      position: fixed;
      width: 100%;
@@ -173,31 +131,6 @@
      width: 200%;
      color: #fff;
  }
-
- @media(max-width: 680px) {
-     .phex-a {
-         width: 340%;
-         font-size: 60%;
-         margin-top: 20%;
-     }
- }
-
- @media(max-width: 680px) {
-     .phex-b {
-         width: 340%;
-         font-size: 60%;
-         margin-top: 230%;
-     }
- }
-
- @media(max-width: 670px) {
-     .phex-c {
-         width: 340%;
-         font-size: 60%;
-         margin-top: 490%;
-     }
- }
-
  .phex-d {
      font-size: 80%;
      margin-left: 540%;
@@ -229,34 +162,6 @@
      text-align: right;
      color: #fff;
  }
-
- @media(max-width: 670px) {
-     .phex-e {
-         width: 320%;
-         margin-left: 520%;
-         font-size: 60%;
-         margin-top: 240%;
-     }
- }
-
- @media(max-width: 670px) {
-     .phex-d {
-         width: 320%;
-         margin-left: 420%;
-         font-size: 60%;
-         margin-top: 20%;
-     }
- }
-
- @media(max-width: 670px) {
-     .phex-f {
-         width: 320%;
-         margin-top: 490%;
-         margin-left: 430%;
-         font-size: 60%;
-     }
- }
-
  .btn btn-dark {
      margin-left: -80%;
      position: absolute;
@@ -308,15 +213,6 @@
      height: 700px;
      background: #fff url(img/nos.jpg) center center/cover no-repeat content-box fixed;
  }
-
- @media(max-width:900px) {
-     .nos {
-         width: 100%;
-         height: 700px;
-         background: #fff url(img/nos.jpg) center center/cover no-repeat content-box;
-     }
- }
-
  .inf-ser {
      margin-left: 6%;
      width: 40%;
@@ -358,19 +254,6 @@
      border-radius: 10px;
      box-shadow: inset 0 0 0 0 #c16200;
 
- }
- @media(max-width:800px){
-    .btnservicios{
-        width: 80%;
-    }
-    
- }
- @media(max-width:900px){
-    .btnservicios{
-        height: 40%;
-        width: 150%;
-        margin-left:40%;
-    }
  }
 
  .btnservicios:hover {
@@ -615,12 +498,6 @@
      width: 80%;
      transform: translateZ(0);
  }
- @media(min-width:1920px){
-    .image-hover{
-    margin: 100px;
-    }
-    
- }
  
  .image-hover * {
      box-sizing: border-box;
@@ -716,47 +593,9 @@
   
   
   }
-  @media(max-width:1347px){
-    .iconyoutubevid{
-      margin-left: 70%;
-      margin-top: -5%;
-      width: 20px;
-      height: 30px;
-      
-    }
-  }
-  
  #img1ds {
      height: 267px;
      width: 400px;
- }
-
- @media(max-width:700px) {
-     #img1ds {
-         height: 40%;
-         width: 100%;
-     }
- }
-
- @media(min-width:1200px) {
-     .image-hover {
-         height: 267px;
-         width: 400px
-     }
- }
-
- @media(max-width:1800px) {
-     #img1ds {
-         height: 367px;
-         width: 790px
-     }
- }
-
- @media(max-width:1800px) {
-     img.thumb {
-         height: 367px;
-         width: 790px
-     }
  }
 
  .image-hover:hover .title,
@@ -1284,10 +1123,57 @@
      border-color: rgb(150, 150, 200);
  }
 
- 
+/*Responsivo*/
 
+@media(max-width: 680px) {
+    .phex-a {
+        width: 340%;
+        font-size: 60%;
+        margin-top: 20%;
+    }
+    .phex-b {
+        width: 340%;
+        font-size: 60%;
+        margin-top: 230%;
+    }
+}
 
+@media(max-width: 1500px) {
+    .texto {
+        font-size: 70px;
+        margin-top: 9%;
+    }
+    p {
+        font-size: 20px;
+    }
+}
 
+ @media(max-width:900px) {
+    .btnini {
+        width: 20px;
+    }
+    .img_index {
+        height: 700px;
+    }
+    .texto {
+        padding-right: 100px;
+        font-size: 40px;
+        margin-right: 10%;
+        justify-content: right;
+        margin-top: 2%;
+    }
+    .nos {
+        width: 100%;
+        height: 700px;
+        background: #fff url(img/nos.jpg) center center/cover no-repeat content-box;
+    }
+    .btnservicios{
+        height: 40%;
+        width: 150%;
+        margin-left:40%;
+    }
+}
+  
 
 @media(max-width: 600px)  {
     .inputGroup input {
@@ -1305,8 +1191,6 @@
     }
 }
 
-
-
  @media(max-width: 500px) {
      .inputGroup:is(input:focus, input:valid)~label {
          margin-left: 10%;
@@ -1318,7 +1202,7 @@
         margin-top: -30%;
     }
     .inputGroup2 input {
-        margin-left: 20%;
+        margin-left: 16%;
     }
     .inputGroup3 :is(textarea:focus, textarea:valid)~label {
         margin-top: -60%;
@@ -1363,6 +1247,88 @@
         }
     }
 
+    @media(max-width: 939px) {
+        .texto {
+            font-size: 50px;
+        }
+    }
+
+    @media(max-width: 670px) {
+        .phex-e {
+            width: 320%;
+            margin-left: 520%;
+            font-size: 60%;
+            margin-top: 240%;
+        }
+        .phex-d {
+            width: 320%;
+            margin-left: 420%;
+            font-size: 60%;
+            margin-top: 20%;
+        }
+        .phex-f {
+            width: 320%;
+            margin-top: 490%;
+            margin-left: 430%;
+            font-size: 60%;
+        }
+        .phex-c {
+            width: 340%;
+            font-size: 60%;
+            margin-top: 490%;
+        }
+        
+    }
+    @media(max-width:800px){
+        .btnservicios{
+            width: 150%;
+            margin-left: 42%;
+        }
+        
+     }
+     @media(min-width:1920px){
+        .image-hover{
+        margin: 100px;
+        }
+        
+     }
+     @media(max-width:1347px){
+        .iconyoutubevid{
+          margin-left: 70%;
+          margin-top: -5%;
+          width: 20px;
+          height: 30px;
+          
+        }
+      }
+      @media(max-width:700px) {
+        #img1ds {
+            height: 40%;
+            width: 100%;
+        }
+    }
+   
+    @media(min-width:1200px) {
+        .image-hover {
+            height: 267px;
+            width: 400px
+        }
+    }
+   
+    @media(max-width:1800px) {
+        #img1ds {
+            height: 367px;
+            width: 790px
+        }
+        img.thumb {
+            height: 367px;
+            width: 790px
+        }
+    }
+   
+      
+    
+/*Fin responsivo*/
 
 
  /*Fin contacto*/
