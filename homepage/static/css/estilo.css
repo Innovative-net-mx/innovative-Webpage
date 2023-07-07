@@ -1,13 +1,15 @@
  /*home*/
 
- .img_index {
-     height: 900px;
-     width: -99.0vw;
-     background-image: url(img/fondo.JPG);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
- }
+.img_index {
+    height: 900px;
+    width: -99.0vw;
+    background-color: rgba(0, 0, 0, 0.418);
+    background-image: url(img/fondo.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-position: center;
+}
 
  .texto {
      margin-left: 5%;
@@ -487,6 +489,7 @@
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
+
  }
 
  .img_home {
@@ -501,10 +504,19 @@
      opacity: 2;
  }
 
+.colmena-container{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+/* css that makes all h3 of colmena-container to a bigger letter size */
+.colmena-container h3{
+    font-size: 18px;
+}
+
  .servicios {
-     width: 100%;
-     height: auto;
-     background-color: #C16200;
+        width: 100%;
+        height: auto;
+        background-color: #C16200;
  }
 
  .serv {
