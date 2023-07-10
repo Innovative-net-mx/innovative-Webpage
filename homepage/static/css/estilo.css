@@ -1771,3 +1771,13 @@
      height: 100px;
      width: 250px;
  }
+    img{
+        width: 400px;
+    
+    }
+    
+    @keyframes mover {
+        0%{
+            transform: translate(100%);
+        }
+    }

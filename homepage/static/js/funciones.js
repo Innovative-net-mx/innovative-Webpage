@@ -28,7 +28,7 @@ window.addEventListener('scroll', function() {
     for (var i = 0; i < elements.length; i++) {
         var element = elements[i];
 
-        if (element.getBoundingClientRect().top < screenSize) {
+        if (element.getBoundingClientRect().top < screenSize/2) {
 
             element.classList.add('visible1');
 
@@ -100,3 +100,44 @@ function videoScroll() {
 }
 
 /*Fin video promocional automatico*/
+
+/*Animaciones scroll ultimas tres imagenes*/
+window.addEventListener("scroll", function(){
+    let animacion = document.getElementById("animado");
+    let posicionObj1 = animacion.getBoundingClientRect().top;
+    console.log(posicionObj1);
+    let tamañoDePantalla = window.innerHeight;
+
+    if(posicionObj1 < tamañoDePantalla){
+
+      animacion.style.animation = "mover 1s ease-out"
+
+    }
+})
+
+window.addEventListener("scroll", function(){
+    let animacion = document.getElementById("animadosegundo");
+    let posicionObj1 = animacion.getBoundingClientRect().top;
+    console.log(posicionObj1);
+    let tamañoDePantalla = window.innerHeight;
+
+    if(posicionObj1 < tamañoDePantalla){
+
+      animacion.style.animation = "mover 1s ease-out"
+
+    }
+})
+
+window.addEventListener("scroll", function(){
+    let animacion = document.getElementById("animadotercero");
+    let posicionObj1 = animacion.getBoundingClientRect().top;
+    console.log(posicionObj1);
+    let tamañoDePantalla = window.innerHeight;
+
+    if(posicionObj1 < tamañoDePantalla){
+
+      animacion.style.animation = "mover 1s ease-out"
+
+    }
+})
+/*Fin animaciones scroll ultimas tres imagenes*/
