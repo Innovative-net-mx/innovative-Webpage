@@ -22,6 +22,9 @@ def  objetivos(request):
 def inicio(request):
     return render(request, "homepage/home_ruben.html")
 
+def error_form(request):
+    return render(request, "homepage/error_form.html")
+
 # make a class view for a form Formulario_Contacto
 class Contacto_Form(CreateView):
     model = Formulario_Contacto
@@ -33,12 +36,11 @@ class Contacto_Form(CreateView):
 
         # Send email
         send_mail(
-            'Contact Form Submission',
+            'Nueva Solicitud Enviada desde la Pagina Web',
             f'Name: {form.cleaned_data["nombre"]}\nEmail: {form.cleaned_data["email"]}\nMessage: {form.cleaned_data["descripcion"]}',
             'no-reply@innovative-net.mx',
-            ['desarrollo.it2@innovative-net.mx'],
+            ['desarrollo.it2@innovative-net.mx','daniel.jara@innovative-net.mx'],
             fail_silently=False,
-
         )
 
         # Display success message
@@ -48,3 +50,5 @@ class Contacto_Form(CreateView):
 
     def get_success_url(self):
         return reverse_lazy('index')
+    def get_error_url(self):
+        return reverse_lazy('error_form')

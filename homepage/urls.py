@@ -6,5 +6,6 @@ urlpatterns = [
     path("cartera_servicios", views.cartera_servicios, name="cartera_servicios"),
     path("contacto", Contacto_Form.as_view(), name="contacto"),
     path("objetivos", views.objetivos, name="objetivos" ),
-    path("inicio",   views.inicio, name="inicio")
+    path("inicio",   views.inicio, name="inicio"),
+    path("error_form", views.error_form, name="error_form"),
 ]

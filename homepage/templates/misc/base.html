@@ -27,9 +27,20 @@
 
 <header id="header">
   
-<nav class="navbar navbar-expand-lg" style="background-color: #F1F7ED; height:auto;">
+<nav class="navbar navbar-expand-lg">
+<script>
+  window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    document.getElementById("header").style.backgroundColor = "#F1F7ED";
+  } else {
+    document.getElementById("header").style.backgroundColor = "rgba(0, 0, 0, 0.15)";
+  }
+}
+</script>
   <div class="container-fluid">
+    
 
     <a href="{% url "index" %}"> <img class="logo" src="static/css/img/horizontal blanco.png" href="section1" style="margin-right:100px;"></a>
 
@@ -45,26 +56,26 @@
               
       <li class="nav-item">
 
-      <a class="nav-link active" aria-current="page" href="#section2" style="margin-left:170px; font-size: 20px;">Servicios</a>
+      <a class="nav-link active" aria-current="page" href="#section2" style="margin-left:170px; font-size: 20px; font-weight: bold;">Servicios</a>
 
       </li>
 
       <li class="nav-item">
 
-      <a class="nav-link" href="#section3" style="margin-left:170px; font-size: 20px;">Nosotros</a>
+      <a class="nav-link" href="#section3" style="margin-left:170px; font-size: 20px; font-weight: bold;">Nosotros</a>
 
       </li>
 
       <li class="nav-item dropdown">
 
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left:170px; font-size: 20px;">Contactanos</a>
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left:170px; font-size: 20px; font-weight: bold;">Contactanos</a>
                 <ul class="dropdown-menu">
 
-                  <li><a class="dropdown-item" href="{% url "contacto" %}">Contactanos</a></li>
+                  <li><a class="dropdown-item" href="{% url "contacto" %}" style="font-weight: bold;">Contactanos</a></li>
 
-                  <li><a class="dropdown-item" href="{% url "cartera_servicios" %}">Cartera de servicios</a></li>
+                  <li><a class="dropdown-item" href="{% url "cartera_servicios" %}" style="font-weight: bold;">Cartera de servicios</a></li>
 
-                  <li><a class="dropdown-item" href="{% url "objetivos" %}">Objetivos</a></li>
+                  <li><a class="dropdown-item" href="{% url "objetivos" %}" style="font-weight: bold;">Objetivos</a></li>
 
                 </ul>
       </li>
