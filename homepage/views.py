@@ -22,6 +22,9 @@ def  objetivos(request):
 def inicio(request):
     return render(request, "homepage/home_ruben.html")
 
+def error_form(request):
+    return render(request, "homepage/error_form.html")
+
 # make a class view for a form Formulario_Contacto
 class Contacto_Form(CreateView):
     model = Formulario_Contacto
@@ -48,3 +51,5 @@ class Contacto_Form(CreateView):
 
     def get_success_url(self):
         return reverse_lazy('index')
+    def get_error_url(self):
+        return reverse_lazy('error_form')
