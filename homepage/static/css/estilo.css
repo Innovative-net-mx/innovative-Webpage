@@ -180,10 +180,22 @@
 
  .imgesp {
      width: 30%;
-     height: auto;
+     height: 318px;
      z-index: 2;
+     border-radius:60px ;
  }
-
+ .imgesp2 {
+    width: 30%;
+    height: 247px;
+    z-index: 2;
+    border-radius:60px ;
+}
+.imgesp3 {
+    width: 30%;
+    height: 290px;
+    z-index: 2;
+    border-radius:60px ;
+}
  .butnos {
      width: 250px;
      letter-spacing: 2px;
@@ -346,26 +358,76 @@ margin-top:-5%;
  }
 
  .letters {
-     width: 50%;
+     width: 60%;
      color: black;
      font-size: 80%;
      margin-left: -0.2%;
      margin: 10px;
      z-index: 2;
+     text-align: justify;
  }
 
  .letters2 {
-     width: 40%;
+     width: 60%;
      font-size: 80%;
      text-align: right;
      color: black;
-     margin-left: 60%;
+     margin: 10px;
+     text-align: justify;
+     margin-left: 30%;
+  
  }
 
  .titapsobnons {
      font-size: 150%;
+     margin-left: 2%; 
+     
+     
  }
+ .titapsobnons2 {
+    font-size: 150%;
+    margin-left: 40%; 
+   
+}
 
+.divcontletras{
+    display: flex;
+    justify-content:start;
+   
+  }
+  .scroll{
+    height: 290px;
+        width: 1900px;
+        overflow-y: auto;
+        z-index: 3;
+  }
+  .gris{
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 96%;
+   border-radius: 0px 60px 60px 0px;
+    height: 318px;
+    z-index: 1;
+    margin-left:-10% ;
+    position: absolute;
+  }
+  .gris2{
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 90%;
+    border-radius: 60px 0px 0px 60px;
+    height: 247px;
+    z-index: 1;
+    margin-left:7.3% ;
+    position: absolute;
+  }
+  .gris3{
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 90%;
+    border-radius: 0px 60px 60px 0px;
+    height: 290px;
+    z-index: 1;
+    margin-left: -5%;
+    position: absolute;
+  }
  .content {
      display: grid;
      grid-template-columns: 15%;
@@ -1370,6 +1432,68 @@ margin-top:-5%;
         }
     }   
 
+
+    @media (max-width:1239px){
+        .gris2 {
+         margin-left: -0.2%;
+        }
+      }
+      
+    @media (max-width:924px){
+        .gris3{
+          margin-left: -10%;
+          width: 92%;
+      }
+    }
+    @media (max-width:500px){
+        .letters{
+      width: 90%;
+      font-size: 70%;
+      text-align: justify;
+      }
+      .letters2{
+        width: 80%;
+        font-size: 70%;
+        margin-left: 0%;
+        text-align: justify;
+        }
+        .scroll{
+            height: 300px;
+            width: 500px;
+            overflow-y: auto;
+        }
+        .imgesp3{
+            width: 50%;
+            margin-left: -10%;
+            height: 290px;
+            z-index: 2;
+            border-radius:60px;
+          }
+          .imgesp{
+            width: 50%;
+            margin-left: -10%;
+            height: 317px;
+            z-index: 2;
+            border-radius:60px;
+          }
+          .imgesp2{
+            width: 45%;
+            margin-left: -10%;
+            height: 245px;
+            z-index: 2;
+            border-radius:60px;
+          }
+          .titapsobnons2{
+            margin-left: 5%;
+            width: 70%;
+            font-size: 80%;
+          }
+        }
+    @media (min-width:500px){
+      .titapsobnons2{
+        margin-left: 20%;
+      }
+    }
 /*Fin responsivo*/
 
  /*Cartera de servicios*/
