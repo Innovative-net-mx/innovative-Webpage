@@ -86,7 +86,12 @@
      position: fixed;
      width: 100%;
      z-index: 1000;
+     transition: 2s;
  }
+ #header.scroll ul {
+    background: rgb(238, 11, 11);
+}
+
 
  .dropdown-menu {
      margin-left: 50% !important;
@@ -1748,6 +1753,7 @@ margin-top:-5%;
      overflow: hidden;
      position: relative;
      width: 100%;
+     
  }
 
  .slider::before,
@@ -1776,15 +1782,11 @@ margin-top:-5%;
      display: flex;
      width: calc(250px * 20);
  }
+.slide{
+    padding: 0 50px;
+}
 
- .slider .slide {
-     height: 100px;
-     width: 250px;
- }
-    img{
-        width: 400px;
-    
-    }
+   
     
     @keyframes mover {
         0%{

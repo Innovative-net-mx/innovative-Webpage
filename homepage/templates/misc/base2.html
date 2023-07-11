@@ -15,8 +15,19 @@
     <title>Document</title>
 </head>
 <header id="header">
+  <script>
+    window.onscroll = function() {scrollFunction()};
   
-    <nav class="navbar navbar-expand-lg "style="background-color: #F1F7ED;">
+  function scrollFunction() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      document.getElementById("header").style.backgroundColor = "#F1F7ED";
+    } else {
+      document.getElementById("header").style.backgroundColor = "transparent";
+    }
+  }
+  </script>
+  
+    <nav class="navbar navbar-expand-lg >
 
 <div class="container-fluid">
           <a href="{% url "index" %}"> <img class="logo" src="static/css/img/horizontal blanco.png" href="section1" ></a>
