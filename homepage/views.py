@@ -36,9 +36,9 @@ class Contacto_Form(CreateView):
             'Contact Form Submission',
             f'Name: {form.cleaned_data["nombre"]}\nEmail: {form.cleaned_data["email"]}\nMessage: {form.cleaned_data["descripcion"]}',
             'no-reply@innovative-net.mx',
-            ['desarrollo.it2@innovative-net.mx'],
+            ['desarrollo.it2@innovative-net.mx','daniel.jara@innovative-net.mx'],
             fail_silently=False,
-
+            subject=f"Nueva solicitud de contacto",
         )
 
         # Display success message
