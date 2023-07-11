@@ -35,7 +35,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
     document.getElementById("header").style.backgroundColor = "#F1F7ED";
   } else {
-    document.getElementById("header").style.backgroundColor = "transparent";
+    document.getElementById("header").style.backgroundColor = "rgba(0, 0, 0, 0.15)";
   }
 }
 </script>
@@ -56,19 +56,19 @@ function scrollFunction() {
               
       <li class="nav-item">
 
-      <a class="nav-link active" aria-current="page" href="#section2" style="margin-left:170px; font-size: 20px;">Servicios</a>
+      <a class="nav-link active" aria-current="page" href="#section2" style="margin-left:170px; font-size: 20px; font-weight: bold;">Servicios</a>
 
       </li>
 
       <li class="nav-item">
 
-      <a class="nav-link" href="#section3" style="margin-left:170px; font-size: 20px;">Nosotros</a>
+      <a class="nav-link" href="#section3" style="margin-left:170px; font-size: 20px; font-weight: bold;">Nosotros</a>
 
       </li>
 
       <li class="nav-item dropdown">
 
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left:170px; font-size: 20px;">Contactanos</a>
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left:170px; font-size: 20px; font-weight: bold;">Contactanos</a>
                 <ul class="dropdown-menu">
 
                   <li><a class="dropdown-item" href="{% url "contacto" %}">Contactanos</a></li>

@@ -87,6 +87,8 @@
      width: 100%;
      z-index: 1000;
      transition: 2s;
+    background-color: rgba(0, 0, 0, 0.15);
+    
  }
  #header.scroll ul {
     background: rgb(238, 11, 11);
