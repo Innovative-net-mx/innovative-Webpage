@@ -32,7 +32,7 @@
   window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     document.getElementById("header").style.backgroundColor = "#F1F7ED";
   } else {
     document.getElementById("header").style.backgroundColor = "rgba(0, 0, 0, 0.15)";
