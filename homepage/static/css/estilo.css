@@ -1940,11 +1940,4 @@ margin-top:-5%;
             transform: translate(100%);
         }
     }
-    .fondoerror{
-    height: 900px;
-     width: -99.0vw;
-     background-image: url(img/fondoerror.png);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
-    }
+   
