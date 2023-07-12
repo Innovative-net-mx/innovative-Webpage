@@ -8,4 +8,5 @@ urlpatterns = [
     path("objetivos", views.objetivos, name="objetivos" ),
     path("inicio",   views.inicio, name="inicio"),
     path("error_form", views.error_form, name="error_form"),
+    
 ]
