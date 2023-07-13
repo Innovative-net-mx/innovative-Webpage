@@ -1946,9 +1946,9 @@ margin-top:-5%;
     width:50%;
   }
   .propio{
-  width: 70%;
+  width: 700px;
   height: 600px;
-  margin-top: 10%;
+  margin-top: 3%;
   background-color: #fff;
   display:flex ;
   border-radius: 8px;
@@ -1958,6 +1958,14 @@ margin-top:-5%;
   padding: 5px 10px;
   position: relative;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
+  
+  }
+  @media(max-width:500px){
+    .propio{
+        width: 400px;
+        height: 400px;
+        margin-top: 10%;
+    }
   }
  
 
