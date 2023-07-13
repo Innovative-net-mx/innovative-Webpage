@@ -110,7 +110,7 @@ window.addEventListener("scroll", function(){
 
     if(posicionObj1 < tamañoDePantalla){
 
-      animacion.style.animation = "mover 1s ease-out"
+      animacion.style.animation = "mover2 1s ease-out"
 
     }
 })
@@ -136,7 +136,7 @@ window.addEventListener("scroll", function(){
 
     if(posicionObj1 < tamañoDePantalla){
 
-      animacion.style.animation = "mover 1s ease-out"
+      animacion.style.animation = "mover2 1s ease-out"
 
     }
 })
