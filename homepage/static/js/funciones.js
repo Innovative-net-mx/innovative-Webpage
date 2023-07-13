@@ -41,9 +41,11 @@ window.addEventListener('scroll', function() {
     }
 
 });
+
 /*FIN animacion servicio SCROLL*/
 
 /*Apis mapas*/
+
 var map, map2;
 
 function initMap() {
@@ -69,7 +71,9 @@ function initMap() {
     });
     marker.setMap(map2);
 }
+
 /*Fin Apis mapas*/
+
 /*Video promocional automatico*/
 
 
@@ -102,6 +106,7 @@ function videoScroll() {
 /*Fin video promocional automatico*/
 
 /*Animaciones scroll ultimas tres imagenes*/
+
 window.addEventListener("scroll", function(){
     let animacion = document.getElementById("animado");
     let posicionObj1 = animacion.getBoundingClientRect().top;
@@ -110,7 +115,7 @@ window.addEventListener("scroll", function(){
 
     if(posicionObj1 < tamañoDePantalla){
 
-      animacion.style.animation = "mover 1s ease-out"
+      animacion.style.animation = "mover2 1s ease-out"
 
     }
 })
@@ -136,8 +141,31 @@ window.addEventListener("scroll", function(){
 
     if(posicionObj1 < tamañoDePantalla){
 
-      animacion.style.animation = "mover 1s ease-out"
+      animacion.style.animation = "mover2 1s ease-out"
 
     }
 })
+
 /*Fin animaciones scroll ultimas tres imagenes*/
+
+
+window.addEventListener('scroll', function() {
+    let elements = document.getElementsByClassName('scroll-content3');
+    let screenSize = window.innerHeight;
+
+    for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+
+        if (element.getBoundingClientRect().top < screenSize) {
+
+            element.classList.add('visible3');
+
+        } else {
+
+            element.classList.remove('visible3');
+
+        }
+
+    }
+
+});

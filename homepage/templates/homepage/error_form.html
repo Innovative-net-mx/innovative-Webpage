@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "css/estilo.css" %}">
+<title>Error</title>
+<html class="fondoerror">
+  <br><br>
+<center>
+
+  <div class="propio" >
+    
+    <img  class="iconoerror"  src="static/css/img/iconoerror.png" >
+     <p class="cookieHeading">Ups algo salio mal</p>
+     <p class="cookieDescription">Algo salio mal al enviar tus datos, intentalo nuevamente o si persiste el problema intentalo más tarde.</p>
+     <div class="buttonContainer">
+      <a href="{% url "contacto" %}"><button class="acceptButton">Intentar nuevamente</button></a>
+      <a  href="{% url "inicio" %}"> <button class="declineButton">Intentar más tarde</button> </a>
+     </div>
+     
+   
+   </div>
+   
+  </center>
+
+
+</html>
