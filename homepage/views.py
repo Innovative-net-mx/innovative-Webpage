@@ -46,4 +46,4 @@ class Contacto_Form(CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse_lazy('index')
+        return reverse_lazy('contacto')
