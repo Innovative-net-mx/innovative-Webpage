@@ -301,7 +301,8 @@
      background: transparent;
      cursor: pointer;
      transition: ease-out 0.5s;
-     border: 2px solid black;
+     border: 2px solid;
+     border-color: rgb(100, 100, 100);
      border-radius: 10px;
      box-shadow: inset 0 0 0 0 #c16200;
  }
@@ -562,6 +563,7 @@ margin-top:-5%;
  }
 
  @import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+
  /* --- IMAGE-HOVER --- */
 
  .image-hover {
@@ -767,6 +769,7 @@ margin-top:-5%;
  }
 
  /*Fin home*/
+
  /*Contacto*/
 
  .extphon {
@@ -1128,9 +1131,11 @@ margin-top:-5%;
      input:valid) {
      border-color: rgb(150, 150, 200);
  }
+
  /*Fin contacto*/
 
 /*Responsivo*/
+
 @media (max-width:760px) {
     .cta {
         width: 60%;
@@ -1645,6 +1650,7 @@ margin-top:-5%;
  }
 
  /* Fin cartera de servicios*/
+
  /*objetivos*/
 
  .h1objetivos {
@@ -1999,11 +2005,6 @@ margin-top:-5%;
   font-weight: 500;
   color: rgb(99, 99, 99);
 }
-
-
-
-
-
 .buttonContainer {
   display: flex;
   gap: 20px;
@@ -2048,7 +2049,5 @@ margin-top:-5%;
   box-shadow: 0 10px 15px -3px #977ef3, 0 4px 6px -2px #977ef3;
   transition-duration: .2s;
 }
-
-
 
    /*termina pagina de error*/
