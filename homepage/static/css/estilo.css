@@ -763,7 +763,11 @@ margin-top:-5%;
      font-size: 13px;
      margin-bottom: 0;
  }
-
+html, body{
+    margin: 0;
+    padding: 0;
+   
+}
  .lifotter {
      color: white;
  }
@@ -2051,3 +2055,7 @@ margin-top:-5%;
 }
 
    /*termina pagina de error*/
+
+   #sernav:hover{
+color: #E4971F;
+   }

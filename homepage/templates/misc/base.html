@@ -56,19 +56,19 @@ function scrollFunction() {
               
       <li class="nav-item">
 
-      <a class="nav-link active" aria-current="page" href="#section2" style="margin-left:170px; font-size: 20px; font-weight: bold;">Servicios</a>
+      <a class="nav-link active" id="sernav" aria-current="page" href="#section2" style="margin-left:170px; font-size: 20px; font-weight: bold;">Servicios</a>
 
       </li>
 
       <li class="nav-item">
 
-      <a class="nav-link" href="#section3" style="margin-left:170px; font-size: 20px; font-weight: bold;">Nosotros</a>
+      <a class="nav-link" id="sernav" href="#section3" style="margin-left:170px; font-size: 20px; font-weight: bold;">Nosotros</a>
 
       </li>
 
       <li class="nav-item dropdown">
 
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left:170px; font-size: 20px; font-weight: bold;">Contactanos</a>
+      <a class="nav-link dropdown-toggle" id="sernav"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left:170px; font-size: 20px; font-weight: bold;">Contactanos</a>
                 <ul class="dropdown-menu">
 
                   <li><a class="dropdown-item" href="{% url "contacto" %}" style="font-weight: bold;">Contactanos</a></li>
@@ -98,44 +98,45 @@ function scrollFunction() {
 </body>
 
 
-<footer>
+
 <div class="linea"></div>
-  <div class="footer-dark">
-    <footer>
-        <div class="container">
-            <div class="row">
-              
-                <div class="col-sm-6 col-md-3 item">
-                    <h3 class="txtsss">LINKS RAPIDOS</h3>
-                    <ul>
-                        <li><a style="color:white;" href="https://www.innovative-net.mx/esp/lenel-partner/lenels2-value-added-resellers">LenelS2 Value Added Reseller</a></li>
-                    </ul>
-                </div>
-              
-                <center>
-                <div class="col-md-6 item text">
-                  <h3 class="txtsss">Innovative net</h3>
-                  <p class="txtsss">INTEGRANDO IDEAS, CREANDO SOLUCIONES.</p>
+  
+<div class="footer-dark">
+  <footer style="height: 7%;">
+      <div class="container">
+          <div class="row">
+            
+              <div class="col-sm-6 col-md-3 item">
+                  <h3 class="txtsss">LINKS RAPIDOS</h3>
+                  <ul>
+                      <li><a style="color:white;" href="https://www.innovative-net.mx/esp/lenel-partner/lenels2-value-added-resellers">LenelS2 Value Added Reseller</a></li>
+                  </ul>
               </div>
-            </center>
-                <div class="col-sm-6 col-md-3 item">
-                    <h3 class="txtsss">INFORMACION LEGAL</h3>
-                    <ul>
-                        <li><a style="color:white;" href="https://www.innovative-net.mx/aviso-de-privacidad">Aviso de Privacidad</a></li><br>
-                    </ul>
-                </div>
-               
-                <div class="item social">
-                  <a href="https://www.facebook.com/InnovativeNett/?locale=es_LA"><i class="fa-brands fa-facebook fa-bounce" style="color: #005eff;"></i></a>
-                  <a href="https://mx.linkedin.com/company/innovative-net"><i class="fa-brands fa-linkedin fa-beat-fade" style="color: #0374B3;"></i></a>
-                  <a href="https://www.instagram.com/innovativenetmx/?hl=es-la"><i class="fa-brands fa-instagram fa-fade" style="color: #ff00f7;"></i></a>
-                  <a href="https://twitter.com/innovativenetmx"><i class="fa-brands fa-twitter fa-bounce" style="color: #3ddee1;"></i></a>
-                  <a href="{% url "index" %}"><img class="inovafoo" src="static/css/img/loginova.png"></a>
-                </div>
+            
+              <center>
+              <div class="col-md-6 item text">
+                <h3 class="txtsss">Innovative net</h3>
+                <p class="txtsss">INTEGRANDO IDEAS, CREANDO SOLUCIONES.</p>
             </div>
-            <p class="copyr">Innovative net © 2023</p>
-        </div>
-        
-</footer>
+          </center>
+              <div class="col-sm-6 col-md-3 item">
+                  <h3 class="txtsss">INFORMACION LEGAL</h3>
+                  <ul>
+                      <li><a style="color:white;" href="https://www.innovative-net.mx/aviso-de-privacidad">Aviso de Privacidad</a></li><br>
+                  </ul>
+              </div>
+             
+              <div class="item social">
+                <a href="https://www.facebook.com/InnovativeNett/?locale=es_LA"><i class="fa-brands fa-facebook fa-bounce" style="color: #005eff;"></i></a>
+                <a href="https://mx.linkedin.com/company/innovative-net"><i class="fa-brands fa-linkedin fa-beat-fade" style="color: #0374B3;"></i></a>
+                <a href="https://www.instagram.com/innovativenetmx/?hl=es-la"><i class="fa-brands fa-instagram fa-fade" style="color: #ff00f7;"></i></a>
+                <a href="https://twitter.com/innovativenetmx"><i class="fa-brands fa-twitter fa-bounce" style="color: #3ddee1;"></i></a>
+                <a href="{% url "index" %}"><img class="inovafoo" src="static/css/img/loginova.png"></a>
+              </div>
+              <p class="copyr">Innovative net © 2023</p>
+          </div>
+         
+      </div>
+  </footer>
 
 </html>
