@@ -35,7 +35,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     document.getElementById("header").style.backgroundColor = "#F1F7ED";
   } else {
-    document.getElementById("header").style.backgroundColor = "rgba(0, 0, 0, 0.15)";
+    document.getElementById("header").style.backgroundColor = "rgba(255,255,255,0.5)";
   }
 }
 </script>
@@ -71,11 +71,11 @@ function scrollFunction() {
       <a class="nav-link dropdown-toggle" id="sernav"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left:170px; font-size: 20px; font-weight: bold;">Contactanos</a>
                 <ul class="dropdown-menu">
 
-                  <li><a class="dropdown-item" href="{% url "contacto" %}" style="font-weight: bold;">Contactanos</a></li>
+                  <li><a class="dropdown-item" href="{% url "contacto" %}" style="font-weight: bold; color: #c16200;">Contactanos</a></li>
 
-                  <li><a class="dropdown-item" href="{% url "cartera_servicios" %}" style="font-weight: bold;">Cartera de servicios</a></li>
+                  <li><a class="dropdown-item" href="{% url "cartera_servicios" %}" style="font-weight: bold; color: #c16200; ">Cartera de servicios</a></li>
 
-                  <li><a class="dropdown-item" href="{% url "objetivos" %}" style="font-weight: bold;">Objetivos</a></li>
+                  <li><a class="dropdown-item" href="{% url "objetivos" %}" style="font-weight: bold; color: #c16200;">Objetivos</a></li>
 
                 </ul>
       </li>

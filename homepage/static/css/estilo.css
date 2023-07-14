@@ -89,12 +89,11 @@
      width: 100%;
      z-index: 1000;
      transition: 2s;
-    background-color: rgba(0, 0, 0, 0.15);
+     background-color: rgba(255,255,255,0.5)
+    
     
  }
- #header.scroll ul {
-    background: rgb(238, 11, 11);
-}
+
 
 
  .dropdown-menu {
@@ -2058,5 +2057,5 @@ html, body{
    /*termina pagina de error*/
 
    #sernav:hover{
-color: #E4971F;
+color: #C16200;
    }
