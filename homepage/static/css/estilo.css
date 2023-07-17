@@ -1089,6 +1089,7 @@ margin-top:-5%;
      font-family: 'Segoe UI', sans-serif;
      max-width: 350px;
      position: relative;
+     z-index: 3;
  }
 
  .inputGroup3 textarea {
@@ -1181,6 +1182,11 @@ margin-top:-5%;
     }
     p {
         font-size: 20px;
+    }
+    .formnegro {
+        width: 25%;
+       
+        margin-left: 17%;
     }
 }
 
@@ -1373,6 +1379,17 @@ margin-top:-5%;
             height: 367px;
             width: 790px
         }
+        .formnegro {
+            width: 20%;
+            
+            margin-left: 22%;
+        }
+    }
+    @media(max-width:2000px){
+        .formnegro {
+            width: 20%;
+            margin-left: 22%;
+        }
     }
     @media (max-width:991px) {
         .footer-dark .item.social {
@@ -1466,6 +1483,13 @@ margin-top:-5%;
       .titapsobnons2{
         margin-left: 20%;
       }
+    }
+    @media(min-width:2000px){
+        .formnegro {
+            width: 19%;
+           
+            margin-left: 22%;
+        }
     }
     @media (max-width:924px){
         .titapsobnons {
