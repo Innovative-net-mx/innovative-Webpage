@@ -834,7 +834,7 @@ margin-top:-5%;
 
  .letras {
      font-size: 170%;
-     color: #C16200;
+     color: #F1F7ED;
  }
 
  .letras1 {
@@ -1088,6 +1088,7 @@ margin-top:-5%;
      font-family: 'Segoe UI', sans-serif;
      max-width: 350px;
      position: relative;
+     z-index: 2;
  }
 
  .inputGroup3 textarea {
