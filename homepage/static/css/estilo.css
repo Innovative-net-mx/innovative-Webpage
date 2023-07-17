@@ -833,11 +833,14 @@ margin-top:-5%;
  }
 
  .letras {
-     font-size: 150%;
+     font-size: 170%;
+     color: #C16200;
  }
 
  .letras1 {
      font-size: 100%;
+     margin-left: 30px;
+     width: 90%;
  }
 
  .body {
@@ -854,7 +857,7 @@ margin-top:-5%;
      border-radius: 33px;
      background: #628395;
      width: 450px;
-     height: 550px;
+     height: 650px;
      border: 1px;
      margin-left: 40%;
  }
@@ -1251,8 +1254,15 @@ margin-top:-5%;
     }
     .form {
         width: 350px;
-        height: 600px;
+        height: 700px;
         margin-left: 9%;
+    }
+    .letras{
+        font-size:151% ;
+    }
+    .letras1{
+        font-size:70% ;
+        margin-left: 0;
     }
     .contact-from-phone {
         margin-left: 20%;
