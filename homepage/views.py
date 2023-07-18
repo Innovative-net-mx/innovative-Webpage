@@ -52,3 +52,19 @@ class Contacto_Form(CreateView):
         return reverse_lazy('contacto')
     def get_error_url(self):
         return reverse_lazy('error_form')
+
+# ========>> CRM VIEWS <<==========
+
+# class view in wich it show the data base list of CRM_noticias
+class CRM_noticias_list(ListView):
+    model = CRM_noticas
+    template_name = 'CRM/listado_noticias.html'
+    from_class = CRM_noticia_form
+    object = "noticias"
+
+class CRM_noticias_create(CreateView):
+    model = CRM_noticas
+    form_class = CRM_noticia_form
+    template_name = 'CRM/agregar_noticia.html'
+    success_url = reverse_lazy('crm_noticias_list')
+
