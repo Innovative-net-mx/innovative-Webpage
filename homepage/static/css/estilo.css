@@ -336,6 +336,10 @@
 }
 
 .btnagg:hover {
+    color: white;
+     box-shadow: inset 0 -100px 0 0 #c16200;
+ } 
+
  .btnnoticias {
     position: relative;
     display: inline-block;
@@ -361,11 +365,11 @@
     box-shadow: inset 0 -100px 0 0 #c16200;
 }
 
-<<<<<<< HEAD
 .btnagg:active {
-=======
+    transform: scale(0.9);
+}
+
 .btnnoticias:active {
->>>>>>> 6cca88ca21ac169d3e213d9377f96c1e7e52fc72
     transform: scale(0.9);
 }
  .det_ser {
