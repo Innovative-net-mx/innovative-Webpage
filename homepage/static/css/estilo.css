@@ -316,6 +316,34 @@
      transform: scale(0.9);
  }
 
+ .btnnoticias {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    width: 180px;
+    height: 60px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid;
+    border-color: rgb(100, 100, 100);
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 0 #c16200;
+}
+
+.btnnoticias:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #c16200;
+}
+
+.btnnoticias:active {
+    transform: scale(0.9);
+}
  .det_ser {
      width: 100%;
      height: auto;
@@ -387,13 +415,12 @@ margin-top:-5%;
     justify-content:start;
    
   }
-  .scroll{
-    height: 290px;
-        width: 1900px;
-        overflow-y: auto;
-        z-index: 3;
-       
-  }
+  .svgimg{
+    background-image: url(img/fondoaggnoticia.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
 
   .gris{
     background-color:rgba(241, 247, 237, 0.60);
