@@ -1,7 +1,165 @@
 {% extends "misc/base_crm.html" %}
 {% block body %}
 
-<div style="height: 700px;"></div>
+<div class="svgimg">
+  <br><br><br><br><br><br>
 
 
+  <center>
+    <div class="fondo-form"></div>
+    <div class="form-noticias">
+        <h1 class="titform">AGREGRA NOTICIA</h1>
+        
+
+        <form actions="" method="POST" >
+
+            {% csrf_token %}
+            {{form.non_field_errors}}
+
+            <div class="inputGroupnoticias">
+                {{ form.titulo.errors }}
+            {{form.titulo}} 
+            <label for="name">Titulo</label>
+
+            </div>
+            <div class="inputGroupnoticias">
+                {{ form.fecha.errors }}
+                {{form.fecha}} 
+                <label for="name">Fecha</label>
+            </div> 
+
+            <br><br>
+            <div class="inputGroupnoticias">
+                {{ form.imagen.errors }}
+                {{form.imagen}} 
+              
+            </div>
+
+                <div class="inputGroupdes">
+            
+                {{ form.descripcion.errors }}
+                {{form.descripcion}}
+                <label for="name">Descripcion</label>
+            </div> 
+
+            <button class="btnnoticias">Enviar</button>
+
+            </div> 
+    
+
+        
+
+    
+</center>
+
+<br><br><br><br>
+</div>
+
+<style>
+
+.titform{
+    color: #F1F7ED;
+}
+.fondo-form{
+    width: 420px;
+    height: 510px;
+    background-color: #C16200;
+    border-radius: 20px;
+}
+.form-noticias{
+    width: 400px;
+    height: 490px;
+    position: relative;
+    margin-top: -500px;
+    border-radius: 20px;
+    background-color: #628395;
+}
+
+.inputGroupnoticias {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 1em 0 1em 0;
+  max-width: 340px;
+  position: relative;
+}
+
+.inputGroupnoticias input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: #F1F7ED;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputGroupnoticias label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.inputGroupnoticias :is(input:focus, input:valid)~label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #628395;
+}
+
+.inputGroupnoticias :is(input:focus, input:valid) {
+  border-color: rgb(150, 150, 200);
+}
+
+
+
+
+.inputGroupdes {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 1em 0 1em 0;
+  max-width: 340px;
+  position: relative;
+}
+
+.inputGroupdes textarea {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: #F1F7ED;
+  border-radius: 20px;
+  height: 130px;
+  width: 100%;
+}
+
+.inputGroupdes label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.inputGroupdes :is(textarea:focus, textarea:valid)~label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #628395;
+}
+
+.inputGroupdes :is(textarea:focus, textarea:valid) {
+  border-color: rgb(150, 150, 200);
+}
+
+
+
+</style>
 {% endblock %}
