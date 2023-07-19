@@ -449,6 +449,12 @@ margin-top:-5%;
     background-repeat: no-repeat;
     background-position: center;
     }
+    .svgimg{
+        background-image: url(img/fondo-agregar-noticia.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        }
 
   .gris{
     background-color:rgba(241, 247, 237, 0.60);
