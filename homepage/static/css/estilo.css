@@ -315,6 +315,30 @@
  .btnnose:active {
      transform: scale(0.9);
  }
+/**/
+.btnagg {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid;
+    border-color: rgb(100, 100, 100);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #c16200;
+}
+
+.btnagg:hover {
+    color: white;
+     box-shadow: inset 0 -100px 0 0 #c16200;
+ } 
 
  .btnnoticias {
     position: relative;
@@ -339,6 +363,10 @@
 .btnnoticias:hover {
     color: white;
     box-shadow: inset 0 -100px 0 0 #c16200;
+}
+
+.btnagg:active {
+    transform: scale(0.9);
 }
 
 .btnnoticias:active {
@@ -2147,3 +2175,11 @@ margin-top:-5%;
    #sernav:hover{
 color: #C16200;
    }
+
+
+   .fondolistado_noticias{
+    background-image: url(img/fondolistado_noticia.svg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+}

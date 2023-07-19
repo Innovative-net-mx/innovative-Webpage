@@ -1,7 +1,156 @@
-{% extends "misc/base3.html" %}
+{% extends "misc/base_crm.html" %}
 {% block body %}
-cuerpo 
-<div style="height: 700px;"></div>
+<div class="fondolistado_noticias">
+    <br> 
+    <div style="height: 700px;">
+    
+    <table class="rwd-table">
+      <tr>
+        <th>Agregar noticia</th>
+        <th>Titulo</th>
+        <th>Foto</th>
+        <th>Fecha</th>
+        <th>Descripcion</th>
+        
+      </tr>
+      <tr>
+        <td data-th="agregar"><button class="btnagg"> Agregar
+        </button></td>
+        <td data-th="Titulo">Ejemplo</td>
+        <td data-th="Foto">ejemplo.png</td>
+        <td data-th="Fecha">06/06/2006</td>
+        <td data-th="Descripcion">lorem ipsu is simply dummy text of the printing and typesetting industry. </td>
+      </tr>
+      <tr>
+        <td data-th="agregar"><button class="btnagg"> Agregar
+        </button></td>
+        <td data-th="Titulo">Ejemplo</td>
+        <td data-th="Foto">ejemplo.png</td>
+        <td data-th="Fecha">06/06/2006</td>
+        <td data-th="Descripcion">lorem ipsu is simply dummy text of the printing and typesetting industry. </td>
+      </tr>
+      <tr>
+        <td data-th="agregar"><button class="btnagg"> Agregar
+        </button></td>
+        <td data-th="Titulo">Ejemplo</td>
+        <td data-th="Foto">ejemplo.png</td>
+        <td data-th="Fecha">06/06/2006</td>
+        <td data-th="Descripcion">lorem ipsu is simply dummy text of the printing and typesetting industry. </td>
+      </tr>
+    </table>
+    
+
+</div>
 
 
+</div>
+
+
+<style>
+
+
+.rwd-table {
+    margin: 7em 26em;
+    
+}
+.rwd-table tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.rwd-table th {
+    display: none;
+}
+.rwd-table td {
+    display: block;
+    background-color: #628395;
+}
+.rwd-table td:first-child {
+    padding-top: .5em;
+}
+.rwd-table td:last-child {
+    padding-bottom: .5em;
+}
+.rwd-table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 6.5em;
+    display: inline-block;
+}
+@media (min-width: 480px) {
+    .rwd-table td:before {
+        display: none;
+    }
+}
+@media(max-width:1000px){
+    .rwd-table{
+        margin: 7em 20em; 
+        margin-left: 90px;
+    }
+}
+@media(max-width:800px){
+    .rwd-table{
+        margin: 7em 10em; 
+    }
+}
+@media(max-width:800px){
+    .rwd-table{
+        margin: 7em 10em; 
+    }
+}
+@media(max-width:590px){
+    .rwd-table{
+        margin: 7em 5em; 
+    }
+}
+@media(max-width:385px){
+    .rwd-table{
+        width: 297px; 
+        margin-left: 30px;
+    }
+}
+
+
+
+
+.rwd-table th, .rwd-table td {
+    text-align: left;
+}
+@media (min-width: 480px) {
+    .rwd-table th, .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em;
+    }
+    .rwd-table th:first-child, .rwd-table td:first-child {
+        padding-left: 0;
+    }
+    .rwd-table th:last-child, .rwd-table td:last-child {
+        padding-right: 0;
+    }
+}
+
+
+.rwd-table {
+    color: #fff;
+    border-radius: .4em;
+    overflow: hidden;
+}
+.rwd-table tr {
+    border-color: #C16200;
+    background-color: #F1F7ED;
+}
+.rwd-table th, .rwd-table td {
+    margin: .5em 1em;
+}
+@media (min-width: 480px) {
+    .rwd-table th, .rwd-table td {
+        padding: 1em !important;
+    }
+}
+
+.rwd-table th, .rwd-table td:before {
+    color: #051923;
+}
+
+
+</style>
 {% endblock %}
