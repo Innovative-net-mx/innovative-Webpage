@@ -332,12 +332,12 @@
     border: 2px solid;
     border-color: rgb(100, 100, 100);
     border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #c16200;
+    box-shadow: inset 0 0 0 0 #628395;
 }
 
 .btnagg:hover {
     color: white;
-     box-shadow: inset 0 -100px 0 0 #c16200;
+     box-shadow: inset 0 -100px 0 0 #628395;
  } 
 
  .btnnoticias {
@@ -2172,7 +2172,7 @@ color: #C16200;
 
 
    .fondolistado_noticias{
-    background-image: url(img/fondolistado_noticia.svg);
+    background-image: url(img/fondolistado.svg);
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;

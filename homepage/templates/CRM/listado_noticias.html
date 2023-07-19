@@ -6,7 +6,6 @@
     
     <table class="rwd-table">
       <tr>
-        <th>Agregar noticia</th>
         <th>Titulo</th>
         <th>Foto</th>
         <th>Fecha</th>
@@ -14,31 +13,32 @@
         
       </tr>
       <tr>
-        <td data-th="agregar"><button class="btnagg"> Agregar
-        </button></td>
         <td data-th="Titulo">Ejemplo</td>
         <td data-th="Foto">ejemplo.png</td>
         <td data-th="Fecha">06/06/2006</td>
-        <td data-th="Descripcion">lorem ipsu is simply dummy text of the printing and typesetting industry. </td>
+        <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
+    
       </tr>
       <tr>
-        <td data-th="agregar"><button class="btnagg"> Agregar
-        </button></td>
         <td data-th="Titulo">Ejemplo</td>
         <td data-th="Foto">ejemplo.png</td>
         <td data-th="Fecha">06/06/2006</td>
-        <td data-th="Descripcion">lorem ipsu is simply dummy text of the printing and typesetting industry. </td>
+        <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
       </tr>
       <tr>
-        <td data-th="agregar"><button class="btnagg"> Agregar
-        </button></td>
         <td data-th="Titulo">Ejemplo</td>
         <td data-th="Foto">ejemplo.png</td>
         <td data-th="Fecha">06/06/2006</td>
-        <td data-th="Descripcion">lorem ipsu is simply dummy text of the printing and typesetting industry. </td>
+        <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
       </tr>
     </table>
-    
+    <table class="tabla_btn">
+
+        <tr>
+        <td data-th="agregar"><button class="btnagg"> Agregar
+        </button></td>
+    </tr>
+    </table>
 
 </div>
 
@@ -47,7 +47,88 @@
 
 
 <style>
+    .desnot{
+ width: 240px;
+  height: 70px;
+  overflow-x: hidden;
+    }
+  
+    .tabla_btn {
+    margin: -20em 15em;
+    
+}
 
+
+.tabla_btn th {
+    display: none;
+}
+
+.tabla_btn td:first-child {
+    padding-top: .5em;
+}
+.tabla_btn td:last-child {
+    padding-bottom: .5em;
+}
+.tabla_btn td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 6.5em;
+    display: inline-block;
+}
+@media (min-width: 480px) {
+    .tabla_btn td:before {
+        display: none;
+    }
+}
+
+
+@media(max-width:590px){
+    .tabla_btn{
+        margin: 7em 5em; 
+    }
+}
+@media(max-width:385px){
+    .tabla_btn{
+        width: 297px; 
+        margin-left: 30px;
+    }
+}
+
+
+
+
+.tabla_btn th, .tabla_btn td {
+    text-align: left;
+}
+@media (min-width: 480px) {
+    .tabla_btn th, .tabla_btn td {
+        display: table-cell;
+        padding: .25em .5em;
+    }
+    .tabla_btn th:first-child, .tabla_btn td:first-child {
+        padding-left: 0;
+    }
+    .tabla_btn th:last-child, .tabla_btn td:last-child {
+        padding-right: 0;
+    }
+}
+
+
+
+
+.tabla_btn th, .tabla_btn td {
+    margin: .5em 1em;
+}
+@media (min-width: 480px) {
+    .tabla_btn th, .tabla_btn td {
+        padding: 1em !important;
+    }
+}
+
+.tabla_btn th, .tabla_btne td:before {
+    color: #051923;
+}
+/*otra tabla*/
 
 .rwd-table {
     margin: 7em 26em;
@@ -81,22 +162,7 @@
         display: none;
     }
 }
-@media(max-width:1000px){
-    .rwd-table{
-        margin: 7em 20em; 
-        margin-left: 90px;
-    }
-}
-@media(max-width:800px){
-    .rwd-table{
-        margin: 7em 10em; 
-    }
-}
-@media(max-width:800px){
-    .rwd-table{
-        margin: 7em 10em; 
-    }
-}
+
 @media(max-width:590px){
     .rwd-table{
         margin: 7em 5em; 
