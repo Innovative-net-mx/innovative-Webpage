@@ -55,6 +55,8 @@ class Contacto_Form(CreateView):
 
 # ========>> CRM VIEWS <<==========
 
+def login(request):
+    return render(request, "CRM/login.html")
 # class view in wich it show the data base list of CRM_noticias
 class CRM_noticias_list(ListView):
     model = CRM_noticas
