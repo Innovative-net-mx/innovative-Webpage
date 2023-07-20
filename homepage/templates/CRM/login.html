@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/aed5eee859.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
@@ -10,13 +13,13 @@
     <center>
 <div class="contenedor-login"><br><br>
 
-    <h1 class="titlog">LOGIN</h1>
-    <p>Hey enter your details to sign in your account</p>
+    <h1 class="titlog">LOGIN</h1><br>
+  
 
     <div class="inputGroupemail">
         
         <input id="inputemail" type="text" required="" autocomplete="off" >
-        <label for="name"><i class="fa-solid fa-user fa-lg"></i> Enter your username/email</label> 
+        <label class="label1" for="name" ><i class="fa-solid fa-user fa-lg"></i> Enter your username/email</label> 
         
     </div>
     <div class="inputGrouppassword">
@@ -27,24 +30,47 @@
     </div>
 
     <button class="btnlog">Login in</button>
-    <p>Dont't have an account? <a href="">sing in</a></p>
+
 
 </div>
 </center>
 
 <style>
+  .label1{
+    font-family: 'Roboto', sans-serif;
+  }
     .titlog{
         color: #587291;
+        font-family: 'Roboto', sans-serif;
     }
-   .btnlog{
-    width: 327px;
-    height: 50px;
-    background-color: #587291;
-    border-radius: 10px;
-    color: #F1F7ED;
-    border: 1px solid black;
-    margin-left: 20px;
-   }
+    .btnlog {
+     position: relative;
+     display: inline-block;
+     margin: 15px;
+     padding: 15px 30px;
+     text-align: center;
+     font-size: 18px;
+     letter-spacing: 1px;
+     text-decoration: none;
+     color:black;
+     font-family: 'Roboto', sans-serif;
+     background: transparent;
+     cursor: pointer;
+     transition: ease-out 0.5s;
+     border: 2px solid;
+     border-color: rgb(100, 100, 100);
+     border-radius: 10px;
+     box-shadow: inset 0 0 0 0 #c16200;
+ }
+
+ .btnlog:hover {
+     color: white;
+     box-shadow: inset 0 -100px 0 0 #c16200;
+ }
+
+ .btnlog:active {
+     transform: scale(0.9);
+ }
 
 #inputemail{
     width: 300px;
@@ -133,6 +159,7 @@ body{
   font-size: 100%;
   position: absolute;
   left: 0;
+  font-family: 'Roboto', sans-serif;
   width: 250px;
   margin-top: -50px;
   padding: 0.8em;
