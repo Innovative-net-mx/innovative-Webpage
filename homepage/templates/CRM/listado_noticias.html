@@ -1,222 +1,344 @@
-{% extends "misc/base_crm.html" %}
-{% block body %}
-<div class="fondolistado_noticias">
-    <br> 
-    <div style="height: 700px;">
-    
-    <table class="rwd-table">
-      <tr>
-        <th>Titulo</th>
-        <th>Foto</th>
-        <th>Fecha</th>
-        <th>Descripcion</th>
-        
-      </tr>
-      <tr>
-        <td data-th="Titulo">Ejemplo</td>
-        <td data-th="Foto">ejemplo.png</td>
-        <td data-th="Fecha">06/06/2006</td>
-        <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
-    
-      </tr>
-      <tr>
-        <td data-th="Titulo">Ejemplo</td>
-        <td data-th="Foto">ejemplo.png</td>
-        <td data-th="Fecha">06/06/2006</td>
-        <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
-      </tr>
-      <tr>
-        <td data-th="Titulo">Ejemplo</td>
-        <td data-th="Foto">ejemplo.png</td>
-        <td data-th="Fecha">06/06/2006</td>
-        <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
-      </tr>
-    </table>
-    <table class="tabla_btn">
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/estilo.css" %}">
 
-        <tr>
-        <td data-th="agregar"><button class="btnagg"> Agregar
-        </button></td>
-    </tr>
-    </table>
+    <script src="https://kit.fontawesome.com/aed5eee859.js" crossorigin="anonymous"></script>
+    <script src="{% static "js/funciones.js" %}"></script>
 
-</div>
-
-
-</div>
-
-
-<style>
-    .desnot{
- width: 240px;
-  height: 70px;
-  overflow-x: hidden;
-    }
+    <title>Document</title>
+</head>
+<header id="header">
+  <script>
+    window.onscroll = function() {scrollFunction()};
   
-    .tabla_btn {
-    margin: -20em 15em;
+  function scrollFunction() {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+      document.getElementById("header").style.backgroundColor = "#F1F7ED";
+    } else {
+      document.getElementById("header").style.backgroundColor =  "rgba(255,255,255,0.5)";
+    }
+  }
+  </script>
+  
+    <nav class="navbar navbar-expand-lg >
+
+<div class="container-fluid">
+          <a href="{% url "index" %}"> <img class="logo" src="static/css/img/horizontal blanco.png" href="section1" ></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+          </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+              <li class="nav-item">
+                <a class="nav-link" id="sernav"  href="{% url "inicio" %}  " style="margin-left:100px; font-size: 20px; font-weight: bold;">Inicio</a>
+
+              </li>
+             
+               
+                </a>
+                  <a class="nav-link" id="sernav"  href="{% url "contacto" %}  " style="margin-left:100px; font-size: 20px; font-weight: bold;">Contacto</a>
+                  <a class="nav-link" id="sernav"  href="{% url "cartera_servicios" %}  " style="margin-left:100px; font-size: 20px; font-weight: bold;">Cartera de servicios</a>
+                  <a class="nav-link"  id="sernav" href="{% url "objetivos" %}  " style="margin-left:100px; font-size: 20px; font-weight: bold;">Objetivos</a>
+                  <a class="nav-link" id="sernav" href="#section3" style="margin-left:100px; font-size: 20px; font-weight: bold;">Visualizacion de usuario</a>
+              
+                    
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+</header>
+<div class="fondolistado_noticias">
+<body>
+   
+        <br> 
+        <div style="height: 700px;">
+      
+        <table class="rwd-table">
+          <tr>
+            <th>Titulo</th>
+            <th>Foto</th>
+            <th>Fecha</th>
+            <th>Descripcion</th>
+            
+          </tr>
+          <tr>
+            <td data-th="Titulo">Ejemplo</td>
+            <td data-th="Foto">ejemplo.png</td>
+            <td data-th="Fecha">06/06/2006</td>
+            <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
+        
+          </tr>
+          <tr>
+            <td data-th="Titulo">Ejemplo</td>
+            <td data-th="Foto">ejemplo.png</td>
+            <td data-th="Fecha">06/06/2006</td>
+            <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
+          </tr>
+          <tr>
+            <td data-th="Titulo">Ejemplo</td>
+            <td data-th="Foto">ejemplo.png</td>
+            <td data-th="Fecha">06/06/2006</td>
+            <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
+          </tr>
+          <tr>
+            <td data-th="Titulo">Ejemplo</td>
+            <td data-th="Foto">ejemplo.png</td>
+            <td data-th="Fecha">06/06/2006</td>
+            <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
+          </tr>
+          <tr>
+            <td data-th="Titulo">Ejemplo</td>
+            <td data-th="Foto">ejemplo.png</td>
+            <td data-th="Fecha">06/06/2006</td>
+            <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
+          </tr>
+          <tr>
+            <td data-th="Titulo">Ejemplo</td>
+            <td data-th="Foto">ejemplo.png</td>
+            <td data-th="Fecha">06/06/2006</td>
+            <td data-th="Descripcion"><div class="desnot"> lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry.lorem ipsu is simply dummy text of the printing and typesetting industry. </div> </td> 
+          </tr>
+        
+        </table>
+        
+        <table class="tabla_btn">
     
-}
-
-
-.tabla_btn th {
-    display: none;
-}
-
-.tabla_btn td:first-child {
-    padding-top: .5em;
-}
-.tabla_btn td:last-child {
-    padding-bottom: .5em;
-}
-.tabla_btn td:before {
-    content: attr(data-th) ": ";
-    font-weight: bold;
-    width: 6.5em;
-    display: inline-block;
-}
-@media (min-width: 480px) {
+            <tr>
+            <td data-th="agregar"><button class="btnagg"> Agregar
+            </button></td>
+        </tr>
+        </table>
+    
+    </div>
+   
+    
+    
+    
+    <style>
+        .desnot{
+     width: 240px;
+      height: 70px;
+      overflow-x: hidden;
+        }
+      
+        .tabla_btn {
+        margin: -20em 15em;
+        
+    }
+    
+    
+    .tabla_btn th {
+        display: none;
+    }
+    
+    .tabla_btn td:first-child {
+        padding-top: .5em;
+    }
+    .tabla_btn td:last-child {
+        padding-bottom: .5em;
+    }
     .tabla_btn td:before {
-        display: none;
+        content: attr(data-th) ": ";
+        font-weight: bold;
+        width: 6.5em;
+        display: inline-block;
     }
-}
-
-
-@media(max-width:590px){
-    .tabla_btn{
-        margin: 7em 5em; 
+    @media (min-width: 480px) {
+        .tabla_btn td:before {
+            display: none;
+        }
     }
-}
-@media(max-width:385px){
-    .tabla_btn{
-        width: 297px; 
-        margin-left: 30px;
-    }
-}
-
-
-
-
-.tabla_btn th, .tabla_btn td {
-    text-align: left;
-}
-@media (min-width: 480px) {
-    .tabla_btn th, .tabla_btn td {
-        display: table-cell;
-        padding: .25em .5em;
-    }
-    .tabla_btn th:first-child, .tabla_btn td:first-child {
-        padding-left: 0;
-    }
-    .tabla_btn th:last-child, .tabla_btn td:last-child {
-        padding-right: 0;
-    }
-}
-
-
-
-
-.tabla_btn th, .tabla_btn td {
-    margin: .5em 1em;
-}
-@media (min-width: 480px) {
-    .tabla_btn th, .tabla_btn td {
-        padding: 1em !important;
-    }
-}
-
-.tabla_btn th, .tabla_btne td:before {
-    color: #051923;
-}
-/*otra tabla*/
-
-.rwd-table {
-    margin: 7em 26em;
     
-}
-.rwd-table tr {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-}
-.rwd-table th {
-    display: none;
-}
-.rwd-table td {
-    display: block;
-    background-color: #628395;
-}
-.rwd-table td:first-child {
-    padding-top: .5em;
-}
-.rwd-table td:last-child {
-    padding-bottom: .5em;
-}
-.rwd-table td:before {
-    content: attr(data-th) ": ";
-    font-weight: bold;
-    width: 6.5em;
-    display: inline-block;
-}
-@media (min-width: 480px) {
-    .rwd-table td:before {
+    
+    @media(max-width:590px){
+        .tabla_btn{
+            margin: 7em 5em; 
+        }
+    }
+    @media(max-width:385px){
+        .tabla_btn{
+            width: 297px; 
+            margin-left: 30px;
+        }
+    }
+    
+    
+    
+    
+    .tabla_btn th, .tabla_btn td {
+        text-align: left;
+    }
+    @media (min-width: 480px) {
+        .tabla_btn th, .tabla_btn td {
+            display: table-cell;
+            padding: .25em .5em;
+        }
+        .tabla_btn th:first-child, .tabla_btn td:first-child {
+            padding-left: 0;
+        }
+        .tabla_btn th:last-child, .tabla_btn td:last-child {
+            padding-right: 0;
+        }
+    }
+    
+    
+    
+    
+    .tabla_btn th, .tabla_btn td {
+        margin: .5em 1em;
+    }
+    @media (min-width: 480px) {
+        .tabla_btn th, .tabla_btn td {
+            padding: 1em !important;
+        }
+    }
+    
+    .tabla_btn th, .tabla_btne td:before {
+        color: #051923;
+    }
+    /*otra tabla*/
+    
+    .rwd-table {
+        margin: 7em 26em; 
+    }
+    .rwd-table tr {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+    .rwd-table th {
         display: none;
     }
-}
-
-@media(max-width:590px){
-    .rwd-table{
-        margin: 7em 5em; 
+    .rwd-table td {
+        display: block;
+        background-color: #628395;
     }
-}
-@media(max-width:385px){
-    .rwd-table{
-        width: 297px; 
-        margin-left: 30px;
+    .rwd-table td:first-child {
+        padding-top: .5em;
     }
-}
-
-
-
-
-.rwd-table th, .rwd-table td {
-    text-align: left;
-}
-@media (min-width: 480px) {
+    .rwd-table td:last-child {
+        padding-bottom: .5em;
+    }
+    .rwd-table td:before {
+        content: attr(data-th) ": ";
+        font-weight: bold;
+        width: 6.5em;
+        display: inline-block;
+    }
+    @media (min-width: 480px) {
+        .rwd-table td:before {
+            display: none;
+        }
+    }
+    
+    @media(max-width:590px){
+        .rwd-table{
+            margin: 7em 5em; 
+        }
+    }
+    @media(max-width:385px){
+        .rwd-table{
+            width: 297px; 
+            margin-left: 30px;
+        }
+    }
+    
+    
+    
+    
     .rwd-table th, .rwd-table td {
-        display: table-cell;
-        padding: .25em .5em;
+        text-align: left;
     }
-    .rwd-table th:first-child, .rwd-table td:first-child {
-        padding-left: 0;
+    @media (min-width: 480px) {
+        .rwd-table th, .rwd-table td {
+            display: table-cell;
+            padding: .25em .5em;
+        }
+        .rwd-table th:first-child, .rwd-table td:first-child {
+            padding-left: 0;
+        }
+        .rwd-table th:last-child, .rwd-table td:last-child {
+            padding-right: 0;
+        }
     }
-    .rwd-table th:last-child, .rwd-table td:last-child {
-        padding-right: 0;
+    
+    
+    .rwd-table {
+        color: #fff;
+        border-radius: .4em;
+        overflow: hidden;
     }
-}
-
-
-.rwd-table {
-    color: #fff;
-    border-radius: .4em;
-    overflow: hidden;
-}
-.rwd-table tr {
-    border-color: #C16200;
-    background-color: #F1F7ED;
-}
-.rwd-table th, .rwd-table td {
-    margin: .5em 1em;
-}
-@media (min-width: 480px) {
+    .rwd-table tr {
+        border-color: #C16200;
+        background-color: #F1F7ED;
+    }
     .rwd-table th, .rwd-table td {
-        padding: 1em !important;
+        margin: .5em 1em;
     }
-}
-
-.rwd-table th, .rwd-table td:before {
-    color: #051923;
-}
-
-
-</style>
-{% endblock %}
+    @media (min-width: 480px) {
+        .rwd-table th, .rwd-table td {
+            padding: 1em !important;
+        }
+    }
+    
+    .rwd-table th, .rwd-table td:before {
+        color: #051923;
+    }
+    
+    
+    </style>
+    
+    
+    
+</body>
+</div>
+<div class="linea"></div>
+  
+<div class="footer-dark">
+  <footer style="height: 7%;">
+      <div class="container">
+          <div class="row">
+            
+              <div class="col-sm-6 col-md-3 item">
+                  <h3 class="txtsss">LINKS RAPIDOS</h3>
+                  <ul>
+                      <li><a style="color:white;" href="https://www.innovative-net.mx/esp/lenel-partner/lenels2-value-added-resellers">LenelS2 Value Added Reseller</a></li>
+                  </ul>
+              </div>
+            
+              <center>
+              <div class="col-md-6 item text">
+                <h3 class="txtsss">Innovative net</h3>
+                <p class="txtsss">INTEGRANDO IDEAS, CREANDO SOLUCIONES.</p>
+            </div>
+          </center>
+              <div class="col-sm-6 col-md-3 item">
+                  <h3 class="txtsss">INFORMACION LEGAL</h3>
+                  <ul>
+                      <li><a style="color:white;" href="https://www.innovative-net.mx/aviso-de-privacidad">Aviso de Privacidad</a></li><br>
+                  </ul>
+              </div>
+             
+              <div class="item social">
+                <a href="https://www.facebook.com/InnovativeNett/?locale=es_LA"><i class="fa-brands fa-facebook fa-bounce" style="color: #005eff;"></i></a>
+                <a href="https://mx.linkedin.com/company/innovative-net"><i class="fa-brands fa-linkedin fa-beat-fade" style="color: #0374B3;"></i></a>
+                <a href="https://www.instagram.com/innovativenetmx/?hl=es-la"><i class="fa-brands fa-instagram fa-fade" style="color: #ff00f7;"></i></a>
+                <a href="https://twitter.com/innovativenetmx"><i class="fa-brands fa-twitter fa-bounce" style="color: #3ddee1;"></i></a>
+                <a href="{% url "index" %}"><img class="inovafoo" src="static/css/img/loginova.png"></a>
+              </div>
+              <p class="copyr">Innovative net © 2023</p>
+          </div>
+         
+      </div>
+  </footer>
+    
+    </html>
