@@ -332,12 +332,12 @@
     border: 2px solid;
     border-color: rgb(100, 100, 100);
     border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #628395;
+    box-shadow: inset 0 0 0 0 #C16200;
 }
 
 .btnagg:hover {
     color: white;
-     box-shadow: inset 0 -100px 0 0 #628395;
+     box-shadow: inset 0 -100px 0 0 #C16200;
  } 
 
  .btnnoticias {
@@ -729,12 +729,6 @@ margin-top:-5%;
  .image-hover:hover .title,
  .image-hover:hover .description {
      transform: translateY(0);
- }
-
- .linea {
-     width: 100%;
-     height: 2px;
-     background-color: red;
  }
 
  .inovafoo {
