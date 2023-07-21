@@ -3,12 +3,12 @@
 
 <div class="body">
    
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap"> </script>
+       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap"> </script>
 
-<br><br><br><br><br>
+        <br><br><br><br><br>
 
 
-  <center>
+        <center>
     <div class="mgform">
 
         <div class="formnegro">
@@ -16,53 +16,48 @@
               <h1  class="letcontti" style="color:#F1F7ED;">Contactanos</h1><br>
               <p class="contdire">Dirección</p>
 
-         <div class="divcontinf">
-
-            <img class="imgubica" src="static/css/img/ubicacion.png">
-            <p class="indicasucti">Calle 33 Sur, #33 Pinos Aguero,
+           <div class="divcontinf">
+                <img class="imgubica" src="static/css/img/ubicacion.png">
+                <p class="indicasucti">Calle 33 Sur, #33 Pinos Aguero,
                 Tijuana B.C. , C.P. 22116</p>
-
-         </div>
+            
+            </div>
 
             <p class="ptelefonocon">Telefono</p>
 
           <div class="conttelefonocont">
-
-                <img class="imgtelefonocontlo" src="static/css/img/telefonocont.png">
-            <a class="numtelcont">+52 664 200 2140</a>
+                  <img class="imgtelefonocontlo" src="static/css/img/telefonocont.png">
+                  <a class="numtelcont">+52 664 200 2140</a>
 
           </div>
 
             <p class="pcorreoeleccont">Correo electronico</p>
 
-        <div class="conttelefonocont">
+           <div class="conttelefonocont">
+                   <img class="imgcorreocont" src="static/css/img/correocont.png">
+                   <p class="pdireccioncorrecont">info@innovative-net.mx</p>
+           </div>
 
-                <img class="imgcorreocont" src="static/css/img/correocont.png">
-            <p class="pdireccioncorrecont">info@innovative-net.mx</p>
-
-        </div>
-
-        </div>
+         </div>
     
-    <div class="form">
-    <br><br>
-    <h1 class="letras">Ponte en contacto con nosotros</h1>
-    <h3 class="letras1">Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3>
-        <form actions="" method="POST" >
+           <div class="form">
+              <br><br>
+               <h1 class="letras">Ponte en contacto con nosotros</h1>
+               <h3 class="letras1">Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3>
+               <form actions="" method="POST" >
 
-            {% csrf_token %}
-            {{form.non_field_errors}}
-            <br>
+               {% csrf_token %}
+               {{form.non_field_errors}}
+                 <br>
         
-            <div class="inputGroup">
+               <div class="inputGroup">
 
                 {{ form.nombre.errors }}
-            {{form.nombre}}
-            <label for="name">Nombre</label>
-            </div><br>
+               {{form.nombre}}
+                <label for="name">Nombre</label>
+          </div>     <br>
         
             <div class="inputGroup">
-
                 {{ form.empresa.errors }}
                 {{form.empresa}}
                 <label for="name">Empresa</label>
@@ -81,15 +76,15 @@
 
             <div class="extphon" >
 
-            <div class="acomodo">
+                <div class="acomodo">
                 <div class="inputGroup2">
                 {{ form.phone.errors }}
-            {{form.phone}}
-            <label for="name">Telefono</label>
+                {{form.phone}}
+               <label for="name">Telefono</label>
 
             </div>
 
-            <br><br>
+                  <br><br>
             <div class="inputGroup3">
 
                 {{ form.descripcion.errors }}
@@ -106,29 +101,29 @@
                
                 <label for="name">Ext.</label>
 
-            </div>
+         </div>
             <br><br>
           
-    </div>
-    <button class="btnnose"> Enviar datos</button>
-    </div>
+      </div>
+       <button class="btnnose"> Enviar datos</button>
+ </div>
 
   </center> 
   <br><br><br><br><br><br>
   
-<div class="contapismaps">
+   <div class="contapismaps">
 
-    <h1 class="hdirecapiscont" >MATRIZ TIJUANA<br>
-     <p class="ph1matrizTIJ">Calle 33 Sur, #33 Pinos Aguero,<br>
-     Tijuana B.C. , C.P. 22116<br>
-     gerencia.ventas@innovative-net.mx<br>
-     info@innovative-net.mx<br>
-     <a>+52 664 200 2140</a></p></h1>
-    <h1 class="hdirecapiscont" >SUCURSAL MEXICALI<br>
-     <p class="ph1matrizTIJ">Intermedia 3798, Bugambilias,<br>
-     Mexicali B.C., C.P. 21399<br>
-     gerencia.ventas@innovative-net.mx<br>
-     <a>+52 686 842 9676</a><br></p></h1>
+          <h1 class="hdirecapiscont" >MATRIZ TIJUANA<br>
+          <p class="ph1matrizTIJ">Calle 33 Sur, #33 Pinos Aguero,<br>
+              Tijuana B.C. , C.P. 22116<br>
+               gerencia.ventas@innovative-net.mx<br>
+               info@innovative-net.mx<br>
+         <a>+52 664 200 2140</a></p></h1>
+         <h1 class="hdirecapiscont" >SUCURSAL MEXICALI<br>
+           <p class="ph1matrizTIJ">Intermedia 3798, Bugambilias,<br>
+               Mexicali B.C., C.P. 21399<br>
+               gerencia.ventas@innovative-net.mx<br>
+          <a>+52 686 842 9676</a><br></p></h1>
 
     </div>
 
@@ -141,6 +136,6 @@
     </div>
 
 
-<br><br>
+    <br><br>
 </div>
  {% endblock %}
