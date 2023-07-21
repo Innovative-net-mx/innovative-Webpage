@@ -2,58 +2,85 @@
 {% block body %}
 
 <div class="svgimg">
-  <br><br><br><br><br><br>
+ <br><br><br><br><br><br>
 
 
-  <center>
+   <center>
+
     <div class="fondo-form"></div>
+
     <div class="form-noticias"><br>
+
         <h1 class="titform">AGREGAR NOTICIA</h1>
         
-
         <form actions="" method="POST" >
 
             {% csrf_token %}
+
             {{form.non_field_errors}}
 
             <div class="inputGroupnoticias">
+
                 {{ form.titulo.errors }}
-            {{form.titulo}} 
-            <label for="name">Titulo</label>
+
+                {{form.titulo}} 
+
+                <label for="name">Titulo</label>
 
             </div>
-            <div class="contfecha">
+
+          <div class="contfecha">
+
             <div class="inputGroupnoticias">
+
                 {{ form.fecha.errors }}
+
                 {{form.fecha}} 
+
                 <label for="name" class="labelfecha">Fecha</label>
+
             </div> 
+
           </div>
 
           <br>
+
             <div class="actu">
+
               <h1 class="subnot">Subir foto</h1>
+
               <button type="button" class="btn-warning">
-              <i class="fa-sharp fa-solid fa-arrow-up-long fa-bounce fa-lg" style="color: black;"></i>
-              {{ form.imagen.errors }}
-              {{form.imagen}} 
+
+                 <i class="fa-sharp fa-solid fa-arrow-up-long fa-bounce fa-lg" style="color: black;"></i>
+
+                 {{ form.imagen.errors }}
+
+                 {{form.imagen}} 
+
               </button>
-              </div>   
+
+            </div>   
             
-                <div class="inputGroupdes">
+            <div class="inputGroupdes">
             
                 {{ form.descripcion.errors }}
+
                 {{form.descripcion}}
+
                 <label for="name">Descripcion</label>
+
             </div> 
 
             <button class="btnnoticias">Enviar</button>
 
-            </div> 
-    
-</center>
+        </form>
 
-<br><br><br><br>
+      </div> 
+    
+   </center>
+
+ <br><br><br><br>
+
 </div>
 
 {% endblock %}

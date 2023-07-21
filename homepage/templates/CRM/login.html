@@ -2,30 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/aed5eee859.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+
+    <title>Login</title>
 </head>
-<body>
-    <center>
+
+
+<body class="body-log">
+
+<center>
+
 <div class="contenedor-login"><br><br>
 
     <h1 class="titlog">LOGIN</h1><br>
   
 
     <div class="inputGroupemail">
-        
+    
         <input id="inputemail" type="text" required="" autocomplete="off" >
-        <label class="label1" for="name" ><i class="fa-solid fa-user fa-lg"></i> Enter your username/email</label> 
+
+       <div class="divicon"><i class="fa-solid fa-user fa-lg" style=" margin-top: 20px;"></i></div> 
+
+      <label class="label1" for="name">Enter your username/email</label> 
         
     </div>
+
+
     <div class="inputGrouppassword">
         
         <input  id="inputpassword"type="text" required="" autocomplete="off" >
-       <label for="name"><i class="fa-solid fa-lock"></i> Enter your password</label>
+
+        <div class="divicon"><i class="fa-solid fa-lock" style=" margin-top: 15px;"></i></div> 
+
+       <label for="name"> Enter your password</label>
         
     </div>
 
@@ -33,162 +51,180 @@
 
 
 </div>
+
 </center>
 
+</body>
+
+
+
+
 <style>
-  .label1{
-    font-family: 'Roboto', sans-serif;
-  }
-    .titlog{
-        color: #587291;
-        font-family: 'Roboto', sans-serif;
-    }
-    .btnlog {
-     position: relative;
-     display: inline-block;
-     margin: 15px;
-     padding: 15px 30px;
-     text-align: center;
-     font-size: 18px;
-     letter-spacing: 1px;
-     text-decoration: none;
-     color:black;
-     font-family: 'Roboto', sans-serif;
-     background: transparent;
-     cursor: pointer;
-     transition: ease-out 0.5s;
-     border: 2px solid;
-     border-color: rgb(100, 100, 100);
-     border-radius: 10px;
-     box-shadow: inset 0 0 0 0 #c16200;
- }
 
- .btnlog:hover {
-     color: white;
-     box-shadow: inset 0 -100px 0 0 #c16200;
- }
+.divicon{
+width: 50px; 
+height: 45.7px; 
+background-color: #587291; 
+margin-left: -375px; 
+border: 1px solid black;
+}
 
- .btnlog:active {
-     transform: scale(0.9);
- }
+.label1{
+font-family: 'Roboto', sans-serif;
+}
+
+.titlog{
+color: #587291;
+font-family: 'Roboto', sans-serif;
+}
+
+.btnlog {
+position: relative;
+display: inline-block;
+margin: 15px;
+padding: 15px 30px;
+text-align: center;
+font-size: 18px;
+width: 300px;
+letter-spacing: 1px;
+text-decoration: none;
+color:black;
+font-family: 'Roboto', sans-serif;
+background: transparent;
+cursor: pointer;
+transition: ease-out 0.5s;
+border: 2px solid;
+border-color: rgb(100, 100, 100);
+border-radius: 10px;
+box-shadow: inset 0 0 0 0 #c16200;
+}
+
+.btnlog:hover {
+color: white;
+box-shadow: inset 0 -100px 0 0 #c16200;
+}
+
+.btnlog:active {
+transform: scale(0.9);
+}
 
 #inputemail{
-    width: 300px;
-    margin-left: -60px;
-
+width: 300px;
+margin-left: -60px;
 }
+
 #inputpassword{
-    width: 300px;
-    margin-left: -60px;
-
+width: 300px;
+margin-left: -60px;
 }
+
 .contenedor-login{
-    width: 700px;
-    margin-top: 120px;
-    height: 450px;
-    background-color: #fff;
-}
-body{
-    background-color:  #F1F7ED;
+width: 700px;
+margin-top: 120px;
+height: 450px;
+background-color: rgba(255, 255, 255, 0.5);
+box-shadow:  35px 35px 70px #cdd2c9,
+             -35px -35px 70px #ffffff;
 }
 
-
+.body-log{
+background-color:  #F1F7ED;
+}
 
 .inputGroupemail {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 1em 0 1em 0;
-  max-width: 190px;
-  position: relative;
+font-family: 'Segoe UI', sans-serif;
+margin: 1em 0 1em 0;
+max-width: 190px;
+display: flex;
+position: relative;
 }
 
 .inputGroupemail input {
-  font-size: 100%;
-  padding: 0.8em;
-  outline: none;
-  border: 1px solid black;
-  background-color: #F1F7ED;
-  height: 20px;
-  border-radius: 10px;
-  width: 100%;
+font-size: 100%;
+padding: 0.8em;
+outline: none;
+border: 1px solid black;
+background-color: rgba(241, 247, 237, 0.4);
+height: 20px;
+width: 100%;
 }
 
 .inputGroupemail label {
-  font-size: 100%;
-  position: absolute;
-  left: 0;
-  width: 300px;
-  margin-top: -50px;
-  padding: 0.8em;
-  margin-left: -98px;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  color: rgb(100, 100, 100);
+font-size: 100%;
+position: absolute;
+left: 0;
+width: 300px;
+margin-top: 0px;
+padding: 0.8em;
+margin-left: -98px;
+pointer-events: none;
+transition: all 0.3s ease;
+color: rgb(100, 100, 100);
 }
 
 .inputGroupemail :is(input:focus, input:valid)~label {
-  transform: translateY(-200%) scale(.9);
-  margin: 0em;
-  margin-left: -98px;
-  padding: 0.4em;
-  background-color: #e8e8e8;
+transform: translateY(-50%) scale(.9);
+margin: 0em;
+margin-left: -98px;
+padding: 0.4em;
+background-color: #e8e8e8;
 }
 
 .inputGroupemail :is(input:focus, input:valid) {
-  border-color: rgb(150, 150, 200);
+border-color: rgb(150, 150, 200);
 }
 
 .inputGrouppassword {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 1em 0 1em 0;
-  max-width: 190px;
-  position: relative;
+font-family: 'Segoe UI', sans-serif;
+margin: 1em 0 1em 0;
+display: flex;
+max-width: 190px;
+position: relative;
 }
 
 .inputGrouppassword input {
-  font-size: 100%;
-  padding: 0.8em;
-  outline: none;
-  border: 1px solid black;
-  background-color: #F1F7ED;
-  height: 20px;
-  border-radius: 10px;
-  width: 100%;
+font-size: 100%;
+padding: 0.8em;
+outline: none;
+border: 1px solid black;
+background-color: rgba(241, 247, 237, 0.4);
+height: 20px;
+width: 100%;
 }
 
 .inputGrouppassword label {
-  font-size: 100%;
-  position: absolute;
-  left: 0;
-  font-family: 'Roboto', sans-serif;
-  width: 250px;
-  margin-top: -50px;
-  padding: 0.8em;
-  margin-left: -98px;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  color: rgb(100, 100, 100);
+font-size: 100%;
+position: absolute;
+left: 0;
+font-family: 'Roboto', sans-serif;
+width: 250px;
+margin-top: 0px;
+padding: 0.8em;
+margin-left: -98px;
+pointer-events: none;
+transition: all 0.3s ease;
+color: rgb(100, 100, 100);
 }
 
 .inputGrouppassword :is(input:focus, input:valid)~label {
-  transform: translateY(-200%) scale(.9);
-  margin: 0em;
-  margin-left: -98px;
-  padding: 0.4em;
-  background-color: #e8e8e8;
+transform: translateY(-55%) scale(.9);
+margin: 0em;
+margin-left: -98px;
+padding: 0.4em;
+background-color: #e8e8e8;
 }
 
 .inputGrouppassword :is(input:focus, input:valid) {
-  border-color: rgb(150, 150, 200);
+border-color: rgb(150, 150, 200);
 }
 
 @media(max-width: 710px) {
-    .contenedor-login {
-    width: 400px;
-    height: 450px;
-    }
+.contenedor-login {
+width: 405px;
+height: 450px;
+  }
 }
 </style>
 
-</body>
 </html>
 
