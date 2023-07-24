@@ -26,7 +26,7 @@ class Noticia_Lista(ListView):
     model = CRM_noticas
     template_name = 'bloque/noticia.html'
     from_class = CRM_noticia_form
-    object = "noticias"
+    context_object_name = "noticias"
 
 def inicio(request):
     return render(request, "homepage/home_ruben.html")
@@ -83,7 +83,7 @@ class CRM_noticias_list(ListView):
     template_name = 'CRM/listado_noticias.html'
     from_class = CRM_noticia_form
     context_object_name = 'noticias'
-    
+
 class CRM_noticias_create(CreateView):
     model = CRM_noticas
     form_class = CRM_noticia_form
