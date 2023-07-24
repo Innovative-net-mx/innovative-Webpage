@@ -6,7 +6,9 @@ from django.views.generic.list import ListView
 from .forms import *
 from django.contrib import messages
 from django.core.mail import send_mail
-
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.list import ListView
 # Create your views here.
 from .models import *
 from django.http import HttpResponse
@@ -19,6 +21,13 @@ def cartera_servicios(request):
     return render(request, "homepage/carteraServicios.html")
 def  objetivos(request):
     return render(request, "homepage/objetivos.html")
+
+class Noticia_Lista(ListView):
+    model = CRM_noticas
+    template_name = 'bloque/noticia.html'
+    from_class = CRM_noticia_form
+    object = "noticias"
+
 def inicio(request):
     return render(request, "homepage/home_ruben.html")
 
@@ -54,6 +63,17 @@ class Contacto_Form(CreateView):
         return reverse_lazy('error_form')
 
 # ========>> CRM VIEWS <<==========
+
+
+class CustomLoginView(LoginView):
+    # Esta clase se encarga de verificar que el usuario este autenticado antes de poder
+    # entrar a cualquier parte de la pagina.
+    template_name = 'CRM/login.html'
+    fields = '__all__'
+    redirect_authenticated_user = True
+
+    def get_success_url(self) -> str:
+        return reverse_lazy('')
 
 def login(request):
     return render(request, "CRM/login.html")
