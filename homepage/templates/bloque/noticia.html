@@ -1,29 +1,24 @@
-{% extends "misc/base_crm.html" %}
 
-{% block body %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<div class="body_objetivos"> 
-<br><br><br><br>
+
 <div class="container">
 
-  
-    
-    <div class="caja">
+      <div class="caja">
+
         {% for noticia in noticias %}
-        <div class="caja">
-           <div class="img-box">
+
+          <div class="caja">
+
+            <div class="img-box">
+
                   <div>{{ noticia.imagen}}</div>
+
            </div>
      
           <div class="content">
+
                   <h2 class="leth2">{{ noticia.titulo }}</h2>
+
                    <p>
                      {{ noticia.fecha }}</p>
                      <p>
@@ -31,14 +26,12 @@
                    </p>
                    
            </div>
-         
-    </div>
+
+        </div>
           
 </div>
       {% endfor %}
 
-</div>
- 
 
-{% endblock %}
-</html>
+
+
