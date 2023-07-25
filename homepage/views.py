@@ -19,8 +19,12 @@ def index(request):
 
 def cartera_servicios(request):
     return render(request, "homepage/carteraServicios.html")
-def  objetivos(request):
-    return render(request, "homepage/objetivos.html")
+
+class Objetivos(ListView):
+    model = CRM_noticas
+    template_name = 'homepage/objetivos.html'
+    from_class = CRM_noticia_form
+    context_object_name = "noticias"
 
 class Noticia_Lista(ListView):
     model = CRM_noticas
