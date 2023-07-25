@@ -1,37 +1,32 @@
-
-
-
 <div class="container">
+{% for noticia in noticias %}
+        
 
-      <div class="caja">
+                <div class="caja">
+ 
+                    <div class="img-box">
 
-        {% for noticia in noticias %}
+                           <img >{{ noticia.imagen }}</img>
 
-          <div class="caja">
-
-            <div class="img-box">
-
-                  <div>{{ noticia.imagen}}</div>
-
-           </div>
+                    </div>
      
-          <div class="content">
+                    <div class="content">
 
-                  <h2 class="leth2">{{ noticia.titulo }}</h2>
+                              <h2 class="leth2">{{ noticia.titulo }}</h2>
 
-                   <p>
-                     {{ noticia.fecha }}</p>
-                     <p>
-                     {{ noticia.descripcion }}
-                   </p>
+                            <p>
+                               {{ noticia.fecha }}</p>
+                               <p>
+                                 {{ noticia.descripcion }}
+                                     </p>
                    
-           </div>
+                    </div>
 
-        </div>
-          
-</div>
+             </div>   
+  
+
       {% endfor %}
-
+    </div>
 
 
 
