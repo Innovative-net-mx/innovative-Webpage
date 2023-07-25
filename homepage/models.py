@@ -14,6 +14,6 @@ class Formulario_Contacto(models.Model):
 
 class CRM_noticas(models.Model):
     titulo = models.CharField(max_length=50)
-    descripcion = models.CharField(max_length=500)
+    descripcion = models.CharField(max_length=2500)
     fecha = models.DateField(auto_now_add=True)
     imagen = models.ImageField(upload_to='noticias', null=True, blank=True)
