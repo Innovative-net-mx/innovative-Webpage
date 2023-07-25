@@ -13,7 +13,7 @@ class Formulario_Contacto(models.Model):
     descripcion = models.CharField(max_length=200)
 
 class CRM_noticas(models.Model):
-    titulo = models.CharField(max_length=50)
+    titulo = models.CharField(max_length=250)
     descripcion = models.CharField(max_length=2500)
     fecha = models.DateField(auto_now_add=True)
     imagen = models.ImageField(upload_to='noticias', null=True, blank=True)
