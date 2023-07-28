@@ -26,6 +26,10 @@ class Objetivos(ListView):
     from_class = CRM_noticia_form
     context_object_name = "noticias"
 
+    def get_queryset(self):
+        return CRM_noticas.objects.order_by('-id')[:3]
+
+
 class Noticia_Lista(ListView):
     model = CRM_noticas
     template_name = 'bloque/noticia.html'
