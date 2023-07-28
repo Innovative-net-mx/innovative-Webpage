@@ -1412,15 +1412,19 @@ margin-top:-5%;
         }
         
      }
-     @media(max-width:1347px){
-        .iconyoutubevid{
-          margin-left: 70%;
-          margin-top: -5%;
-          width: 20px;
-          height: 30px;
-          
+  
+      
+        @media only screen and (min-width:300px) and (max-width:1000px){
+            .iconyoutubevid{
+                margin-left: 68%;
+                margin-top: -8.5%;
+                width: 30px;
+                height: 40px;
+                
+                
+              }
         }
-      }
+      
       @media(max-width:700px) {
         #img1ds {
             height: 40%;
