@@ -1,4 +1,5 @@
 from django.db import models
+from PIL import Image
 
 
 
@@ -16,4 +17,4 @@ class CRM_noticas(models.Model):
     titulo = models.CharField(max_length=250)
     descripcion = models.CharField(max_length=2500)
     fecha = models.DateField(auto_now_add=True)
-    imagen = models.ImageField(upload_to='noticias', null=True, blank=True)
+    imagen = models.ImageField(upload_to='noticias', null=True, blank=True, default='noticia.jpg')

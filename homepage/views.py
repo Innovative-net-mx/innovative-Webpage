@@ -1,21 +1,39 @@
 from django.shortcuts import render, redirect
 from django.views.generic import FormView
 from django.urls import reverse_lazy
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from .forms import *
 from django.contrib import messages
 from django.core.mail import send_mail
-from django.contrib.auth.views import LoginView
-from django.contrib.auth.mixins import LoginRequiredMixin
+
 from django.views.generic.list import ListView
 # Create your views here.
 from .models import *
 from django.http import HttpResponse
 
 # Create your views here.
+class CustomLoginView(LoginView):
+    # Esta clase se encarga de verificar que el usuario este autenticado antes de poder
+    # entrar a cualquier parte de la pagina.
+    template_name = 'CRM/login.html'
+    fields = '__all__'
+    form_class = PrettyAuthenticationForm
+    redirect_authenticated_user = True
+
+    # Regresa al usuario a la pagina principal si ya esta autenticado
+    def get_success_url(self) -> str:
+        return reverse_lazy('crm_noticias_list')
+
+    # si el usuario no esta autenticado lo envia a la pagina de login
+    def login(request):
+        return render(request, "CRM/login.html")
+
+
 def index(request):
-    return render(request, "homepage/home_ruben.html")
+    return render(request, "homepage/index.html")
 
 def cartera_servicios(request):
     return render(request, "homepage/carteraServicios.html")
@@ -37,7 +55,7 @@ class Noticia_Lista(ListView):
     context_object_name = "noticias"
 
 def inicio(request):
-    return render(request, "homepage/home_ruben.html")
+    return render(request, "homepage/index.html")
 
 def error_form(request):
     return render(request, "homepage/error_form.html")
@@ -72,29 +90,21 @@ class Contacto_Form(CreateView):
 
 # ========>> CRM VIEWS <<==========
 
-
-class CustomLoginView(LoginView):
-    # Esta clase se encarga de verificar que el usuario este autenticado antes de poder
-    # entrar a cualquier parte de la pagina.
-    template_name = 'CRM/login.html'
-    fields = '__all__'
-    redirect_authenticated_user = True
-
-    def get_success_url(self) -> str:
-        return reverse_lazy('')
-
-def login(request):
-    return render(request, "CRM/login.html")
 # class view in wich it show the data base list of CRM_noticias
-class CRM_noticias_list(ListView):
+class CRM_noticias_list(LoginRequiredMixin, ListView):
     model = CRM_noticas
     template_name = 'CRM/listado_noticias.html'
     from_class = CRM_noticia_form
     context_object_name = 'noticias'
 
-class CRM_noticias_create(CreateView):
+class CRM_noticias_create(LoginRequiredMixin, CreateView):
     model = CRM_noticas
     form_class = CRM_noticia_form
     template_name = 'CRM/agregar_noticia.html'
     success_url = reverse_lazy('crm_noticias_list')
+
+
+
+
+
 

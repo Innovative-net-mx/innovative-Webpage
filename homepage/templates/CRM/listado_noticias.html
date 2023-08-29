@@ -1,51 +1,49 @@
 {% extends "misc/base_crm.html" %}
 {% block body %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 <div class="fondolistado_noticias">
-    <br><br><br><br><br> 
-<center> 
+        <br><br><br><br><br> 
+    <center> 
     <div class="conttabla"> 
-<table class="listadonota">
-    
-         <tr style="background-color:#F1F7ED;">
-              <th style="text-align: center;">Titulo</th>
-              <th style="text-align: center;" >Fecha</th>
-              <th style="text-align: center;" >Foto</th>
-              <th style="text-align: center;">Descripcion</th>
-         </tr>
-        {% for noticia in noticias %}
-    
-        <tr style="background: rgba(98, 131, 144, 0.8)">
-            <td>{{ noticia.titulo }}</td>
-            <td>{{ noticia.fecha }}</td>
-            <td>{{ noticia.imagen}}</td>
-            <td>
-                <div class="scrollnot">
-                    {{ noticia.descripcion }}
-                </div>
-            </td>
-        </tr>
-        {% endfor %}
-</table> 
-          </div>
-</center>
-    
- <table class="btn_tabla">
-         <tr class="boton">
-     <td>
-               <button class="btnagg"> Agregar</button>
-     </td>   </tr>
- </table>
- <div style="height: 70px;">
- </div>
+        <table class="listadonota">
+            
+                <tr style="background-color:#F1F7ED;">
+                    <th style="text-align: center;">Titulo</th>
+                    <th style="text-align: center;" >Fecha</th>
+                    <th style="text-align: center;" >Foto</th>
+                    <th style="text-align: center;">Descripcion</th>
+                </tr>
+                {% for noticia in noticias %}
+            
+                <tr style="background: rgba(98, 131, 144, 0.8)">
+                    <td>
+                        <div class='scrollnot'>
+                            {{ noticia.titulo }}
+                        </div>
+                    </td>
+                    <td style='margin: 18px;'>{{ noticia.fecha }}</td>
+                    <td>
+                        <img src='/media/{{ noticia.imagen }}' style='max-width: 250px; margin: 12px;'></img>
+                    </td>
+                    <td>
+                        <div class="scrollnot">
+                            {{ noticia.descripcion }}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+        </table> 
+    </div>
+    </center>
+        
+    <a href={% url 'crm_noticias_create' %}>
+        <button class="btnagg" > Agregar</button>
+    </a>
+    <div style="height: 70px;">
+    </div>
+    </div>
+    </div>
 </div>
- </div>
- </div>
 
  <style>
     .listanota{
@@ -61,11 +59,13 @@
    
  }
  .scrollnot{
-    height: 100px;
-      width: 600px;
-      overflow: scroll;
-      overflow-x: hidden;
-      text-align: justify;
+    width: 350px;
+    max-width: 400px;
+    max-height: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: justify;
+    margin: 18px;
  }
  .scrollnot::-webkit-scrollbar{
     display: none;

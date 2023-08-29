@@ -25,31 +25,31 @@
 
     <h1 class="titlog">LOGIN</h1><br>
   
+    <form method="POST">
+      {% csrf_token %}
+      <div class="inputGroupemail">
+          {{form.username}}
 
-    <div class="inputGroupemail">
-    
-        <input id="inputemail" type="text" required="" autocomplete="off" >
+        <div class="divicon"><i class="fa-solid fa-user fa-lg" style=" margin-top: 20px;"></i></div> 
 
-       <div class="divicon"><i class="fa-solid fa-user fa-lg" style=" margin-top: 20px;"></i></div> 
-
-      <label class="label1" for="name">Enter your username/email</label> 
-        
-    </div>
-
-
-    <div class="inputGrouppassword">
-        
-        <input  id="inputpassword"type="text" required="" autocomplete="off" >
-
-        <div class="divicon"><i class="fa-solid fa-lock" style=" margin-top: 15px;"></i></div> 
-
-       <label for="name"> Enter your password</label>
-        
-    </div>
-
-    <button class="btnlog">Login in</button>
+        <label class="label1" for="name">Enter your username/email</label> 
+          
+      </div>
 
 
+      <div class="inputGrouppassword">
+          
+          {% comment %} <input  id="inputpassword"type="text" required="" autocomplete="off" > {% endcomment %}
+          {{ form.password }}
+          <div class="divicon"><i class="fa-solid fa-lock" style=" margin-top: 15px;"></i></div> 
+
+        <label for="name"> Enter your password</label>
+          
+      </div>
+
+      <button class="btnlog" type="submit" value='Login'>Login in</button>
+
+  </form>
 </div>
 
 </center>

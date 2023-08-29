@@ -1,6 +1,6 @@
 from django import forms
 from .models import Formulario_Contacto, CRM_noticas
-
+from django.contrib.auth.forms import AuthenticationForm
 
 class FormularioContactoForm(forms.ModelForm):
     class Meta:
@@ -25,3 +25,7 @@ class CRM_noticia_form(forms.ModelForm):
             'descripcion': forms.Textarea(attrs={'class': 'crm-noticia-descripcion'}),
             'imagen': forms.FileInput(attrs={'class': 'crm-noticia-imagen'})
         }
+
+class PrettyAuthenticationForm(AuthenticationForm):
+    username = forms.CharField(widget=forms.TextInput(attrs={'id': 'inputemail'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'id': 'inputpassword'}))

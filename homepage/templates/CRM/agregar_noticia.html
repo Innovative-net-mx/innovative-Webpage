@@ -13,7 +13,7 @@
 
         <h1 class="titform">AGREGAR NOTICIA</h1>
         
-        <form actions="" method="POST" >
+        <form actions="" method="POST" enctype="multipart/form-data" >
 
             {% csrf_token %}
 
@@ -55,10 +55,10 @@
 
                  {{ form.imagen.errors }}
 
-                 {{form.imagen}} 
+                 {{form.imagen }}
+                  
 
               </button>
-
             </div>   
             
             <div class="inputGroupdes">
@@ -71,7 +71,7 @@
 
             </div> 
 
-            <button class="btnnoticias">Enviar</button>
+            <button type='submit' class="btnnoticias">Enviar</button>
 
         </form>
 
