@@ -911,7 +911,7 @@ margin-top:-5%;
      border-radius: 33px;
      background: #628395;
      width: 450px;
-     height: 650px;
+     height: 790px;
      border: 1px;
      margin-left: 40%;
  }
@@ -1143,6 +1143,7 @@ margin-top:-5%;
      max-width: 350px;
      position: relative;
      z-index: 3;
+     margin-top: 3%;
  }
 
  .inputGroup3 textarea {
