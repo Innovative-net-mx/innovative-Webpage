@@ -27,11 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# Recaptcha
+RECAPTCHA_PUBLIC_KEY = '6LcLbuQjAAAAAMB7YUBSV541JZXFeS7F6i4IuYAL'
+RECAPTCHA_PRIVATE_KEY = '6LcLbuQjAAAAAOaDk034tDWnyKQRPed-UP-1BtjE'
 
 # Application definition
 
 INSTALLED_APPS = [
     'homepage',
+    'captcha',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,5 +134,6 @@ LOGIN_URL = 'login'
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
+
