@@ -78,7 +78,9 @@ class Contacto_Form(CreateView):
             'Nueva Solicitud Enviada desde la Pagina Web',
             f'Name: {form.cleaned_data["nombre"]}\nEmail: {form.cleaned_data["email"]}\nMessage: {form.cleaned_data["descripcion"]}',
             'no-reply@innovative-net.mx',
-            ['desarrollo.it2@innovative-net.mx','daniel.jara@innovative-net.mx'],
+            ['desarrollo.it2@innovative-net.mx',
+            #'daniel.jara@innovative-net.mx'
+            ],
             fail_silently=False,
         )
 
@@ -97,15 +99,35 @@ class Contacto_Form(CreateView):
                 }
             }
         """
-        # Prepare the column values as JSON
+        # Define column IDs here
+        column_ids = {
+            "email": "email",  # Replace with actual column ID
+            "phone_1": "phone_1",  # Replace with actual column ID
+            "text0": "text0",
+            "n_mero": "n_mero",
+            "long_text": "long_text",
+            # ... add other columns as necessary ...
+        }
+
+        # Prepare the column values
         column_values = {
-            "Venderdor": form_data['nombre'],
-            "Correo electronico": form_data['email'],
-            "Telefono": str(form_data['phone']),
-            "Compañía": form_data['empresa'],
-            "Extension": str(form_data['extension']) if form_data['extension'] else None,
+            "email": {
+                "email": str(form_data['email']),
+                "text": str(form_data['email'])
+            },
+            "phone_1": {
+                "phone": '52'+str(form_data['phone']),
+                "countryShortName": "MX"  # Use the appropriate country code
+            },
+            "text0": form_data['empresa'],  # Assuming 'empresa' is a text column
+            "n_mero": str(form_data['extension']) if form_data['extension'] else None,  # Assuming 'n_mero' is a text or number column
+            "long_text": form_data['descripcion'],  # Assuming 'long_text' is a long text column
             # Add other fields as necessary
         }
+
+        # Serialize the entire column_values dictionary
+        column_values_json = json.dumps({column_ids[key]: value for key, value in column_values.items()})
+        print(column_values)
         data = {
             'query': query,
             'variables': {
@@ -115,6 +137,11 @@ class Contacto_Form(CreateView):
         }
         response = requests.post(url, json=data, headers=headers)
         # Handle the response, check for errors, etc.
+        # Error handling
+        if response.status_code != 200:
+            print("Error in API call:", response.status_code, response.text)
+        else:
+            print("API call successful:", response.json())
 
     def get_success_url(self):
         return reverse_lazy('contacto')
