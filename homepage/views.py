@@ -13,7 +13,8 @@ from django.views.generic.list import ListView
 # Create your views here.
 from .models import *
 from django.http import HttpResponse
-
+import json
+import requests
 # Create your views here.
 class CustomLoginView(LoginView):
     # Esta clase se encarga de verificar que el usuario este autenticado antes de poder
@@ -65,10 +66,13 @@ class Contacto_Form(CreateView):
     model = Formulario_Contacto
     form_class = FormularioContactoForm
     template_name = 'homepage/contacto.html'
-
+    
     def form_valid(self, form):
         form.instance.author = self.request.user
-
+        
+        # Add Monday.com integration here
+        self.create_monday_item(form.cleaned_data)
+        
         # Send email
         send_mail(
             'Nueva Solicitud Enviada desde la Pagina Web',
@@ -82,6 +86,35 @@ class Contacto_Form(CreateView):
         messages.success(self.request, 'Your message has been sent!')
 
         return super().form_valid(form)
+
+    def create_monday_item(self, form_data):
+        url = "https://api.monday.com/v2"
+        headers = {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjI2NTkwMzEwMSwiYWFpIjoxMSwidWlkIjoxOTI0MDkyMiwiaWFkIjoiMjAyMy0wNi0yOVQxOTo0ODowNy4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MjMzNTY1LCJyZ24iOiJ1c2UxIn0.orZN0oA-P0jWsch_XgqyES_AKqE0lQThkO8vt4o_Mas"}
+        query = """
+            mutation ($myItemName: String!, $columnValues: JSON!) {
+                create_item (board_id: 3787551203, item_name: $myItemName, column_values: $columnValues) {
+                    id
+                }
+            }
+        """
+        # Prepare the column values as JSON
+        column_values = {
+            "Venderdor": form_data['nombre'],
+            "Correo electronico": form_data['email'],
+            "Telefono": str(form_data['phone']),
+            "Compañía": form_data['empresa'],
+            "Extension": str(form_data['extension']) if form_data['extension'] else None,
+            # Add other fields as necessary
+        }
+        data = {
+            'query': query,
+            'variables': {
+                'myItemName': form_data['nombre'],  # This can be any field or static text
+                'columnValues': json.dumps(column_values)
+            }
+        }
+        response = requests.post(url, json=data, headers=headers)
+        # Handle the response, check for errors, etc.
 
     def get_success_url(self):
         return reverse_lazy('contacto')
