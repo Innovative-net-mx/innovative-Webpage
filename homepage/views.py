@@ -79,7 +79,7 @@ class Contacto_Form(CreateView):
             f'Name: {form.cleaned_data["nombre"]}\nEmail: {form.cleaned_data["email"]}\nMessage: {form.cleaned_data["descripcion"]}',
             'no-reply@innovative-net.mx',
             ['desarrollo.it2@innovative-net.mx',
-            #'daniel.jara@innovative-net.mx'
+            'hector.torres@innovative-net.mx'
             ],
             fail_silently=False,
         )
@@ -162,6 +162,120 @@ class CRM_noticias_create(LoginRequiredMixin, CreateView):
     form_class = CRM_noticia_form
     template_name = 'CRM/agregar_noticia.html'
     success_url = reverse_lazy('crm_noticias_list')
+
+
+# ========>> BOLETIN TECNICO <<==========
+
+from django.core.mail import EmailMessage
+from django.conf import settings
+from .forms import SendPDFForm
+from PyPDF2 import PdfReader
+from django.shortcuts import render, redirect
+import re
+
+def pdf_preview(request):
+    form = SendPDFForm()
+    if request.method == 'POST':
+        form = SendPDFForm(request.POST)
+        if form.is_valid():
+            # Process the form data
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            company = form.cleaned_data['company']
+
+            # Send the PDF by email
+            email_subject = 'Your Requested PDF'
+            email_body = f"Que tal {name},\n\nEste correo contiene el bletin tecnico que requirio."
+            email = EmailMessage(
+                email_subject, email_body, settings.EMAIL_HOST_USER, [email]
+            )
+
+            # Attach PDF
+            with open('homepage/static/pdf/boletin_1.pdf', 'rb') as pdf:
+                email.attach('ataque-ciber-fisico.pdf', pdf.read(), 'application/pdf')
+
+            # Send the email
+            email.send()
+
+            # Redirect after POST
+    def get_success_url(self):
+            return reverse_lazy('ataque-ciber-fisico')
+    # Load the PDF file
+    pdf_path = 'homepage/static/pdf/boletin_1.pdf'
+    reader = PdfReader(pdf_path)
+
+    def is_header_line(index, lines_to_exclude=10):
+        """
+        Determine if a line is potentially part of the header.
+        This function considers the first few lines of each page as potential header content.
+
+        :param index: The index of the line on the page.
+        :param lines_to_exclude: The number of lines to consider as header. Default is 3.
+        :return: True if the line is potentially a header, False otherwise.
+        """
+        return index < lines_to_exclude
+
+    def is_subtitle(line, next_line):
+        """
+        Heuristic to determine if a line is a subtitle.
+        Assumes a subtitle is a shorter line followed by an empty line, in all uppercase, 
+        or starts and ends with a question mark.
+
+        :param line: The current line of text.
+        :param next_line: The next line of text.
+        :return: True if the line is likely a subtitle, False otherwise.
+        """
+        is_all_caps = line.isupper()
+        starts_ends_with_question_mark = line.startswith('¿') and line.endswith('?')
+
+        return is_all_caps or starts_ends_with_question_mark
+
+    def is_end_of_paragraph(line):
+        """
+        Determine if a line is likely the end of a paragraph.
+        Assumes a paragraph usually ends with a period, exclamation mark, or question mark.
+
+        :param line: The current line of text.
+        :return: True if the line is likely the end of a paragraph, False otherwise.
+        """
+        return line.strip().endswith(('.\n', '!', '?'))
+
+    # Extract and handle text across pages
+    all_lines = []
+    for page in reader.pages:
+        page_text = page.extract_text()
+        if page_text:
+            lines = page_text.split('\n')
+            all_lines.extend([line for index, line in enumerate(lines) if not is_header_line(index)])
+
+    paragraphs = []
+    paragraph = ''
+    for i, line in enumerate(all_lines):
+        next_line = all_lines[i + 1] if i + 1 < len(all_lines) else ''
+        if is_subtitle(line, next_line):
+            if paragraph:
+                paragraphs.append(paragraph.strip())
+                paragraph = ''
+            paragraphs.append(f"{line}")
+        elif line.strip(): 
+            paragraph += line + ' '
+            if is_end_of_paragraph(line) or not next_line.strip():
+                paragraphs.append(paragraph.strip())
+                paragraph = ''
+        elif not paragraph:
+            # Add the last paragraph if it's not empty and no continuation is detected
+            paragraphs.append(paragraph.strip())
+            paragraph = ''
+
+    # Display the first few paragraphs for review
+    paragraphs = paragraphs[:10]  # Displaying the first 10 paragraphs as a sample
+
+    context = {'form': form, 'pdf_content': paragraphs}
+    return render(request, 'boletin/btec1.html', context)
+
+
+
+
 
 
 

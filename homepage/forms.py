@@ -34,3 +34,9 @@ class CRM_noticia_form(forms.ModelForm):
 class PrettyAuthenticationForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'id': 'inputemail'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'id': 'inputpassword'}))
+
+
+class SendPDFForm(forms.Form):
+    name = forms.CharField(label='Your Name', max_length=100)
+    email = forms.EmailField(label='Email Address')
+    company = forms.CharField(label='Company', max_length=100)
