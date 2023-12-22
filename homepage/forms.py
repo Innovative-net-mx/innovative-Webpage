@@ -2,7 +2,7 @@ from django import forms
 from .models import Formulario_Contacto, CRM_noticas
 from django.contrib.auth.forms import AuthenticationForm
 from captcha.fields import ReCaptchaField
-from captcha.widgets import ReCaptchaV2Checkbox
+from captcha.widgets import ReCaptchaV2Checkbox, ReCaptchaV2Invisible
 
 
 class FormularioContactoForm(forms.ModelForm):
