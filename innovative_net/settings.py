@@ -137,3 +137,11 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.ionos.com'  # Replace with your email provider's SMTP server
+EMAIL_PORT = 465  # Replace with your email provider's SMTP port
+EMAIL_HOST_USER = 'no-reply@innovative-net.mx'  # Replace with your email address
+EMAIL_HOST_PASSWORD = 'Sscz70ic'  # Replace with your email password
+
+

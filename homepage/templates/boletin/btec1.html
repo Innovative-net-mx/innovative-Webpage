@@ -1,0 +1,120 @@
+{% extends "misc/base2.html" %}
+
+{% block body %}
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.pdf-preview {
+    margin: 20px;
+    margin-top: 20px;
+    padding-right: 5%;
+    text-align: justify;
+    letter-spacing: 1px;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+.pdf-preview h1{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+
+}
+#registration-prompt p {
+    color: black;
+    letter-spacing: 2.5px;
+}
+#registration-prompt {
+    display: none;
+    position: fixed;
+    width: 100%;
+    bottom: 1%;
+    border-radius: 10px;
+    height: 150px;
+    background-color: rgba(194, 97, 0, 0.90);
+    padding: 20px;
+    text-align: center;
+}
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.form-inline label {
+    margin: 5px 10px 5px 0;
+    font-size: 18px;
+}
+.form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px  ;
+}
+.form-inline button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: white;
+}
+</style>
+
+
+ <br><br><br><br>
+
+<div class="pdf-preview" style='margin-top:'>
+    <h1 style='margin-top:80px; margin-bottom:22px;'>¿COMO PREVENIR UN ATAQUE CIBER FÍSICO?</h1>
+
+    {% for paragraph in pdf_content %}
+    <p style='color: black;'>{{ paragraph|linebreaksbr }}</p>
+    {% endfor %}
+
+
+</div>
+<div id="registration-prompt">
+    <p>To read the full document, please register your email.</p>
+    <form method="post" class="form-inline">
+    {% csrf_token %}
+    {{ form.name.label_tag }}{{ form.name }}
+    {{ form.email.label_tag }}{{ form.email }}
+    {{ form.company.label_tag }}{{ form.company }}
+    <button type="submit">Send PDF</button>
+    </form>
+    <!-- Add your registration form or link here -->
+</div>
+    
+
+<script>
+window.addEventListener('scroll', function() {
+    var fixedDiv = document.querySelector('#registration-prompt');
+    var footer = document.querySelector('.footer-dark');
+    var scrollDistance = window.pageYOffset + window.innerHeight;
+    var footerTop = footer.offsetTop;
+
+    if (scrollDistance > footerTop) {
+        // Adjust the position of the fixed div
+        fixedDiv.style.position = 'absolute';
+        fixedDiv.style.bottom = 'auto'; // Reset bottom property
+        fixedDiv.style.top = footerTop - fixedDiv.offsetHeight + 'px';
+        fixedDiv.style.height = '200px';
+        fixedDiv.style.display = 'block';
+
+    } else {
+        // Return to fixed position
+        fixedDiv.style.position = 'fixed';
+        fixedDiv.style.bottom = '10px'; // Or your initial value
+        fixedDiv.style.top = 'auto'; // Reset top property
+        fixedDiv.style.height = '150px';
+        fixedDiv.style.display = 'none';
+    }
+});
+
+</script>
+{% endblock %}

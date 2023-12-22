@@ -15,7 +15,8 @@ urlpatterns = [
     path("crm_noticias_create", CRM_noticias_create.as_view(), name="crm_noticias_create"),
     path("login", CustomLoginView.as_view() , name="login"),
     path("logout/", LogoutView.as_view(next_page='login'), name='logout'),
-    path("noticia_bloque", Noticia_Lista.as_view(), name="noticia_bloque" )
+    path("noticia_bloque", Noticia_Lista.as_view(), name="noticia_bloque" ),
+    path('ataque-ciber-fisico', views.pdf_preview, name='ataque-ciber-fisico'),
     
 ]
 
