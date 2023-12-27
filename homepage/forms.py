@@ -38,6 +38,6 @@ class PrettyAuthenticationForm(AuthenticationForm):
 
 
 class SendPDFForm(forms.Form):
-    name = forms.CharField(label='Your Name', max_length=100)
-    email = forms.EmailField(label='Email Address')
-    company = forms.CharField(label='Company', max_length=100)
+    name = forms.CharField(label='Nombre', max_length=100)
+    email = forms.EmailField(label='Correo')
+    company = forms.CharField(label='Compañia', max_length=100)
