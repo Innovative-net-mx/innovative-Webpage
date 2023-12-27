@@ -10,13 +10,14 @@ class FormularioContactoForm(forms.ModelForm):
 
     class Meta:
         model = Formulario_Contacto
-        fields = ['nombre', 'email', 'phone', 'empresa', 'extension', 'descripcion']
+        fields = ['nombre', 'email', 'phone', 'empresa', 'extension', 'intencion', 'descripcion']
         widgets = {
             'nombre': forms.TextInput(attrs={'class': 'contact-from'}),
             'email': forms.EmailInput(attrs={'class': 'contact-from'}),
             'phone': forms.NumberInput(attrs={'class': 'contact-from-phone'}),
             'empresa': forms.TextInput(attrs={'class': 'contact-from'}),
             'extension': forms.NumberInput(attrs={'class': 'contact-from-extension'}),
+            'intencion': forms.Select(attrs={'class': 'contact-from-intencion'}),
             'descripcion': forms.Textarea(attrs={'class': 'contact-from-descripcion'})
 
         }

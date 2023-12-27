@@ -1,6 +1,5 @@
 {% extends "misc/base2.html" %}
 {% block body %}
-
 <div class="body">
    
        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaXbIxPeiNA_AheM8saI4eT2foTT0J_ak&callback=initMap"> </script>
@@ -79,6 +78,7 @@
                                 <label for="name">Telefono</label>
                             </div>
 
+
                             <br><br>
                             <div class="inputGroup3">
                                 {{ form.descripcion.errors }}
@@ -92,6 +92,10 @@
                             {{ form.extension }}
                             <label for="name">Ext.</label>
                         </div>
+                    </div>
+                    <div class="inputGroup4" >
+                        {{ form.intencion.errors }}
+                        {{ form.intencion }}
                     </div>
 
 
