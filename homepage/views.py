@@ -174,20 +174,21 @@ from django.shortcuts import render, redirect
 import re
 
 def pdf_preview(request):
+    success_message = request.session.get('success_message', None)
     form = SendPDFForm()
     if request.method == 'POST':
         form = SendPDFForm(request.POST)
         if form.is_valid():
             # Process the form data
             name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
+            email_user = form.cleaned_data['email']
             company = form.cleaned_data['company']
 
             # Send the PDF by email
             email_subject = 'Your Requested PDF'
             email_body = f"Que tal {name},\n\nEste correo contiene el bletin tecnico que requirio."
             email = EmailMessage(
-                email_subject, email_body, settings.EMAIL_HOST_USER, [email]
+                email_subject, email_body, settings.EMAIL_HOST_USER, [email_user]
             )
 
             # Attach PDF
@@ -197,9 +198,25 @@ def pdf_preview(request):
             # Send the email
             email.send()
 
+            #### Send notification email to the company #####
+            email_subject = 'Nueva Solicitud de Boletin Tecnico'
+            email_body = f"Los siguientes datos fueron ingresados para obtener el boletin tecnico. \n\n Name: {name}\nEmail: {email_user}\nCompany: {company}"
+            email = EmailMessage(
+                email_subject, email_body, settings.EMAIL_HOST_USER, [
+                    'desarrollo.it2@innovative-net.mx',
+                    'hector.torres@innovative-net.mx'
+                    ]
+            )
+            email.send()
+
+            mydictionary = {
+                "form": SendPDFForm(),
+            }
+            mydictionary["success"] = True
+            success_message = "El boletin tecnico se ha enviado correctamente"
+            request.session['success_message'] = success_message
+            return redirect('ataque-ciber-fisico')
             # Redirect after POST
-    def get_success_url(self):
-            return reverse_lazy('ataque-ciber-fisico')
     # Load the PDF file
     pdf_path = 'homepage/static/pdf/boletin_1.pdf'
     reader = PdfReader(pdf_path)
@@ -270,7 +287,13 @@ def pdf_preview(request):
     # Display the first few paragraphs for review
     paragraphs = paragraphs[:10]  # Displaying the first 10 paragraphs as a sample
 
-    context = {'form': form, 'pdf_content': paragraphs}
+    context = {
+        'form': form, 'pdf_content': paragraphs,
+        'success_message': success_message,
+        }
+    
+    if success_message:
+        del request.session['success_message']
     return render(request, 'boletin/btec1.html', context)
 
 

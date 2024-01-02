@@ -29,7 +29,6 @@ body, html {
     letter-spacing: 2.5px;
 }
 #registration-prompt {
-    display: none;
     position: fixed;
     width: 100%;
     bottom: 1%;
@@ -64,11 +63,39 @@ body, html {
     border-radius: 5px;
     color: white;
 }
+.success-form {
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: lightgreen;   
+}
+.success-form h3 {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.success-form button {
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
 </style>
 
 
  <br><br><br><br>
-
+{% if success_message %}
+<div class="success-form" role="alert">
+    <button type='button' data-dismiss="alert"> x </button>
+    <h3>¡Gracias por registrarse!</h3>
+    <p style='color: black;'>Por favor revise su correo electrónico para descargar el PDF.</p>
+</div>
+{% endif %}
 <div class="pdf-preview" style='margin-top:'>
     <h1 style='margin-top:80px; margin-bottom:22px;'>¿COMO PREVENIR UN ATAQUE CIBER FÍSICO?</h1>
 
@@ -92,6 +119,10 @@ body, html {
     
 
 <script>
+window.onload = function() {
+    window.scrollTo(0, 0);
+};
+
 window.addEventListener('scroll', function() {
     var fixedDiv = document.querySelector('#registration-prompt');
     var footer = document.querySelector('.footer-dark');
@@ -112,9 +143,16 @@ window.addEventListener('scroll', function() {
         fixedDiv.style.bottom = '10px'; // Or your initial value
         fixedDiv.style.top = 'auto'; // Reset top property
         fixedDiv.style.height = '150px';
-        fixedDiv.style.display = 'none';
     }
 });
+
+document.querySelector('.success-form button').addEventListener('click', function() {
+    document.querySelector('.success-form').style.display = 'none';
+});
+
+
+
+
 
 </script>
 {% endblock %}
