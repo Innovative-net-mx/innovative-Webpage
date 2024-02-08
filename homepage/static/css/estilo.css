@@ -254,7 +254,36 @@
      border-radius: 10px;
      box-shadow: inset 0 0 0 0 #c16200;
  }
- .btnnosotros{
+
+.btnservicios:hover {
+     color: white;
+     box-shadow: inset 0 -100px 0 0 #c16200;
+ }
+
+.btnservicioseparados {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    width: 40%;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #c16200;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 0 0 #c16200;
+}
+
+.btnservicioseparados:hover {
+     color: white;
+     box-shadow: inset 0 -100px 0 0 #c16200;
+ }
+
+.btnnosotros{
     position: relative;
      display: inline-block;
      margin: 15px;
@@ -273,10 +302,7 @@
 
  }
 
- .btnservicios:hover {
-     color: white;
-     box-shadow: inset 0 -100px 0 0 #c16200;
- }
+
 .btnnosotros:hover{
     color: white;
      box-shadow: inset 0 -100px 0 0 #c16200;
@@ -615,25 +641,24 @@ margin-top:-5%;
 
  /* --- IMAGE-HOVER --- */
 
- .image-hover {
-     font-family: 'Raleway', Arial, sans-serif;
-     font-size: 15px;
-     color: #FFFFFF;
-     display: inline-block;
-     overflow: hidden;
-     width: 50%;
-     transform: translateZ(0);
- }
+.image-hover {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 15px;
+    color: #FFFFFF;
+    display: inline-block;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    transform: translateZ(0);
+}
  
  .image-hover * {
      box-sizing: border-box;
      transition: all 0.35s ease;
  }
- .image-hover .image {
-     padding: 15px 0;
- }
 
  .image-hover .thumb {
+    transform: scale(1.40);
      max-width: 100%;
      opacity: 0.75;
  }
@@ -651,10 +676,26 @@ margin-top:-5%;
      position: absolute;
      left: 0;
      width: 100%;
-     background-color: #0D0D0D;
+     background-color: rgba(0, 0, 0, 0.75);
      margin: 0;
-     padding: 9px 25px;
+     padding: 21.5px 10px;
  }
+.image-hover .separrafo {
+    column-count: 2;
+    /* This creates two columns */
+    column-gap: 20px;
+    /* This sets the gap between the columns */
+    width: 100%;
+    /* Optional: Adjust the width as needed */
+    -webkit-column-count: 2;
+    /* For Safari and Chrome */
+    -webkit-column-gap: 20px;
+    /* For Safari and Chrome */
+    -moz-column-count: 2;
+    /* For Firefox */
+    -moz-column-gap: 20px;
+    /* For Firefox */
+}
  .description{
     text-align: justify;
  }
@@ -666,18 +707,15 @@ margin-top:-5%;
      font-weight: bold;
      text-transform: uppercase;
      top: 0;
-     transform: translateY(-100%);
  }
 
  .image-hover .description {
      font-size: 0.8em;
      bottom: 0;
-     transform: translateY(100%);
  }
 
  .image-hover a {
      position: absolute;
-     top: 0;
      bottom: 0;
      left: 0;
      right: 0;
@@ -685,7 +723,7 @@ margin-top:-5%;
 
  .image-hover:hover .thumb,
  .image-hover.hover .thumb {
-     transform: scale(1.25);
+     transform: scale(1.8);
      opacity: 1;
  }
  .scroll-spacer {
@@ -1292,6 +1330,7 @@ margin-top:-5%;
         width: 150%;
         margin-left:40%;
     }
+
     .formnegro {
         width: 20%;
         margin-left: 21%;
@@ -1453,8 +1492,8 @@ margin-top:-5%;
    
     @media(min-width:1200px) {
         .image-hover {
-            height: 267px;
-            width: 400px
+            height: 320px;
+            width: 450px
         }
         
     }
@@ -1465,7 +1504,7 @@ margin-top:-5%;
             width: 790px
         }
         img.thumb {
-            height: 367px;
+            height: 3467px;
             width: 790px
         }
         .formnegro {
@@ -1691,6 +1730,11 @@ margin-top:-5%;
         border: 1px;
         margin-left: 5%;
     }
+    .image-hover .thumb {
+        transform: scale(1);
+        max-width: 100%;
+        opacity: 0.75;
+    }
 
 }
 /* Fin Medida para un telefono Iphone 14 a XR */
@@ -1709,6 +1753,7 @@ margin-top:-5%;
                height: 250px;
             }      
         }
+        
         @media (max-width:887px) {
             .titapsobnons2 {
               margin-left: 20%; 
