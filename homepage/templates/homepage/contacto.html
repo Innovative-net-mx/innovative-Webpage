@@ -141,4 +141,19 @@
     <br><br>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var selectField = document.getElementById('intencion'); // Adjusted to match the common Django id format
+
+    selectField.addEventListener('change', function() {
+        if (this.value) {
+            this.style.color = 'black'; // Directly change the color to black when an option is selected
+        } else {
+            this.style.color = ''; // Reset to default color when no option is selected
+        }
+    });
+});
+</script>
+
+
  {% endblock %}

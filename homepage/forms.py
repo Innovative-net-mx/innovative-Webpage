@@ -17,7 +17,7 @@ class FormularioContactoForm(forms.ModelForm):
             'phone': forms.NumberInput(attrs={'class': 'contact-from-phone'}),
             'empresa': forms.TextInput(attrs={'class': 'contact-from'}),
             'extension': forms.NumberInput(attrs={'class': 'contact-from-extension'}),
-            'intencion': forms.Select(attrs={'class': 'contact-from-intencion'}),
+            'intencion': forms.Select(attrs={'class': 'contact-from-intencion', 'id': 'intencion'}),
             'descripcion': forms.Textarea(attrs={'class': 'contact-from-descripcion'})
 
         }
