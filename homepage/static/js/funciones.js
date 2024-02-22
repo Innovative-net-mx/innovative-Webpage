@@ -109,6 +109,7 @@ function videoScroll() {
 
 window.addEventListener("scroll", function(){
     let animacion = document.getElementById("animado");
+    if(animacion){
     let posicionObj1 = animacion.getBoundingClientRect().top;
     console.log(posicionObj1);
     let tamañoDePantalla = window.innerHeight;
@@ -117,11 +118,12 @@ window.addEventListener("scroll", function(){
 
       animacion.style.animation = "mover2 1s ease-out"
 
-    }
+    }}
 })
 
 window.addEventListener("scroll", function(){
     let animacion = document.getElementById("animadosegundo");
+    if(animacion){
     let posicionObj1 = animacion.getBoundingClientRect().top;
     console.log(posicionObj1);
     let tamañoDePantalla = window.innerHeight;
@@ -130,11 +132,12 @@ window.addEventListener("scroll", function(){
 
       animacion.style.animation = "mover 1s ease-out"
 
-    }
+    }}
 })
 
 window.addEventListener("scroll", function(){
     let animacion = document.getElementById("animadotercero");
+    if(animacion){
     let posicionObj1 = animacion.getBoundingClientRect().top;
     console.log(posicionObj1);
     let tamañoDePantalla = window.innerHeight;
@@ -143,7 +146,7 @@ window.addEventListener("scroll", function(){
 
       animacion.style.animation = "mover2 1s ease-out"
 
-    }
+    }}
 })
 
 /*Fin animaciones scroll ultimas tres imagenes*/
