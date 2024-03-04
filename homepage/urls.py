@@ -10,6 +10,7 @@ urlpatterns = [
     path("contacto", Contacto_Form.as_view(), name="contacto"),
     path("objetivos", Objetivos.as_view(), name="objetivos" ),
     path("inicio",   views.inicio, name="inicio"),
+    path("aviso_privacidad", views.aviso_privacidad, name="aviso_privacidad"),
     path("error_form", views.error_form, name="error_form"),
     path("crm_noticias_list", CRM_noticias_list.as_view(), name="crm_noticias_list"),
     path("crm_noticias_create", CRM_noticias_create.as_view(), name="crm_noticias_create"),

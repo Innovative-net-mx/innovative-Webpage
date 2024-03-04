@@ -1,0 +1,22 @@
+{% extends "misc/base2.html" %}
+{% block body %}
+<style>
+    .aviso{
+        width: 80%;
+        height: 80vh;
+        padding-left: 22%;
+    }
+    .aviso:focus{
+        outline: none;
+    }
+</style>
+<div class="cuerpo">
+    <br><br><br><br><br><br>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Aviso de Privacidad</h1>
+                <iframe class="aviso" src="static/pdf/Aviso_Privacidad.pdf" allowfullscreen ></iframe>
+            </div>
+        </div>
+    </div>
+{% endblock %}

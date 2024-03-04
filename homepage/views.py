@@ -36,6 +36,9 @@ class CustomLoginView(LoginView):
 def index(request):
     return render(request, "homepage/index.html")
 
+def aviso_privacidad(request):
+    return render(request, "homepage/aviso_privacidad.html")
+
 def cartera_servicios(request):
     return render(request, "homepage/carteraServicios.html")
 
