@@ -1363,7 +1363,8 @@ margin-top:-5%;
 
  @media(max-width:900px) {
     .btnini {
-        width: 20px;
+        margin-top: 15%;
+        margin-left: 25%;
     }
     .img_index {
         height: 700px;
@@ -1413,10 +1414,10 @@ margin-top:-5%;
     }
 }
 
- @media(max-width: 500px) {
-     .inputGroup:is(input:focus, input:valid)~label {
-         margin-left: 10%;
-     }
+@media(max-width: 500px) {
+    .inputGroup:is(input:focus, input:valid)~label {
+        margin-left: 10%;
+    }
      .inputGroup label {
         margin-left: 10%;
     }
@@ -1427,13 +1428,13 @@ margin-top:-5%;
         margin-left: 16%;
     }
     .inputGroup3 :is(textarea:focus, textarea:valid)~label {
-        margin-top: -60%;
+        margin-top: -45%;
     }
     .btnenvd {
         width: 40%
     }
     .form {
-        width: 350px;
+        width: 3250px;
         height: 650px;
         margin-left: 9%;
     }
@@ -1469,19 +1470,26 @@ margin-top:-5%;
         }
     .texto {
         padding-right: 100px;
-        font-size: 60px;
+        font-size: 30px;
         margin-right: 10%;
         justify-content: right;
         margin-top: 20%;
         }
-      
+    .subtexto{
+        font-size: 20px;
+        margin-right: 40%;
     }
 
-    @media(max-width: 939px) {
-        .texto {
-            font-size: 50px;
-        }
+    .inputGroup2 :is(input:focus,
+        input:valid)~label {
+        transform: translateY(-50%) scale(.9);
+        margin-top: -20%;
+        margin-left: 23%;
+        padding: 0.4em;
+        background-color: #628395;
     }
+}
+
 
     @media(max-width: 670px) {
         .phex-e {
@@ -1692,7 +1700,6 @@ margin-top:-5%;
                   border-radius:60px;
             }
             .gris3{
-                margin-left: -10%;
                 height: 190px;
                 width: 92%;
             }
@@ -1702,7 +1709,6 @@ margin-top:-5%;
                margin-left: 8%;
               }
               .gris{
-                margin-left: -10%;
                 height: 190px;
                 width: 92%;
             }
@@ -1736,8 +1742,8 @@ margin-top:-5%;
         height: 115%;
     }
     .gris2{
-        margin-left: 20%;
-        width: 75%;
+        margin-left: 10%;
+        width: 80%;
         height: 115%;
     }
     .letters{
@@ -1745,9 +1751,11 @@ margin-top:-5%;
     }
     #titapsobnons2 {
         font-size: 100%;
+        margin-left: 10%;
     }
     .titapsobnons{
         font-size: 100%;
+        margin-left: 10%;
     }
     .image-hover {
         font-family: 'Raleway', Arial, sans-serif;
@@ -1755,8 +1763,8 @@ margin-top:-5%;
         color: #FFFFFF;
         display: inline-block;
         overflow: hidden;
-        height: 200px;
         transform: translateZ(0);
+        width: 95%
     }
 
     .iconyoutubevid {
@@ -1779,13 +1787,19 @@ margin-top:-5%;
     }
 
     /* Pagina contacto */
+    .mgform{
+        display: block;
+    }
     .form {
         border-radius: 33px;
         background: #628395;
-        width: 450px;
+        width: 380px;
+        height: 100%;
         border: 1px;
-        margin-left: 5%;
+        position: relative;
+        margin: 0 auto;
     }
+
     .image-hover .thumb {
         transform: scale(1);
         max-width: 100%;
@@ -1816,7 +1830,7 @@ margin-top:-5%;
               font-size: 100%;
         }
         .titapsobnons {
-              margin-left: 20%; 
+              margin-left: 10%; 
         }
         }
       
