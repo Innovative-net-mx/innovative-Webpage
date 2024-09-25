@@ -1,6 +1,7 @@
 from django.db import models
 from multiselectfield import MultiSelectField
 from PIL import Image
+from .models_hiring import *
 
 
 
