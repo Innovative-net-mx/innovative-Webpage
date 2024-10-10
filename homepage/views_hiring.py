@@ -66,7 +66,7 @@ class Main_HiringPage(TemplateView):
             
             # Send the emails
             email.send(fail_silently=False)
-
+            
             # Sends data to a monday.com board using the API
             url = "https://api.monday.com/v2"
             headers = {

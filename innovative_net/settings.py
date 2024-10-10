@@ -20,16 +20,30 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'b*ixwd#fyy#xhl9+e_60ml2f^ni66&6(k2^3bfmky7)8l%atos'
+keys = {}
+with open(os.path.join(BASE_DIR, 'llaves.txt')) as f:
+    for line in f:
+        key, value = line.strip().split('=')
+        keys[key] = value
+
+SECRET_KEY = keys.get('SECRET_KEY')
+# Add other keys as needed
+# ANOTHER_KEY = keys.get('ANOTHER_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True  # Set to True for development, False for production
+
+# Add this to serve static files in production
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'staticfiles'),
+]
 
 ALLOWED_HOSTS = ['*']
 
 # Recaptcha
-RECAPTCHA_PUBLIC_KEY = '6LcLbuQjAAAAAMB7YUBSV541JZXFeS7F6i4IuYAL'
-RECAPTCHA_PRIVATE_KEY = '6LcLbuQjAAAAAOaDk034tDWnyKQRPed-UP-1BtjE'
+RECAPTCHA_PUBLIC_KEY = keys.get('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = keys.get('RECAPTCHA_PRIVATE_KEY')
 
 # Application definition
 
