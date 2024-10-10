@@ -239,3 +239,22 @@
   });
 
 })()
+
+
+document.querySelectorAll('input[type="file"]').forEach(input => {
+
+    input.addEventListener('change', function() {
+
+        if (this.files && this.files.length > 0) {
+
+            this.setAttribute('data-file-name', this.files[0].name);
+
+        } else {
+
+            this.removeAttribute('data-file-name');
+
+        }
+
+    });
+
+});

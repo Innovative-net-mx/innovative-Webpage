@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+from . import views, views_hiring
 from .views import *
 from django.contrib.auth.views import LogoutView
 from django.conf.urls.static import static  # para poder mostrar imagenes
@@ -18,6 +18,7 @@ urlpatterns = [
     path("logout/", LogoutView.as_view(next_page='login'), name='logout'),
     path("noticia_bloque", Noticia_Lista.as_view(), name="noticia_bloque" ),
     path('ataque-ciber-fisico', views.pdf_preview, name='ataque-ciber-fisico'),
+    path('bolsa-de-empleo', views_hiring.Main_HiringPage.as_view(), name='bolsa-de-empleo'),
     
 ]
 

@@ -1,0 +1,140 @@
+{% extends "misc/base.html" %}
+
+{% block body %}
+
+<div class="section">
+    <h1 class="section-title">UNETE A NUESTRO EQUIPO </h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 slide-l2r">
+            <img src="static/assets/img/bolsatrabajo.png" alt="hiring" style="width: 100%">
+        </div>
+        <div class="col-md-6 hiring slide-r2l">
+            <h2> ¿Por qué Trabajar con Nosotros?</h2>
+            <p>En <strong>Innovative-net</strong> estamos comprometidos con el desarrollo de nuestros colaboradores, por lo que
+                ofrecemos un ambiente de trabajo agradable y desafiante, en el que podrás desarrollar tus habilidades
+                y crecer profesionalmente.</p>
+            </strong>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="row">
+        <h1 class="section-title">VACANTES DISPONIBLES</h1>
+    </div>
+
+    {% if hiring %}
+        {% for job in hiring %}
+            {% if forloop.counter0|divisibleby:3 %}
+            <div class="row" style="padding-top: 20px;">
+            {% endif %}
+                <div class="col-md-4{% if hiring|length == 2 %} offset-md-1{% endif %}">
+                    <div class="hiringcard">
+                        <div class="hiringcard-body">
+                            <h4 class="card-title">{{ job.name }}</h4>
+                            <p class="card-text">{{ job.description|linebreaksbr|safe }}</p>
+                        </div>
+                        <p class="card-undertext">Ciudad: {{ job.location }}</p>
+                    </div>
+                </div>
+            {% if forloop.counter0|divisibleby:3 and not forloop.first %}
+            </div>
+            {% endif %}
+            {% if forloop.last %}
+            </div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>No hay vacantes disponibles en este momento.</p>
+    {% endif %}
+</div>
+
+<div class="section">
+    <div class="row">
+        <h1 class="section-title">Unete a Nuestro Equipo</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4" >
+            <img src="static/assets/img/bolsadetrabajo2.png" alt="hiring" style="width: 140%; padding-top: 30px">
+        </div>
+        <div class="col-lg-6 offset-md-2">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <div class="hiringinputGroup">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="name">Nombre</label>
+                        </div>
+                        <div class="col-md-8">
+                            {{ form.name.errors }}
+                            {{ form.name }}
+                        </div>
+                    </div>
+                </div>
+                <div class="hiringinputGroup">
+                    <div class="row">
+                        <div class="col-md-4">
+                            {{ form.email.errors }}
+                            <label for="email">Correo</label>
+                        </div>
+                        <div class="col-md-8">
+                            {{ form.email }}
+                        </div>
+                    </div>
+                </div>
+                <div class="hiringinputGroup">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="phone">Teléfono</label>
+                        </div>
+                        <div class="col-md-8">
+                            {{ form.phone.errors }}
+                            {{ form.phone }}
+                        </div>
+                    </div>
+                </div>
+                <div class="hiringinputGroup">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="hiring_spot">Selecciona la vacante que te interesa</label>
+                        </div>
+                        <div class="col-md-8">
+                            {{ form.hiring_spot.errors }}
+                            {{ form.hiring_spot }}
+                        </div>
+                    </div>
+                </div>
+                <div class="hiringinputGroup">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="cv">Envianos to CV</label>
+                        </div>
+                        <div class="col-md-8">
+                            {{ form.cv.errors }}
+                            {{ form.cv }}
+                        </div>
+                    </div>
+                </div>
+                {% comment %} <!-- reCAPTCHA field rendering -->
+                <div style='margin-top: 8px;'>
+                    {{ form.captcha.errors }}
+                    {{ form.captcha }}
+                </div> {% endcomment %}
+                <button class="btnnose ">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

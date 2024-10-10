@@ -18,10 +18,11 @@ class Formulario_Contacto(models.Model):
     phone = models.IntegerField()
     empresa = models.CharField(max_length=60)
     extension = models.IntegerField(blank=True, null=True)
-    intencion = models.CharField(max_length=1, choices=INTENCION_LISTA)
+    intencion = models.CharField(max_length=1, choices=INTENCION_LISTA, default='1')
     descripcion = models.CharField(max_length=200)
 
 class CRM_noticas(models.Model):
+    id = models.BigAutoField(primary_key=True)
     titulo = models.CharField(max_length=250)
     descripcion = models.CharField(max_length=2500)
     fecha = models.DateField(auto_now_add=True)
