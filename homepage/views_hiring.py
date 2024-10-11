@@ -15,7 +15,7 @@ import requests
 from django import forms
 import mimetypes
 import base64
-
+from django.conf import settings
 class Main_HiringPage(TemplateView):
     template_name = 'hiring/hiring_main.html'
     
@@ -24,6 +24,7 @@ class Main_HiringPage(TemplateView):
         context['hiring'] = Hiring_Spot.objects.all()
         context['form_class'] = SendHiringRequest()
         context['form'] = SendHiringRequest()
+        context['recaptcha_site_key'] = settings.RECAPTCHA_SITE_KEY
         return context
 
     def post(self, request, *args, **kwargs):
@@ -34,6 +35,34 @@ class Main_HiringPage(TemplateView):
         form = SendHiringRequest(request.POST, request.FILES)
 
         if form.is_valid():
+            secret_key = settings.RECAPTCHA_SECRET_KEY
+            monday_api_key = settings.MONDAY_API_KEY
+            # captcha verification
+            captcha_response = request.POST.get('g-recaptcha-response')
+            if not captcha_response:
+                messages.error(request, 'Captcha response is missing. Please try again.')
+                return self.render_to_response(self.get_context_data())
+
+            captcha_data = {
+                'response': captcha_response,
+                'secret': secret_key
+            }
+            try:
+                resp = requests.post('https://www.google.com/recaptcha/api/siteverify', data=captcha_data)
+                resp.raise_for_status()
+                result_json = resp.json()
+            except requests.exceptions.RequestException as e:
+                messages.error(request, f'Captcha verification failed due to a network error: {e}')
+                return self.render_to_response(self.get_context_data())
+
+            print(result_json)
+
+            if not result_json.get('success'):
+                error_codes = result_json.get('error-codes', [])
+                messages.error(request, f'Captcha verification failed. Error codes: {error_codes}')
+                return self.render_to_response(self.get_context_data())
+            # end captcha verification
+            
             hiring_request = form.save(commit=False)
             messages.success(request, 'Tus datos fueron enviados de manera exitosa.')
             print('Formulario enviado')
@@ -44,10 +73,10 @@ class Main_HiringPage(TemplateView):
             file_extension = file_name.split('.')[-1]
             file_base_name = '.'.join(file_name.split('.')[:-1])
             counter = 1
-            while Hiring_requests.objects.filter(cv__icontains=file_base_name).exists():
+            while Hiring_requests.objects.filter(cv=file.name).exists():
                 file.name = f"{file_base_name}_{counter}.{file_extension}"
                 counter += 1
-            
+            print("passed the while loop")
             hiring_request.save()
             file_content = hiring_request.cv.read()
             hiring_request.cv.seek(0)  # Reset file pointer to the beginning
@@ -70,7 +99,7 @@ class Main_HiringPage(TemplateView):
             # Sends data to a monday.com board using the API
             url = "https://api.monday.com/v2"
             headers = {
-                "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjQyMDY3ODgyNCwiYWFpIjoxMSwidWlkIjoxOTI0MDkyMiwiaWFkIjoiMjAyNC0xMC0wOFQwNjoyODo1My4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MjMzNTY1LCJyZ24iOiJ1c2UxIn0.Rpa743__qQ9-EGHRuHDub1bK4qFc-bmGan3Aj1rSxxw",
+                "Authorization": monday_api_key,
             }
             query = """
             mutation ($itemName: String!, $columnValues: JSON!) {
@@ -143,6 +172,7 @@ class Main_HiringPage(TemplateView):
                 print(f"Response content: {response.content if response else 'No response'}")
                 print(f"Request data: {json.dumps(data, indent=4)}")
                 print(f"Request headers: {headers}")
+
             return redirect('bolsa-de-empleo')
         else:
             context = self.get_context_data()

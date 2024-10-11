@@ -1,5 +1,6 @@
 from django import forms
 from .models import Formulario_Contacto, CRM_noticas
+from .models_hiring import Hiring_requests
 from .models_hiring import *
 from django.contrib.auth.forms import AuthenticationForm
 from captcha.fields import ReCaptchaField
@@ -7,7 +8,6 @@ from captcha.widgets import ReCaptchaV2Checkbox
 
 
 class FormularioContactoForm(forms.ModelForm):
-    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox(attrs={'class': 'recaptcha-class'}))
 
     class Meta:
         model = Formulario_Contacto

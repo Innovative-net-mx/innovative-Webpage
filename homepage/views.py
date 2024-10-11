@@ -1,20 +1,20 @@
 from django.shortcuts import render, redirect
-from django.views.generic import FormView
+from django.views.generic import FormView, CreateView, DeleteView, UpdateView, TemplateView, ListView
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic.edit import CreateView, DeleteView, UpdateView
-from django.views.generic.list import ListView
-from .forms import *
 from django.contrib import messages
-from django.core.mail import send_mail
-
-from django.views.generic.list import ListView
-# Create your views here.
+from django.core.mail import send_mail, EmailMessage
+from django import forms
+from .forms import *
 from .models import *
+from .models_hiring import Hiring_Spot, Hiring_requests
 from django.http import HttpResponse
 import json
 import requests
+import mimetypes
+import base64
+from django.conf import settings
 # Create your views here.
 class CustomLoginView(LoginView):
     # Esta clase se encarga de verificar que el usuario este autenticado antes de poder
@@ -65,36 +65,74 @@ def error_form(request):
     return render(request, "homepage/error_form.html")
 
 # make a class view for a form Formulario_Contacto
-class Contacto_Form(CreateView):
-    model = Formulario_Contacto
-    form_class = FormularioContactoForm
+
+class Contacto_Form(TemplateView):
     template_name = 'homepage/contacto.html'
     
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        form = FormularioContactoForm()
+        context['form'] = form
+        context['recaptcha_site_key'] = getattr(settings, 'RECAPTCHA_SITE_KEY', None)
+        return context
+
+    def post(self, request, *args, **kwargs):
+        form = FormularioContactoForm(request.POST)
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
     def form_valid(self, form):
-        form.instance.author = self.request.user
+        secret_key = settings.RECAPTCHA_SECRET_KEY
+        monday_api_key = settings.MONDAY_API_KEY
+        request = self.request
+        # captcha verification
+        captcha_response = request.POST.get('g-recaptcha-response')
+        if not captcha_response:
+            messages.error(request, 'Captcha response is missing. Please try again.')
+            return self.render_to_response(self.get_context_data())
         
+        captcha_data = {
+            'response': captcha_response,
+            'secret': secret_key
+        }
+        
+        try:
+            resp = requests.post('https://www.google.com/recaptcha/api/siteverify', data=captcha_data)
+            resp.raise_for_status()
+            result_json = resp.json()
+        except requests.exceptions.RequestException as e:
+            messages.error(request, f'Captcha verification failed due to a network error: {e}')
+            return self.render_to_response(self.get_context_data())
+
+        if not result_json.get('success'):
+            error_codes = result_json.get('error-codes', [])
+            messages.error(request, f'Captcha verification failed. Error codes: {error_codes}')
+            return self.render_to_response(self.get_context_data())
+
+        form.instance.author = request.user
+
         # Add Monday.com integration here
-        self.create_monday_item(form.cleaned_data)
+        self.create_monday_item(form.cleaned_data, monday_api_key)
         
         # Send email
         send_mail(
             'Nueva Solicitud Enviada desde la Pagina Web',
             f'Name: {form.cleaned_data["nombre"]}\nEmail: {form.cleaned_data["email"]}\nMessage: {form.cleaned_data["descripcion"]}',
             'no-reply@innovative-net.mx',
-            ['desarrollo.it2@innovative-net.mx',
-            'hector.torres@innovative-net.mx'
-            ],
+            ['desarrollo.it2@innovative-net.mx', 'hector.torres@innovative-net.mx'],
             fail_silently=False,
         )
 
         # Display success message
         messages.success(self.request, 'Your message has been sent!')
 
-        return super().form_valid(form)
-
-    def create_monday_item(self, form_data):
+        return redirect(self.get_success_url())
+    
+    def create_monday_item(self, form_data, monday_api_key):
         url = "https://api.monday.com/v2"
-        headers = {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjI2NTkwMzEwMSwiYWFpIjoxMSwidWlkIjoxOTI0MDkyMiwiaWFkIjoiMjAyMy0wNi0yOVQxOTo0ODowNy4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MjMzNTY1LCJyZ24iOiJ1c2UxIn0.orZN0oA-P0jWsch_XgqyES_AKqE0lQThkO8vt4o_Mas"}
+        headers = {"Authorization": monday_api_key}
         query = """
             mutation ($myItemName: String!, $columnValues: JSON!) {
                 create_item (board_id: 3787551203, item_name: $myItemName, column_values: $columnValues) {
@@ -130,17 +168,15 @@ class Contacto_Form(CreateView):
 
         # Serialize the entire column_values dictionary
         column_values_json = json.dumps({column_ids[key]: value for key, value in column_values.items()})
-        print(column_values)
         data = {
             'query': query,
             'variables': {
                 'myItemName': form_data['nombre'],  # This can be any field or static text
-                'columnValues': json.dumps(column_values)
+                'columnValues': column_values_json
             }
         }
         response = requests.post(url, json=data, headers=headers)
         # Handle the response, check for errors, etc.
-        # Error handling
         if response.status_code != 200:
             print("Error in API call:", response.status_code, response.text)
         else:
@@ -148,8 +184,10 @@ class Contacto_Form(CreateView):
 
     def get_success_url(self):
         return reverse_lazy('contacto')
-    def get_error_url(self):
-        return reverse_lazy('error_form')
+
+    def form_invalid(self, form):
+        messages.error(self.request, 'There was an error with your form submission. Please try again.')
+        return self.render_to_response(self.get_context_data())
 
 # ========>> CRM VIEWS <<==========
 

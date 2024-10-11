@@ -42,8 +42,13 @@
             <div class="form">
                 <br><br>
                 <h1 class="letras">Ponte en contacto con nosotros</h1>
-                <h3 class="letras1">Déjanos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3>
-                <form action="" method="POST" >  <!-- Corrected 'actions' to 'action' -->
+                <h3 class="letras1">Compártenos tus datos y pronto nos comunicaremos contigo para resolver tus comentarios.</h3>
+                {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+                {% endif %}
+                <form id="contactform" action="" method="post">  <!-- Corrected 'actions' to 'action' -->
 
                     {% csrf_token %}
                     {{ form.non_field_errors }}
@@ -83,7 +88,7 @@
                             <div class="inputGroup3">
                                 {{ form.descripcion.errors }}
                                 {{ form.descripcion }}
-                                <label for="name">Descripcion</label>
+                                <label for="descripcion">Descripcion</label>
                             </div>
                         </div>
 
@@ -97,15 +102,11 @@
                         {{ form.intencion.errors }}
                         {{ form.intencion }}
                     </div>
-
-
-                    <!-- reCAPTCHA field rendering -->
+                        <!-- reCAPTCHA field rendering -->
                     <div style='margin-top: 8px;'>
-                        {{ form.captcha.errors }}
-                        {{ form.captcha }}
+                        <input type="hidden" name="g-recaptcha-response" id='recaptcha'>
                     </div>
-
-                    <button class="btnnose"> Enviar</button>
+                    <button class="btnnose" style="margin: 15px;">Enviar</button>
                 </form> <!-- Closed form tag -->
             </div>
         </center> 
@@ -154,6 +155,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-
-
- {% endblock %}
+{% endblock %}
