@@ -54,6 +54,7 @@ MONDAY_API_KEY = keys.get('MONDAY_API_KEY')
 INSTALLED_APPS = [
     'homepage',
     'captcha',
+    'api',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
