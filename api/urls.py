@@ -15,6 +15,7 @@ from django.conf import settings  # para poder mostrar imagenes
 
 urlpatterns = [
     path('contact-us/', Contacto_Form.as_view(), name='contact_us'),
+    path('unsubscribe/<str:email>/', views.unsubscribe, name='unsubscribe'),
 ]
 
 # Dynamically create URL patterns for each item in Email_ContactButton_Conversion to be used in the def of track_conversion(request, unique_url)
@@ -27,3 +28,6 @@ def generate_conversion_urls():
     return conversion_urls
 
 urlpatterns += generate_conversion_urls()
+
+# URL pattern for unsubscribe button click
+
