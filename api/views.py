@@ -23,7 +23,7 @@ def track_conversion(request, campaing_id):
         conversion.times_clicked += 1
         conversion.datetime_last_clicked = time.strftime('%Y-%m-%d %H:%M:%S')
         conversion.save()
-        return redirect('contacto')
+        return redirect(reverse_lazy('contacto'))
     except Email_ContactButton_Conversion.DoesNotExist:
         return JsonResponse({'status': 'error', 'message': 'Invalid URL'})
 

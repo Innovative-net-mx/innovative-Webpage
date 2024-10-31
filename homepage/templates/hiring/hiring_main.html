@@ -27,26 +27,22 @@
     </div>
 
     {% if hiring %}
+        <div class="row" style="padding-top: 20px;">
         {% for job in hiring %}
-            {% if forloop.counter0|divisibleby:3 %}
-            <div class="row" style="padding-top: 20px;">
-            {% endif %}
-                <div class="col-md-4{% if hiring|length == 2 %} offset-md-1{% endif %}">
-                    <div class="hiringcard">
-                        <div class="hiringcard-body">
-                            <h4 class="card-title">{{ job.name }}</h4>
-                            <p class="card-text">{{ job.description|linebreaksbr|safe }}</p>
-                        </div>
-                        <p class="card-undertext">Ciudad: {{ job.location }}</p>
+            <div class="col-md-4{% if hiring|length == 2 %} offset-md-1{% endif %}">
+                <div class="hiringcard">
+                    <div class="hiringcard-body">
+                        <h4 class="card-title">{{ job.name }}</h4>
+                        <p class="card-text">{{ job.description|linebreaksbr|safe }}</p>
                     </div>
+                    <p class="card-undertext">Ciudad: {{ job.location }}</p>
                 </div>
-            {% if forloop.counter0|divisibleby:3 and not forloop.first %}
             </div>
-            {% endif %}
-            {% if forloop.last %}
-            </div>
+            {% if forloop.counter|divisibleby:3 and not forloop.last %}
+            </div><div class="row" style="padding-top: 20px;">
             {% endif %}
         {% endfor %}
+        </div>
     {% else %}
         <p>No hay vacantes disponibles en este momento.</p>
     {% endif %}
