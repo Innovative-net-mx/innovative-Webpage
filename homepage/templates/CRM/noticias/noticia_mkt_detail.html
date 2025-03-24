@@ -1,0 +1,119 @@
+{% extends "misc/base.html" %}
+{% load static %}
+{% block body %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Noticias</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <style>
+            .news-header {
+                font-size: 3rem;
+                font-weight: bold;
+            }
+            .news-section {
+                display: flex;
+                flex-direction: row;
+            }
+            @media (max-width: 1024px) {
+                .news-sidebar {
+                    display: none;
+                }
+            }
+            .news-sidebar {
+                background-color: #D84315;
+                color: white;
+                padding: 15px;
+                width: 300px;
+                margin-left: -120px;
+            }
+            .news-sidebar h5 {
+                font-weight: bold;
+            }
+            .news-sidebar li {
+                padding: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                
+            }
+            .news-sidebar a {
+                color: inherit;
+                text-decoration: none;
+            }
+            .news-content {
+                flex: 1;
+                padding: 20px;
+            }
+            .news-content img {
+                width: 90%;
+                
+                object-fit: cover;
+                
+            }
+            .news-content p{
+                text-align: justify;
+                color: rgb(57, 60, 62);
+            }
+            .contenido {
+                text-align: justify;
+                padding: 20px;
+            }   
+            .agent-container {
+                display: flex;
+                align-items: center;
+                background-color:rgb(247, 245, 242);
+                padding: 15px;
+            }
+            .agent-container img {
+                width: 80px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+            .agent-container p {
+                margin-bottom: 0;
+                color:rgb(57, 60, 62);
+            }
+            .con-agent-text {
+                display: flex;
+                flex-direction: column;
+                items-align: left;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container mt-4">
+            
+            <div class="news-section mt-4">
+                <div class="news-sidebar">
+                    <h5>Otras Noticias</h5>
+                    <ul class="list-unstyled">
+                        {% for noticia in noticias_sidebar|slice:":3" %}
+                            <li><strong><a href="{% url 'noticia_detail' noticia.id %}">{{ noticia.titulo }}</a></strong></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="news-content">
+                    <img src="{{ news_image }}" class="img-fluid mt-3 mx-auto d-block" alt="Noticias">
+
+                    <h2 style="padding:10px; margin-top: 15px">{{ news_title }}</h2> 
+                    <p><strong>FECHA:</strong> {{ news_date }}</p>
+                    <div class="contenido">{{ news_body|safe }}</div>
+                </div>
+            </div>
+            
+            <div class="container-fluid mt-4 agent-container">
+                <img src="{{agente_img}}" alt="{{agente}}">
+                <div class="con-agent-text">
+                    <h5>{{agente}}</h5>
+                    <p>{{agente_puesto}}</p>
+                    <a href="{% url 'contacto' %}" class="btn btn-danger">SOLICITAR COTIZACIÓN</a>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+{% endblock %}

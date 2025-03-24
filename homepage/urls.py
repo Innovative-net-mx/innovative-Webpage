@@ -19,6 +19,8 @@ urlpatterns = [
     path("noticia_bloque", Noticia_Lista.as_view(), name="noticia_bloque" ),
     path('ataque-ciber-fisico', views.pdf_preview, name='ataque-ciber-fisico'),
     path('bolsa-de-empleo', views_hiring.Main_HiringPage.as_view(), name='bolsa-de-empleo'),
+    path('noticia/<int:id>/', noticia_detail, name='noticia_detail'),
+    path('noticiamkt/<int:id>/', noticia_mkt_detail, name='noticia_mkt_detail'),
     
 ]
 

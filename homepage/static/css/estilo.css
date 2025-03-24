@@ -460,6 +460,7 @@
      background-position: center;
  }
 
+
  .img_home {
      width: 100%;
      height: auto;
@@ -2818,3 +2819,7 @@ opacity: 0;
 .btnnoticias:hover {
     color: black;
 }
+
+ .det_ser button {
+     color: white;
+ }

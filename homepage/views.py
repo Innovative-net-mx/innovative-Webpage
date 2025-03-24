@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import FormView, CreateView, DeleteView, UpdateView, TemplateView, ListView
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
@@ -58,6 +58,32 @@ class Noticia_Lista(ListView):
     from_class = CRM_noticia_form
     context_object_name = "noticias"
 
+def noticia_detail(request, id):
+    noticia = get_object_or_404(CRM_noticas, id=id)
+    noticias_sidebar = CRM_noticas.objects.order_by('-id')[:5]
+    return render(request, 'CRM/noticias/noticia_detail.html', {
+        'news_date': noticia.fecha,
+        'news_body': noticia.descripcion,
+        'news_title': noticia.titulo,
+        'news_image': noticia.imagen.url if noticia.imagen else None,
+        'noticias_sidebar': noticias_sidebar
+    })
+
+def noticia_mkt_detail(request, id):
+    noticia = get_object_or_404(CRM_noticas_marketing, id=id)
+    noticias_sidebar = CRM_noticas_marketing.objects.order_by('-id')[:5]
+    return render(request, 'CRM/noticias/noticia_mkt_detail.html', {
+        'news_date': noticia.fecha,
+        'news_body': noticia.descripcion,
+        'news_title': noticia.titulo,
+        'agente': noticia.agente,
+        'agente_puesto': noticia.agente_puesto,
+        'agente_email': noticia.agente_email,
+        'agente_img': noticia.agente_img.url if noticia.agente_img else None,
+        'news_image': noticia.imagen.url if noticia.imagen else None,
+        'noticias_sidebar': noticias_sidebar
+    })
+    
 def inicio(request):
     return render(request, "homepage/index.html")
 

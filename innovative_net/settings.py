@@ -31,7 +31,7 @@ SECRET_KEY = keys.get('SECRET_KEY')
 # ANOTHER_KEY = keys.get('ANOTHER_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # Set to True for development, False for production
+DEBUG = True  # Set to True for development, False for production
 
 # Add this to serve static files in production
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
