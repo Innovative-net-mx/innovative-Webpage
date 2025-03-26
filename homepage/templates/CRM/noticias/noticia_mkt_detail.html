@@ -43,6 +43,12 @@
                 color: inherit;
                 text-decoration: none;
             }
+            .news-sidebar li:hover {
+                background-color: #BF360C;
+                color: #FFFFFF;
+                transition: background-color 0.3s ease, color 0.3s ease;
+                font-weight: bold;
+            }
             .news-content {
                 flex: 1;
                 padding: 20px;
@@ -66,15 +72,19 @@
                 align-items: center;
                 background-color:rgb(247, 245, 242);
                 padding: 15px;
+                border-radius: 10px;
             }
             .agent-container img {
-                width: 80px;
+                width: 90px;
                 border-radius: 50%;
-                margin-right: 15px;
+                margin-right: 45px;
+                margin-left: 15px;
             }
             .agent-container p {
-                margin-bottom: 0;
+                margin-bottom: 15px;
                 color:rgb(57, 60, 62);
+                font-size: 1rem;
+
             }
             .con-agent-text {
                 display: flex;
@@ -88,31 +98,32 @@
         <div class="container mt-4">
             
             <div class="news-section mt-4">
-                <div class="news-sidebar">
+                {% comment %} <div class="news-sidebar">
                     <h5>Otras Noticias</h5>
                     <ul class="list-unstyled">
                         {% for noticia in noticias_sidebar|slice:":3" %}
                             <li><strong><a href="{% url 'noticia_detail' noticia.id %}">{{ noticia.titulo }}</a></strong></li>
                         {% endfor %}
                     </ul>
-                </div>
+                </div> {% endcomment %}
                 <div class="news-content">
                     <img src="{{ news_image }}" class="img-fluid mt-3 mx-auto d-block" alt="Noticias">
 
                     <h2 style="padding:10px; margin-top: 15px">{{ news_title }}</h2> 
                     <p><strong>FECHA:</strong> {{ news_date }}</p>
                     <div class="contenido">{{ news_body|safe }}</div>
+                    <div class="container-fluid mt-4 agent-container">
+                        <img src="{{agente_img}}" alt="{{agente}}">
+                        <div class="con-agent-text">
+                            <h5>{{agente}}</h5>
+                            <p>{{agente_puesto}}</p>
+                            <a href="{% url 'contacto' %}" class="btn btn-danger">SOLICITAR COTIZACIÓN</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div class="container-fluid mt-4 agent-container">
-                <img src="{{agente_img}}" alt="{{agente}}">
-                <div class="con-agent-text">
-                    <h5>{{agente}}</h5>
-                    <p>{{agente_puesto}}</p>
-                    <a href="{% url 'contacto' %}" class="btn btn-danger">SOLICITAR COTIZACIÓN</a>
-                </div>
-            </div>
+
         </div>
     </body>
     </html>
