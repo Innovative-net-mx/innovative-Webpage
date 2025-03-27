@@ -2,7 +2,7 @@ from django.db import models
 from multiselectfield import MultiSelectField
 from PIL import Image
 from .models_hiring import *
-from ckeditor.fields import RichTextField
+from django_ckeditor_5.fields import CKEditor5Field
 
 
 # Create your models here.
@@ -24,14 +24,14 @@ class Formulario_Contacto(models.Model):
 class CRM_noticas(models.Model):
     id = models.BigAutoField(primary_key=True)
     titulo = models.CharField(max_length=250)
-    descripcion = RichTextField()
+    descripcion = CKEditor5Field('descripcion', config_name='default')
     fecha = models.DateField(auto_now_add=True)
     imagen = models.ImageField(upload_to='noticias', null=True, blank=True, default='noticia.jpg')
 
 class CRM_noticas_marketing(models.Model):
     id = models.BigAutoField(primary_key=True)
     titulo = models.CharField(max_length=250)
-    descripcion = RichTextField()
+    descripcion = CKEditor5Field('descripcion', config_name='default')
     resumen = models.CharField(max_length=250, null=True, blank=True)
     fecha = models.DateField(auto_now_add=True)
     imagen = models.ImageField(upload_to='noticias', null=True, blank=True, default='noticia.jpg')
