@@ -1,99 +1,94 @@
 {% extends "misc/base2.html" %}
 {% load static %}
+
 {% block body %}
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Noticias</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <style>
-            .news-header {
-                font-size: 3rem;
-                font-weight: bold;
-            }
-            .news-section {
-                display: flex;
-                flex-direction: row;
-            }
-            @media (max-width: 1024px) {
-                .news-sidebar {
-                    display: none;
-                }
-            }
+
+    <style>
+        .news-header {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .news-section {
+            display: flex;
+            flex-direction: row;
+        }
+        @media (max-width: 1024px) {
             .news-sidebar {
-                background-color: #D84315;
-                color: white;
-                padding: 15px;
-                width: 300px;
-                margin-left: -120px;
+                display: none;
             }
-            .news-sidebar h5 {
-                font-weight: bold;
-            }
-            .news-sidebar li {
-                padding: 5px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                
-            }
-            .news-sidebar a {
-                color: inherit;
-                text-decoration: none;
-            }
-            .news-sidebar li:hover {
-                background-color: #BF360C;
-                color: #FFFFFF;
-                transition: background-color 0.3s ease, color 0.3s ease;
-                font-weight: bold;
-            }
-            .news-content {
-                flex: 1;
-                padding: 20px;
-            }
-            .news-content img {
-                width: 90%;
-                
-                object-fit: cover;
-                
-            }
-            .news-content p{
-                text-align: justify;
-                color: rgb(57, 60, 62);
-            }
-            .contenido {
-                text-align: justify;
-                padding: 20px;
-            }   
-            .agent-container {
-                display: flex;
-                align-items: center;
-                background-color:rgb(247, 245, 242);
-                padding: 15px;
-                border-radius: 10px;
-            }
-            .agent-container img {
-                width: 90px;
-                border-radius: 50%;
-                margin-right: 45px;
-                margin-left: 15px;
-            }
-            .agent-container p {
-                margin-bottom: 15px;
-                color:rgb(57, 60, 62);
-                font-size: 1rem;
+        }
+        .news-sidebar {
+            background-color: #D84315;
+            color: white;
+            padding: 15px;
+            width: 300px;
+            margin-left: -120px;
+        }
+        .news-sidebar h5 {
+            font-weight: bold;
+        }
+        .news-sidebar li {
+            padding: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+        }
+        .news-sidebar a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .news-sidebar li:hover {
+            background-color: #BF360C;
+            color: #FFFFFF;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: bold;
+        }
+        .news-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .news-content img {
+            width: 90%;
+            
+            object-fit: cover;
+            
+        }
+        .news-content p{
+            text-align: justify;
+            color: rgb(57, 60, 62);
+        }
+        .contenido {
+            text-align: justify;
+            padding: 20px;
+        }   
+        .agent-container {
+            display: flex;
+            align-items: center;
+            background-color:rgb(247, 245, 242);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .agent-container img {
+            width: 90px;
+            border-radius: 50%;
+            margin-right: 45px;
+            margin-left: 15px;
+        }
+        .agent-container p {
+            margin-bottom: 15px;
+            color:rgb(57, 60, 62);
+            font-size: 1rem;
 
-            }
-            .con-agent-text {
-                display: flex;
-                flex-direction: column;
-                items-align: left;
-            }
+        }
+        .con-agent-text {
+            display: flex;
+            flex-direction: column;
+            items-align: left;
+        }
 
-        </style>
-    </head>
+    </style>
+
     <body>
         <div class="container mt-4">
             
@@ -126,5 +121,4 @@
 
         </div>
     </body>
-    </html>
 {% endblock %}
