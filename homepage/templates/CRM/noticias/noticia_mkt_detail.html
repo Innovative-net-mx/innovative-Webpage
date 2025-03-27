@@ -1,5 +1,6 @@
 {% extends "misc/base2.html" %}
 {% load static %}
+{% load static %}
 
 {% block body %}
 
@@ -89,36 +90,34 @@
 
     </style>
 
-    <body>
-        <div class="container mt-4">
-            
-            <div class="news-section mt-4">
-                {% comment %} <div class="news-sidebar">
-                    <h5>Otras Noticias</h5>
-                    <ul class="list-unstyled">
-                        {% for noticia in noticias_sidebar|slice:":3" %}
-                            <li><strong><a href="{% url 'noticia_detail' noticia.id %}">{{ noticia.titulo }}</a></strong></li>
-                        {% endfor %}
-                    </ul>
-                </div> {% endcomment %}
-                <div class="news-content">
-                    <img src="{{ news_image }}" class="img-fluid mt-3 mx-auto d-block" alt="Noticias">
+    <div class="container mt-4">
+        
+        <div class="news-section mt-4">
+            {% comment %} <div class="news-sidebar">
+                <h5>Otras Noticias</h5>
+                <ul class="list-unstyled">
+                    {% for noticia in noticias_sidebar|slice:":3" %}
+                        <li><strong><a href="{% url 'noticia_detail' noticia.id %}">{{ noticia.titulo }}</a></strong></li>
+                    {% endfor %}
+                </ul>
+            </div> {% endcomment %}
+            <div class="news-content">
+                <img src="{{ news_image }}" class="img-fluid mt-3 mx-auto d-block" alt="Noticias">
 
-                    <h2 style="padding:10px; margin-top: 15px">{{ news_title }}</h2> 
-                    <p><strong>FECHA:</strong> {{ news_date }}</p>
-                    <div class="contenido">{{ news_body|safe }}</div>
-                    <div class="container-fluid mt-4 agent-container">
-                        <img src="{{agente_img}}" alt="{{agente}}">
-                        <div class="con-agent-text">
-                            <h5>{{agente}}</h5>
-                            <p>{{agente_puesto}}</p>
-                            <a href="{% url 'contacto' %}" class="btn btn-danger">SOLICITAR COTIZACIÓN</a>
-                        </div>
+                <h2 style="padding:10px; margin-top: 15px">{{ news_title }}</h2> 
+                <p><strong>FECHA:</strong> {{ news_date }}</p>
+                <div class="contenido">{{ news_body|safe }}</div>
+                <div class="container-fluid mt-4 agent-container">
+                    <img src="{{agente_img}}" alt="{{agente}}">
+                    <div class="con-agent-text">
+                        <h5>{{agente}}</h5>
+                        <p>{{agente_puesto}}</p>
+                        <a href="{% url 'contacto' %}" class="btn btn-danger">SOLICITAR COTIZACIÓN</a>
                     </div>
                 </div>
             </div>
-            
-
         </div>
-    </body>
+        
+
+    </div>
 {% endblock %}
