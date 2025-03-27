@@ -100,6 +100,14 @@ class Contacto_Form(TemplateView):
         form = FormularioContactoForm()
         context['form'] = form
         context['recaptcha_site_key'] = getattr(settings, 'RECAPTCHA_SITE_KEY', None)
+        try:
+            with open('llaves.txt') as f:
+                for line in f:
+                    if line.startswith("GOOGLE_MAPS_KEY="):
+                        context['google_maps_api_key'] = line.strip().split("=")[1]
+                        break
+        except FileNotFoundError:
+            context['google_maps_api_key'] = None
         return context
 
     def post(self, request, *args, **kwargs):
