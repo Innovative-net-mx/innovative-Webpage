@@ -64,11 +64,13 @@ INSTALLED_APPS = [
     'django_ckeditor_5'
 ]
 CKEDITOR_5_CONFIGS = {
-    "default": {
-        "toolbar": [
-            "heading", "|", "bold", "italic", "link", "bulletedList", "numberedList", "blockQuote"
+    'default': {
+        'toolbar': [
+            'heading', '|', 'bold', 'italic', 'link', 'underline',
+            'bulletedList', 'numberedList', '|', 'outdent', 'indent', '|',
+            'blockQuote', 'undo', 'redo'
         ],
-        "language": "en",
+        'language': 'es',
     }
 }
 MIDDLEWARE = [

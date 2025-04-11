@@ -2,123 +2,71 @@
 {% block body %}
 <!DOCTYPE html>
 <div class="fondolistado_noticias">
-        <br><br><br><br><br> 
+    <br><br><br><br><br> 
     <center> 
-    <div class="conttabla"> 
-        <table class="listadonota">
-            
+        <div class="conttabla"> 
+            <table class="listadonota">
                 <tr style="background-color:#F1F7ED;">
                     <th style="text-align: center;">Titulo</th>
-                    <th style="text-align: center;" >Fecha</th>
-                    <th style="text-align: center;" >Foto</th>
+                    <th style="text-align: center;">Fecha</th>
+                    <th style="text-align: center;">Foto</th>
                     <th style="text-align: center;">Descripcion</th>
                 </tr>
                 {% for noticia in noticias %}
-            
                 <tr style="background: rgba(98, 131, 144, 0.8)">
-                    <td>
-                        <div class='scrollnot'>
-                            {{ noticia.titulo }}
-                        </div>
+                    <td style="text-align: left; padding: 10px;">{{ noticia.titulo }}</td>
+                    <td style="text-align: left; padding: 10px;">{{ noticia.fecha }}</td>
+                    <td style="text-align: left; padding: 10px;">
+                        <img src='/media/{{ noticia.imagen }}' style='max-width: 250px; margin: 12px;'>
                     </td>
-                    <td style='margin: 18px;'>{{ noticia.fecha }}</td>
-                    <td>
-                        <img src='/media/{{ noticia.imagen }}' style='max-width: 250px; margin: 12px;'></img>
-                    </td>
-                    <td>
-                        <div class="scrollnot">
-                            {{ noticia.descripcion }}
-                        </div>
-                    </td>
+                    <td style="text-align: left; padding: 10px;">{{ noticia.descripcion }}</td>
                 </tr>
                 {% endfor %}
-        </table> 
-    </div>
+            </table> 
+        </div>
     </center>
         
-    <a href={% url 'crm_noticias_create' %}>
-        <button class="btnagg" > Agregar</button>
-    </a>
-    <div style="height: 70px;">
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+        <a href="{% url 'crm_noticias_create' %}">
+            <button class="btnagg">Agregar Noticias Sencilla</button>
+        </a>
+        <a href="{% url 'noticia_create' %}">
+            <button class="btnagg">Agregar Noticias Compleja</button>
+        </a>
     </div>
-    </div>
-    </div>
+    <div style="height: 70px;"></div>
 </div>
 
- <style>
-    .listanota{
-        background-color: transparent;
+<style>
+    .listadonota {
+        width: 100%;
+        border-collapse: collapse;
     }
- .btn_tabla{
-  position: absolute;
-  margin-top: -300px;
-  margin-left: 30px;
- }
- th{
-    padding: 25px;
-   
- }
- .scrollnot{
-    width: 350px;
-    max-width: 400px;
-    max-height: 150px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    text-align: justify;
-    margin: 18px;
- }
- .scrollnot::-webkit-scrollbar{
-    display: none;
-    height: 100px;
-      width: 600px;
-      overflow: scroll;
-      overflow-x: hidden;
-      text-align: justify;
- }
- td{
-    color: #F1F7ED;
-    border-color: #C16200;
-    text-align: center;  
-    width: 150px;
- }
- tr{
-  border: #F1F7ED 3px solid;
-  height: 1em;
- }
- .boton{
-    border: rgba(0, 0, 0, 0);
- }
- @media(max-width: 400px){
-    .conttabla{
-        width:380px;
-        height: 280px;
+    th, td {
+        padding: 15px;
+        border: 1px solid #C16200;
+        text-align: left;
+        color: #F1F7ED;
     }
- }
- @media(max-width: 873px){
-    .conttabla{
-        width:580px;
-        height: 280px;
-        overflow: scroll;
+    th {
+        background-color: #F1F7ED;
+        color: #000;
     }
- }
- @media(max-width: 581px){
-    .conttabla{
-        width:350px;
-        height: 600px;
-        overflow: scroll;
+    .btnagg {
+        padding: 10px 20px;
+        background-color:rgb(55, 97, 188);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
     }
- }
- @media(max-width:1300px){
-    .btn_tabla{
-        margin-left: 20px;
+    .btnagg:hover {
+        background-color: #45a049;
     }
- }
- @media(max-width:1100px){
-    .btn_tabla{
-        margin-top: -10px;
+    .conttabla {
+        overflow-x: auto;
     }
- }
- </style>
-
- </html>
+</style>
+</html>
 {% endblock %}

@@ -1,11 +1,11 @@
 from django import forms
-from .models import Formulario_Contacto, CRM_noticas
+from .models import Formulario_Contacto, CRM_noticas, CRM_noticas_marketing
 from .models_hiring import Hiring_requests
 from .models_hiring import *
 from django.contrib.auth.forms import AuthenticationForm
 from captcha.fields import ReCaptchaField
 from captcha.widgets import ReCaptchaV2Checkbox
-
+from django_ckeditor_5.fields import CKEditor5Widget
 
 class FormularioContactoForm(forms.ModelForm):
 
@@ -55,3 +55,18 @@ class SendHiringRequest(forms.ModelForm):
             'hiring_spot': forms.Select(attrs={'class': 'hiring-request'}),
             'cv': forms.FileInput(attrs={'class': 'hiring-request', 'id': 'cv-filename', 'onchange': 'showFileName()'})
         }
+
+class CRM_noticia_mkt_form(forms.ModelForm):
+    class Meta:
+        model = CRM_noticas_marketing
+        fields = ['titulo', 'descripcion', 'imagen', 'agente', 'agente_puesto', 'agente_email', 'agente_img']
+        widgets = {
+            'titulo': forms.TextInput(attrs={'class': 'crm-noticia-titulo'}),
+            'descripcion': CKEditor5Widget(config_name='default'),
+            'imagen': forms.FileInput(attrs={'class': 'crm-noticia-imagen'}),
+            'agente': forms.TextInput(attrs={'class': 'crm-noticia-titulo'}),
+            'agente_puesto': forms.TextInput(attrs={'class': 'crm-noticia-titulo'}),
+            'agente_email': forms.EmailInput(attrs={'class': 'crm-noticia-titulo'}),
+            'agente_img': forms.FileInput(attrs={'class': 'crm-noticia-imagen'})
+        }
+        

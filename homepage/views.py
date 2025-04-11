@@ -42,6 +42,9 @@ def aviso_privacidad(request):
 def cartera_servicios(request):
     return render(request, "homepage/carteraServicios.html")
 
+def done(request):
+    return render(request, "misc/done.html")
+
 class Objetivos(ListView):
     model = CRM_noticas
     template_name = 'homepage/objetivos.html'
@@ -83,6 +86,8 @@ def noticia_mkt_detail(request, id):
         'news_image': noticia.imagen.url if noticia.imagen else None,
         'noticias_sidebar': noticias_sidebar
     })
+
+
     
 def inicio(request):
     return render(request, "homepage/index.html")
@@ -238,6 +243,18 @@ class CRM_noticias_create(LoginRequiredMixin, CreateView):
     template_name = 'CRM/agregar_noticia.html'
     success_url = reverse_lazy('crm_noticias_list')
 
+class CRM_noticias_mkt_create(LoginRequiredMixin, CreateView):
+    model = CRM_noticas_marketing
+    form_class = CRM_noticia_mkt_form  # Asegúrate de tener este form en tu archivo forms.py
+    template_name = 'CRM/agregar_noticia_mkt.html'
+    success_url = reverse_lazy('form_done')  # Cambia si quieres redirigir a otra vista
+
+    def form_valid(self, form):
+        form.instance.autor = self.request.user
+        return super().form_valid(form)
+    def form_invalid(self, form):
+        print(form.errors)
+        return super().form_invalid(form)
 
 # ========>> BOLETIN TECNICO <<==========
 
@@ -370,13 +387,3 @@ def pdf_preview(request):
     if success_message:
         del request.session['success_message']
     return render(request, 'boletin/btec1.html', context)
-
-
-
-
-
-
-
-
-
-

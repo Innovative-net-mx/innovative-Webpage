@@ -4,6 +4,7 @@ from .views import *
 from django.contrib.auth.views import LogoutView
 from django.conf.urls.static import static  # para poder mostrar imagenes
 from django.conf import settings  # para poder mostrar imagenes
+from django.urls import include
 urlpatterns = [ 
     path("", views.index, name="index"),
     path("cartera_servicios", views.cartera_servicios, name="cartera_servicios"),
@@ -21,6 +22,9 @@ urlpatterns = [
     path('bolsa-de-empleo', views_hiring.Main_HiringPage.as_view(), name='bolsa-de-empleo'),
     path('noticia/<int:id>/', noticia_detail, name='noticia_detail'),
     path('noticiamkt/<int:id>/', noticia_mkt_detail, name='noticia_mkt_detail'),
+    path('noticia/create', CRM_noticias_mkt_create.as_view(), name='noticia_create'),
+    path('ckeditor5/', include('django_ckeditor_5.urls'), name='mkadd'),
+    path('formdone', views.done, name='form_done'),
     
 ]
 
