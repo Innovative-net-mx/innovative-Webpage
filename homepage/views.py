@@ -56,7 +56,7 @@ class Objetivos(ListView):
 
 
 class Noticia_Lista(ListView):
-    model = CRM_noticas
+    model = CRM_noticas, CRM_noticas_marketing
     template_name = 'bloque/noticia.html'
     from_class = CRM_noticia_form
     context_object_name = "noticias"
@@ -232,10 +232,18 @@ class Contacto_Form(TemplateView):
 
 # class view in wich it show the data base list of CRM_noticias
 class CRM_noticias_list(LoginRequiredMixin, ListView):
-    model = CRM_noticas
     template_name = 'CRM/listado_noticias.html'
     from_class = CRM_noticia_form
     context_object_name = 'noticias'
+
+    def get_queryset(self):
+        # Combine both models' objects into a single list, ordered by id descending
+        noticias = list(CRM_noticas.objects.all())
+        noticias_marketing = list(CRM_noticas_marketing.objects.all())
+        combined = noticias + noticias_marketing
+        # Optionally, sort by id if both models have an 'id' field
+        combined.sort(key=lambda x: x.id, reverse=True)
+        return combined
 
 class CRM_noticias_create(LoginRequiredMixin, CreateView):
     model = CRM_noticas

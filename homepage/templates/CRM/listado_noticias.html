@@ -19,7 +19,7 @@
                     <td style="text-align: left; padding: 10px;">
                         <img src='/media/{{ noticia.imagen }}' style='max-width: 250px; margin: 12px;'>
                     </td>
-                    <td style="text-align: left; padding: 10px;">{{ noticia.descripcion }}</td>
+                    <td style="text-align: left; padding: 10px; max-height: 220px; overflow-y: auto; display: block;">{{ noticia.descripcion|safe }}</td>
                 </tr>
                 {% endfor %}
             </table> 
